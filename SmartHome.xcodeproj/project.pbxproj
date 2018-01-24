@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		953E6BE52016C0F90091C8B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953E6BE42016C0F90091C8B0 /* AppDelegate.swift */; };
+		0F3B2E2570D99553D9182B03 /* Pods_SmartHome.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7736D5A64413724E70C2CCE2 /* Pods_SmartHome.framework */; };
 		953E6BE72016C0F90091C8B0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953E6BE62016C0F90091C8B0 /* ViewController.swift */; };
 		953E6BEA2016C0F90091C8B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 953E6BE82016C0F90091C8B0 /* Main.storyboard */; };
 		953E6BED2016C0F90091C8B0 /* SmartHome.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 953E6BEB2016C0F90091C8B0 /* SmartHome.xcdatamodeld */; };
@@ -15,6 +15,62 @@
 		953E6BF22016C0F90091C8B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 953E6BF02016C0F90091C8B0 /* LaunchScreen.storyboard */; };
 		953E6BFD2016C0F90091C8B0 /* SmartHomeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953E6BFC2016C0F90091C8B0 /* SmartHomeTests.swift */; };
 		953E6C082016C0F90091C8B0 /* SmartHomeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953E6C072016C0F90091C8B0 /* SmartHomeUITests.swift */; };
+		954C674620171E62004332D9 /* ChangeSetPasVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 954C673C20171E61004332D9 /* ChangeSetPasVC.xib */; };
+		954C674720171E62004332D9 /* ChangeRegisterVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 954C673D20171E61004332D9 /* ChangeRegisterVC.xib */; };
+		954C674820171E62004332D9 /* PassLoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 954C673E20171E61004332D9 /* PassLoginVC.xib */; };
+		954C674920171E62004332D9 /* LoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 954C673F20171E61004332D9 /* LoginVC.xib */; };
+		954C674A20171E62004332D9 /* ChangeLoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954C674020171E61004332D9 /* ChangeLoginVC.swift */; };
+		954C674B20171E62004332D9 /* ChangeSetPasVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954C674120171E61004332D9 /* ChangeSetPasVC.swift */; };
+		954C674C20171E62004332D9 /* PassLoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954C674220171E61004332D9 /* PassLoginVC.swift */; };
+		954C674D20171E62004332D9 /* ChangeLoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 954C674320171E62004332D9 /* ChangeLoginVC.xib */; };
+		954C674E20171E62004332D9 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954C674420171E62004332D9 /* LoginVC.swift */; };
+		954C674F20171E62004332D9 /* ChangeRegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954C674520171E62004332D9 /* ChangeRegisterVC.swift */; };
+		954C6759201721CF004332D9 /* FileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 954C6752201721CF004332D9 /* FileManager.m */; };
+		954C675A201721CF004332D9 /* NSDictionary+Ping.m in Sources */ = {isa = PBXBuildFile; fileRef = 954C6754201721CF004332D9 /* NSDictionary+Ping.m */; };
+		954C675B201721CF004332D9 /* NSString+Contains.m in Sources */ = {isa = PBXBuildFile; fileRef = 954C6756201721CF004332D9 /* NSString+Contains.m */; };
+		954C675C201721CF004332D9 /* UIViewController+EZBackPop.m in Sources */ = {isa = PBXBuildFile; fileRef = 954C6758201721CF004332D9 /* UIViewController+EZBackPop.m */; };
+		954C676020172B92004332D9 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 954C675F20172B92004332D9 /* MBProgressHUD.m */; };
+		959883AC2016D383002C473B /* AppDelegate+Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959883A42016D383002C473B /* AppDelegate+Error.swift */; };
+		959883AD2016D383002C473B /* AppDelegate+Reach.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959883A52016D383002C473B /* AppDelegate+Reach.swift */; };
+		959883AE2016D383002C473B /* AppDelegate+Remote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959883A62016D383002C473B /* AppDelegate+Remote.swift */; };
+		959883AF2016D383002C473B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959883A72016D383002C473B /* AppDelegate.swift */; };
+		959883B02016D383002C473B /* MallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959883A82016D383002C473B /* MallViewController.swift */; };
+		959883B12016D383002C473B /* TabbarC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959883A92016D383002C473B /* TabbarC.swift */; };
+		959883B22016D383002C473B /* UIWindow+Visible.m in Sources */ = {isa = PBXBuildFile; fileRef = 959883AB2016D383002C473B /* UIWindow+Visible.m */; };
+		959883BB2016D70E002C473B /* BaseHttpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959883B42016D70E002C473B /* BaseHttpService.swift */; };
+		959883BC2016D70E002C473B /* DataDeal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959883B52016D70E002C473B /* DataDeal.swift */; };
+		959883BD2016D70E002C473B /* GlobalVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959883B62016D70E002C473B /* GlobalVariables.swift */; };
+		959883BE2016D70E002C473B /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959883B72016D70E002C473B /* Helper.swift */; };
+		959883BF2016D70E002C473B /* Https.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959883B82016D70E002C473B /* Https.swift */; };
+		959883C02016D70E002C473B /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959883B92016D70E002C473B /* LocationManager.swift */; };
+		959883C12016D70E002C473B /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959883BA2016D70E002C473B /* Tools.swift */; };
+		959883CE2016DDED002C473B /* box.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959883C42016DDED002C473B /* box.swift */; };
+		959883CF2016DDED002C473B /* Equip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959883C52016DDED002C473B /* Equip.swift */; };
+		959883D02016DDED002C473B /* Floor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959883C62016DDED002C473B /* Floor.swift */; };
+		959883D12016DDED002C473B /* Getui.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959883C72016DDED002C473B /* Getui.swift */; };
+		959883D22016DDED002C473B /* Infrared.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959883C82016DDED002C473B /* Infrared.swift */; };
+		959883D32016DDED002C473B /* LockUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959883C92016DDED002C473B /* LockUser.swift */; };
+		959883D42016DDED002C473B /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959883CA2016DDED002C473B /* Room.swift */; };
+		959883D52016DDED002C473B /* SensorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959883CB2016DDED002C473B /* SensorModel.swift */; };
+		959883D62016DDED002C473B /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959883CC2016DDED002C473B /* UserModel.swift */; };
+		959883D72016DDED002C473B /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959883CD2016DDED002C473B /* WeatherModel.swift */; };
+		959DE56B201823D3000E3C84 /* MKAnnotationView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 959DE54B201823D3000E3C84 /* MKAnnotationView+WebCache.m */; };
+		959DE56C201823D3000E3C84 /* NSData+ImageContentType.m in Sources */ = {isa = PBXBuildFile; fileRef = 959DE54D201823D3000E3C84 /* NSData+ImageContentType.m */; };
+		959DE56D201823D3000E3C84 /* SDImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 959DE54F201823D3000E3C84 /* SDImageCache.m */; };
+		959DE56E201823D3000E3C84 /* SDWebImageCompat.m in Sources */ = {isa = PBXBuildFile; fileRef = 959DE551201823D3000E3C84 /* SDWebImageCompat.m */; };
+		959DE56F201823D3000E3C84 /* SDWebImageDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 959DE553201823D3000E3C84 /* SDWebImageDecoder.m */; };
+		959DE570201823D3000E3C84 /* SDWebImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 959DE555201823D3000E3C84 /* SDWebImageDownloader.m */; };
+		959DE571201823D3000E3C84 /* SDWebImageDownloaderOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 959DE557201823D3000E3C84 /* SDWebImageDownloaderOperation.m */; };
+		959DE572201823D3000E3C84 /* SDWebImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 959DE559201823D3000E3C84 /* SDWebImageManager.m */; };
+		959DE573201823D3000E3C84 /* SDWebImagePrefetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 959DE55C201823D3000E3C84 /* SDWebImagePrefetcher.m */; };
+		959DE574201823D3000E3C84 /* UIButton+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 959DE55E201823D3000E3C84 /* UIButton+WebCache.m */; };
+		959DE575201823D3000E3C84 /* UIImage+GIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 959DE560201823D3000E3C84 /* UIImage+GIF.m */; };
+		959DE576201823D3000E3C84 /* UIImage+MultiFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 959DE562201823D3000E3C84 /* UIImage+MultiFormat.m */; };
+		959DE577201823D3000E3C84 /* UIImage+WebP.m in Sources */ = {isa = PBXBuildFile; fileRef = 959DE564201823D3000E3C84 /* UIImage+WebP.m */; };
+		959DE578201823D3000E3C84 /* UIImageView+HighlightedWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 959DE566201823D3000E3C84 /* UIImageView+HighlightedWebCache.m */; };
+		959DE579201823D3000E3C84 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 959DE568201823D3000E3C84 /* UIImageView+WebCache.m */; };
+		959DE57A201823D3000E3C84 /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 959DE56A201823D3000E3C84 /* UIView+WebCacheOperation.m */; };
+		95C30675201713DA004EACA6 /* GuideViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 95C30674201713DA004EACA6 /* GuideViewController.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,8 +91,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		65EEEA1C009C5DC16BF7604B /* Pods-SmartHome.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartHome.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmartHome/Pods-SmartHome.debug.xcconfig"; sourceTree = "<group>"; };
+		7736D5A64413724E70C2CCE2 /* Pods_SmartHome.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartHome.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		953E6BE12016C0F90091C8B0 /* SmartHome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartHome.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		953E6BE42016C0F90091C8B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		953E6BE62016C0F90091C8B0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		953E6BE92016C0F90091C8B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		953E6BEC2016C0F90091C8B0 /* SmartHome.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SmartHome.xcdatamodel; sourceTree = "<group>"; };
@@ -49,6 +106,88 @@
 		953E6C032016C0F90091C8B0 /* SmartHomeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmartHomeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		953E6C072016C0F90091C8B0 /* SmartHomeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartHomeUITests.swift; sourceTree = "<group>"; };
 		953E6C092016C0F90091C8B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		954C673C20171E61004332D9 /* ChangeSetPasVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChangeSetPasVC.xib; sourceTree = "<group>"; };
+		954C673D20171E61004332D9 /* ChangeRegisterVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChangeRegisterVC.xib; sourceTree = "<group>"; };
+		954C673E20171E61004332D9 /* PassLoginVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PassLoginVC.xib; sourceTree = "<group>"; };
+		954C673F20171E61004332D9 /* LoginVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginVC.xib; sourceTree = "<group>"; };
+		954C674020171E61004332D9 /* ChangeLoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeLoginVC.swift; sourceTree = "<group>"; };
+		954C674120171E61004332D9 /* ChangeSetPasVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeSetPasVC.swift; sourceTree = "<group>"; };
+		954C674220171E61004332D9 /* PassLoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PassLoginVC.swift; sourceTree = "<group>"; };
+		954C674320171E62004332D9 /* ChangeLoginVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChangeLoginVC.xib; sourceTree = "<group>"; };
+		954C674420171E62004332D9 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		954C674520171E62004332D9 /* ChangeRegisterVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeRegisterVC.swift; sourceTree = "<group>"; };
+		954C6751201721CF004332D9 /* FileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileManager.h; sourceTree = "<group>"; };
+		954C6752201721CF004332D9 /* FileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileManager.m; sourceTree = "<group>"; };
+		954C6753201721CF004332D9 /* NSDictionary+Ping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Ping.h"; sourceTree = "<group>"; };
+		954C6754201721CF004332D9 /* NSDictionary+Ping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Ping.m"; sourceTree = "<group>"; };
+		954C6755201721CF004332D9 /* NSString+Contains.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Contains.h"; sourceTree = "<group>"; };
+		954C6756201721CF004332D9 /* NSString+Contains.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Contains.m"; sourceTree = "<group>"; };
+		954C6757201721CF004332D9 /* UIViewController+EZBackPop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+EZBackPop.h"; sourceTree = "<group>"; };
+		954C6758201721CF004332D9 /* UIViewController+EZBackPop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+EZBackPop.m"; sourceTree = "<group>"; };
+		954C675E20172B92004332D9 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		954C675F20172B92004332D9 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		959883A42016D383002C473B /* AppDelegate+Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Error.swift"; sourceTree = "<group>"; };
+		959883A52016D383002C473B /* AppDelegate+Reach.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Reach.swift"; sourceTree = "<group>"; };
+		959883A62016D383002C473B /* AppDelegate+Remote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Remote.swift"; sourceTree = "<group>"; };
+		959883A72016D383002C473B /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		959883A82016D383002C473B /* MallViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MallViewController.swift; sourceTree = "<group>"; };
+		959883A92016D383002C473B /* TabbarC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabbarC.swift; sourceTree = "<group>"; };
+		959883AA2016D383002C473B /* UIWindow+Visible.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+Visible.h"; sourceTree = "<group>"; };
+		959883AB2016D383002C473B /* UIWindow+Visible.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+Visible.m"; sourceTree = "<group>"; };
+		959883B42016D70E002C473B /* BaseHttpService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseHttpService.swift; sourceTree = "<group>"; };
+		959883B52016D70E002C473B /* DataDeal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataDeal.swift; sourceTree = "<group>"; };
+		959883B62016D70E002C473B /* GlobalVariables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalVariables.swift; sourceTree = "<group>"; };
+		959883B72016D70E002C473B /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		959883B82016D70E002C473B /* Https.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Https.swift; sourceTree = "<group>"; };
+		959883B92016D70E002C473B /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		959883BA2016D70E002C473B /* Tools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tools.swift; sourceTree = "<group>"; };
+		959883C42016DDED002C473B /* box.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = box.swift; sourceTree = "<group>"; };
+		959883C52016DDED002C473B /* Equip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Equip.swift; sourceTree = "<group>"; };
+		959883C62016DDED002C473B /* Floor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Floor.swift; sourceTree = "<group>"; };
+		959883C72016DDED002C473B /* Getui.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Getui.swift; sourceTree = "<group>"; };
+		959883C82016DDED002C473B /* Infrared.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Infrared.swift; sourceTree = "<group>"; };
+		959883C92016DDED002C473B /* LockUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LockUser.swift; sourceTree = "<group>"; };
+		959883CA2016DDED002C473B /* Room.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
+		959883CB2016DDED002C473B /* SensorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SensorModel.swift; sourceTree = "<group>"; };
+		959883CC2016DDED002C473B /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		959883CD2016DDED002C473B /* WeatherModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
+		959DE54A201823D3000E3C84 /* MKAnnotationView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKAnnotationView+WebCache.h"; sourceTree = "<group>"; };
+		959DE54B201823D3000E3C84 /* MKAnnotationView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKAnnotationView+WebCache.m"; sourceTree = "<group>"; };
+		959DE54C201823D3000E3C84 /* NSData+ImageContentType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+ImageContentType.h"; sourceTree = "<group>"; };
+		959DE54D201823D3000E3C84 /* NSData+ImageContentType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+ImageContentType.m"; sourceTree = "<group>"; };
+		959DE54E201823D3000E3C84 /* SDImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDImageCache.h; sourceTree = "<group>"; };
+		959DE54F201823D3000E3C84 /* SDImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDImageCache.m; sourceTree = "<group>"; };
+		959DE550201823D3000E3C84 /* SDWebImageCompat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageCompat.h; sourceTree = "<group>"; };
+		959DE551201823D3000E3C84 /* SDWebImageCompat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebImageCompat.m; sourceTree = "<group>"; };
+		959DE552201823D3000E3C84 /* SDWebImageDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageDecoder.h; sourceTree = "<group>"; };
+		959DE553201823D3000E3C84 /* SDWebImageDecoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebImageDecoder.m; sourceTree = "<group>"; };
+		959DE554201823D3000E3C84 /* SDWebImageDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageDownloader.h; sourceTree = "<group>"; };
+		959DE555201823D3000E3C84 /* SDWebImageDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebImageDownloader.m; sourceTree = "<group>"; };
+		959DE556201823D3000E3C84 /* SDWebImageDownloaderOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageDownloaderOperation.h; sourceTree = "<group>"; };
+		959DE557201823D3000E3C84 /* SDWebImageDownloaderOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebImageDownloaderOperation.m; sourceTree = "<group>"; };
+		959DE558201823D3000E3C84 /* SDWebImageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageManager.h; sourceTree = "<group>"; };
+		959DE559201823D3000E3C84 /* SDWebImageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebImageManager.m; sourceTree = "<group>"; };
+		959DE55A201823D3000E3C84 /* SDWebImageOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageOperation.h; sourceTree = "<group>"; };
+		959DE55B201823D3000E3C84 /* SDWebImagePrefetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImagePrefetcher.h; sourceTree = "<group>"; };
+		959DE55C201823D3000E3C84 /* SDWebImagePrefetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebImagePrefetcher.m; sourceTree = "<group>"; };
+		959DE55D201823D3000E3C84 /* UIButton+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+WebCache.h"; sourceTree = "<group>"; };
+		959DE55E201823D3000E3C84 /* UIButton+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+WebCache.m"; sourceTree = "<group>"; };
+		959DE55F201823D3000E3C84 /* UIImage+GIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+GIF.h"; sourceTree = "<group>"; };
+		959DE560201823D3000E3C84 /* UIImage+GIF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+GIF.m"; sourceTree = "<group>"; };
+		959DE561201823D3000E3C84 /* UIImage+MultiFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+MultiFormat.h"; sourceTree = "<group>"; };
+		959DE562201823D3000E3C84 /* UIImage+MultiFormat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+MultiFormat.m"; sourceTree = "<group>"; };
+		959DE563201823D3000E3C84 /* UIImage+WebP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+WebP.h"; sourceTree = "<group>"; };
+		959DE564201823D3000E3C84 /* UIImage+WebP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+WebP.m"; sourceTree = "<group>"; };
+		959DE565201823D3000E3C84 /* UIImageView+HighlightedWebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+HighlightedWebCache.h"; sourceTree = "<group>"; };
+		959DE566201823D3000E3C84 /* UIImageView+HighlightedWebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+HighlightedWebCache.m"; sourceTree = "<group>"; };
+		959DE567201823D3000E3C84 /* UIImageView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+WebCache.h"; sourceTree = "<group>"; };
+		959DE568201823D3000E3C84 /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
+		959DE569201823D3000E3C84 /* UIView+WebCacheOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WebCacheOperation.h"; sourceTree = "<group>"; };
+		959DE56A201823D3000E3C84 /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
+		95C30673201713DA004EACA6 /* GuideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuideViewController.h; sourceTree = "<group>"; };
+		95C30674201713DA004EACA6 /* GuideViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GuideViewController.mm; sourceTree = "<group>"; };
+		95F4E383201717D200F6B51D /* SmartHome-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SmartHome-Bridging-Header.h"; sourceTree = "<group>"; };
+		A7BAE38BF9A4EE632B9FF07B /* Pods-SmartHome.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartHome.release.xcconfig"; path = "Pods/Target Support Files/Pods-SmartHome/Pods-SmartHome.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +195,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F3B2E2570D99553D9182B03 /* Pods_SmartHome.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +216,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D93FC137EEE6BEE0BAFA49A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				65EEEA1C009C5DC16BF7604B /* Pods-SmartHome.debug.xcconfig */,
+				A7BAE38BF9A4EE632B9FF07B /* Pods-SmartHome.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		953E6BD82016C0F80091C8B0 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +232,8 @@
 				953E6BFB2016C0F90091C8B0 /* SmartHomeTests */,
 				953E6C062016C0F90091C8B0 /* SmartHomeUITests */,
 				953E6BE22016C0F90091C8B0 /* Products */,
+				0D93FC137EEE6BEE0BAFA49A /* Pods */,
+				B397CD795CF10E26C410E062 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,7 +250,10 @@
 		953E6BE32016C0F90091C8B0 /* SmartHome */ = {
 			isa = PBXGroup;
 			children = (
-				953E6BE42016C0F90091C8B0 /* AppDelegate.swift */,
+				95F4E383201717D200F6B51D /* SmartHome-Bridging-Header.h */,
+				959883A32016D383002C473B /* AppDelegate */,
+				959883B32016D70E002C473B /* Tools */,
+				959883C22016DDED002C473B /* Home */,
 				953E6BE62016C0F90091C8B0 /* ViewController.swift */,
 				953E6BE82016C0F90091C8B0 /* Main.storyboard */,
 				953E6BEE2016C0F90091C8B0 /* Assets.xcassets */,
@@ -128,6 +282,155 @@
 			path = SmartHomeUITests;
 			sourceTree = "<group>";
 		};
+		954C6750201721CF004332D9 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				959DE549201823D3000E3C84 /* SDWebImage */,
+				954C675D20172B92004332D9 /* MBProgressHUD */,
+				954C6751201721CF004332D9 /* FileManager.h */,
+				954C6752201721CF004332D9 /* FileManager.m */,
+				954C6753201721CF004332D9 /* NSDictionary+Ping.h */,
+				954C6754201721CF004332D9 /* NSDictionary+Ping.m */,
+				954C6755201721CF004332D9 /* NSString+Contains.h */,
+				954C6756201721CF004332D9 /* NSString+Contains.m */,
+				954C6757201721CF004332D9 /* UIViewController+EZBackPop.h */,
+				954C6758201721CF004332D9 /* UIViewController+EZBackPop.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		954C675D20172B92004332D9 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				954C675E20172B92004332D9 /* MBProgressHUD.h */,
+				954C675F20172B92004332D9 /* MBProgressHUD.m */,
+			);
+			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
+		959883A32016D383002C473B /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				959883A72016D383002C473B /* AppDelegate.swift */,
+				959883A42016D383002C473B /* AppDelegate+Error.swift */,
+				959883A52016D383002C473B /* AppDelegate+Reach.swift */,
+				959883A62016D383002C473B /* AppDelegate+Remote.swift */,
+				959883A82016D383002C473B /* MallViewController.swift */,
+				959883A92016D383002C473B /* TabbarC.swift */,
+				959883AA2016D383002C473B /* UIWindow+Visible.h */,
+				959883AB2016D383002C473B /* UIWindow+Visible.m */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		959883B32016D70E002C473B /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				954C6750201721CF004332D9 /* Categories */,
+				959883B42016D70E002C473B /* BaseHttpService.swift */,
+				959883B52016D70E002C473B /* DataDeal.swift */,
+				959883B62016D70E002C473B /* GlobalVariables.swift */,
+				959883B72016D70E002C473B /* Helper.swift */,
+				959883B82016D70E002C473B /* Https.swift */,
+				959883B92016D70E002C473B /* LocationManager.swift */,
+				959883BA2016D70E002C473B /* Tools.swift */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		959883C22016DDED002C473B /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				95C30672201713DA004EACA6 /* Loading */,
+				959883C32016DDED002C473B /* Model */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		959883C32016DDED002C473B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				959883C42016DDED002C473B /* box.swift */,
+				959883C52016DDED002C473B /* Equip.swift */,
+				959883C62016DDED002C473B /* Floor.swift */,
+				959883C72016DDED002C473B /* Getui.swift */,
+				959883C82016DDED002C473B /* Infrared.swift */,
+				959883C92016DDED002C473B /* LockUser.swift */,
+				959883CA2016DDED002C473B /* Room.swift */,
+				959883CB2016DDED002C473B /* SensorModel.swift */,
+				959883CC2016DDED002C473B /* UserModel.swift */,
+				959883CD2016DDED002C473B /* WeatherModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		959DE549201823D3000E3C84 /* SDWebImage */ = {
+			isa = PBXGroup;
+			children = (
+				959DE54A201823D3000E3C84 /* MKAnnotationView+WebCache.h */,
+				959DE54B201823D3000E3C84 /* MKAnnotationView+WebCache.m */,
+				959DE54C201823D3000E3C84 /* NSData+ImageContentType.h */,
+				959DE54D201823D3000E3C84 /* NSData+ImageContentType.m */,
+				959DE54E201823D3000E3C84 /* SDImageCache.h */,
+				959DE54F201823D3000E3C84 /* SDImageCache.m */,
+				959DE550201823D3000E3C84 /* SDWebImageCompat.h */,
+				959DE551201823D3000E3C84 /* SDWebImageCompat.m */,
+				959DE552201823D3000E3C84 /* SDWebImageDecoder.h */,
+				959DE553201823D3000E3C84 /* SDWebImageDecoder.m */,
+				959DE554201823D3000E3C84 /* SDWebImageDownloader.h */,
+				959DE555201823D3000E3C84 /* SDWebImageDownloader.m */,
+				959DE556201823D3000E3C84 /* SDWebImageDownloaderOperation.h */,
+				959DE557201823D3000E3C84 /* SDWebImageDownloaderOperation.m */,
+				959DE558201823D3000E3C84 /* SDWebImageManager.h */,
+				959DE559201823D3000E3C84 /* SDWebImageManager.m */,
+				959DE55A201823D3000E3C84 /* SDWebImageOperation.h */,
+				959DE55B201823D3000E3C84 /* SDWebImagePrefetcher.h */,
+				959DE55C201823D3000E3C84 /* SDWebImagePrefetcher.m */,
+				959DE55D201823D3000E3C84 /* UIButton+WebCache.h */,
+				959DE55E201823D3000E3C84 /* UIButton+WebCache.m */,
+				959DE55F201823D3000E3C84 /* UIImage+GIF.h */,
+				959DE560201823D3000E3C84 /* UIImage+GIF.m */,
+				959DE561201823D3000E3C84 /* UIImage+MultiFormat.h */,
+				959DE562201823D3000E3C84 /* UIImage+MultiFormat.m */,
+				959DE563201823D3000E3C84 /* UIImage+WebP.h */,
+				959DE564201823D3000E3C84 /* UIImage+WebP.m */,
+				959DE565201823D3000E3C84 /* UIImageView+HighlightedWebCache.h */,
+				959DE566201823D3000E3C84 /* UIImageView+HighlightedWebCache.m */,
+				959DE567201823D3000E3C84 /* UIImageView+WebCache.h */,
+				959DE568201823D3000E3C84 /* UIImageView+WebCache.m */,
+				959DE569201823D3000E3C84 /* UIView+WebCacheOperation.h */,
+				959DE56A201823D3000E3C84 /* UIView+WebCacheOperation.m */,
+			);
+			path = SDWebImage;
+			sourceTree = "<group>";
+		};
+		95C30672201713DA004EACA6 /* Loading */ = {
+			isa = PBXGroup;
+			children = (
+				95C30673201713DA004EACA6 /* GuideViewController.h */,
+				95C30674201713DA004EACA6 /* GuideViewController.mm */,
+				954C674020171E61004332D9 /* ChangeLoginVC.swift */,
+				954C674320171E62004332D9 /* ChangeLoginVC.xib */,
+				954C674520171E62004332D9 /* ChangeRegisterVC.swift */,
+				954C673D20171E61004332D9 /* ChangeRegisterVC.xib */,
+				954C674120171E61004332D9 /* ChangeSetPasVC.swift */,
+				954C673C20171E61004332D9 /* ChangeSetPasVC.xib */,
+				954C674420171E62004332D9 /* LoginVC.swift */,
+				954C673F20171E61004332D9 /* LoginVC.xib */,
+				954C674220171E61004332D9 /* PassLoginVC.swift */,
+				954C673E20171E61004332D9 /* PassLoginVC.xib */,
+			);
+			path = Loading;
+			sourceTree = "<group>";
+		};
+		B397CD795CF10E26C410E062 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7736D5A64413724E70C2CCE2 /* Pods_SmartHome.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +438,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 953E6C0C2016C0F90091C8B0 /* Build configuration list for PBXNativeTarget "SmartHome" */;
 			buildPhases = (
+				296453B566D311696E587362 /* [CP] Check Pods Manifest.lock */,
 				953E6BDD2016C0F80091C8B0 /* Sources */,
 				953E6BDE2016C0F80091C8B0 /* Frameworks */,
 				953E6BDF2016C0F80091C8B0 /* Resources */,
+				B2B8C7D717FB35BD1C95A8C5 /* [CP] Embed Pods Frameworks */,
+				D2749C97A76B26B86053C83E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -235,9 +541,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				954C674920171E62004332D9 /* LoginVC.xib in Resources */,
 				953E6BF22016C0F90091C8B0 /* LaunchScreen.storyboard in Resources */,
+				954C674D20171E62004332D9 /* ChangeLoginVC.xib in Resources */,
+				954C674820171E62004332D9 /* PassLoginVC.xib in Resources */,
 				953E6BEF2016C0F90091C8B0 /* Assets.xcassets in Resources */,
+				954C674620171E62004332D9 /* ChangeSetPasVC.xib in Resources */,
 				953E6BEA2016C0F90091C8B0 /* Main.storyboard in Resources */,
+				954C674720171E62004332D9 /* ChangeRegisterVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,14 +568,120 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		296453B566D311696E587362 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SmartHome-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B2B8C7D717FB35BD1C95A8C5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SmartHome/Pods-SmartHome-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SQLite.swift/SQLite.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SQLite.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SmartHome/Pods-SmartHome-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D2749C97A76B26B86053C83E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SmartHome/Pods-SmartHome-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		953E6BDD2016C0F80091C8B0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				959DE578201823D3000E3C84 /* UIImageView+HighlightedWebCache.m in Sources */,
+				954C674E20171E62004332D9 /* LoginVC.swift in Sources */,
+				959883CF2016DDED002C473B /* Equip.swift in Sources */,
+				959883AF2016D383002C473B /* AppDelegate.swift in Sources */,
+				959883AE2016D383002C473B /* AppDelegate+Remote.swift in Sources */,
+				959883C02016D70E002C473B /* LocationManager.swift in Sources */,
+				959883AD2016D383002C473B /* AppDelegate+Reach.swift in Sources */,
+				959883BF2016D70E002C473B /* Https.swift in Sources */,
+				959883B22016D383002C473B /* UIWindow+Visible.m in Sources */,
+				959883D02016DDED002C473B /* Floor.swift in Sources */,
+				959883D62016DDED002C473B /* UserModel.swift in Sources */,
+				959883BB2016D70E002C473B /* BaseHttpService.swift in Sources */,
+				959883C12016D70E002C473B /* Tools.swift in Sources */,
+				959DE572201823D3000E3C84 /* SDWebImageManager.m in Sources */,
+				959DE579201823D3000E3C84 /* UIImageView+WebCache.m in Sources */,
+				954C675A201721CF004332D9 /* NSDictionary+Ping.m in Sources */,
 				953E6BED2016C0F90091C8B0 /* SmartHome.xcdatamodeld in Sources */,
+				959883D22016DDED002C473B /* Infrared.swift in Sources */,
+				959DE56B201823D3000E3C84 /* MKAnnotationView+WebCache.m in Sources */,
+				959DE56C201823D3000E3C84 /* NSData+ImageContentType.m in Sources */,
+				959883D42016DDED002C473B /* Room.swift in Sources */,
+				954C674A20171E62004332D9 /* ChangeLoginVC.swift in Sources */,
+				959883BD2016D70E002C473B /* GlobalVariables.swift in Sources */,
+				954C6759201721CF004332D9 /* FileManager.m in Sources */,
+				959883D12016DDED002C473B /* Getui.swift in Sources */,
+				959DE571201823D3000E3C84 /* SDWebImageDownloaderOperation.m in Sources */,
+				959883D52016DDED002C473B /* SensorModel.swift in Sources */,
+				954C674B20171E62004332D9 /* ChangeSetPasVC.swift in Sources */,
+				954C676020172B92004332D9 /* MBProgressHUD.m in Sources */,
+				959DE577201823D3000E3C84 /* UIImage+WebP.m in Sources */,
+				959DE570201823D3000E3C84 /* SDWebImageDownloader.m in Sources */,
+				959883BC2016D70E002C473B /* DataDeal.swift in Sources */,
+				954C674F20171E62004332D9 /* ChangeRegisterVC.swift in Sources */,
+				95C30675201713DA004EACA6 /* GuideViewController.mm in Sources */,
+				959DE576201823D3000E3C84 /* UIImage+MultiFormat.m in Sources */,
+				959DE56F201823D3000E3C84 /* SDWebImageDecoder.m in Sources */,
+				959883D72016DDED002C473B /* WeatherModel.swift in Sources */,
+				959883CE2016DDED002C473B /* box.swift in Sources */,
+				959883B02016D383002C473B /* MallViewController.swift in Sources */,
+				959883AC2016D383002C473B /* AppDelegate+Error.swift in Sources */,
+				959DE574201823D3000E3C84 /* UIButton+WebCache.m in Sources */,
+				954C674C20171E62004332D9 /* PassLoginVC.swift in Sources */,
+				959DE573201823D3000E3C84 /* SDWebImagePrefetcher.m in Sources */,
+				959DE57A201823D3000E3C84 /* UIView+WebCacheOperation.m in Sources */,
+				959883BE2016D70E002C473B /* Helper.swift in Sources */,
+				959883D32016DDED002C473B /* LockUser.swift in Sources */,
 				953E6BE72016C0F90091C8B0 /* ViewController.swift in Sources */,
-				953E6BE52016C0F90091C8B0 /* AppDelegate.swift in Sources */,
+				959DE575201823D3000E3C84 /* UIImage+GIF.m in Sources */,
+				959883B12016D383002C473B /* TabbarC.swift in Sources */,
+				954C675C201721CF004332D9 /* UIViewController+EZBackPop.m in Sources */,
+				954C675B201721CF004332D9 /* NSString+Contains.m in Sources */,
+				959DE56E201823D3000E3C84 /* SDWebImageCompat.m in Sources */,
+				959DE56D201823D3000E3C84 /* SDImageCache.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,14 +845,19 @@
 		};
 		953E6C0D2016C0F90091C8B0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 65EEEA1C009C5DC16BF7604B /* Pods-SmartHome.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = T2L744R387;
 				INFOPLIST_FILE = SmartHome/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "Shenzhen-smart-house-electronic-technology-co.-LTD.SmartHome";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/SmartHome/SmartHome-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -443,14 +865,19 @@
 		};
 		953E6C0E2016C0F90091C8B0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A7BAE38BF9A4EE632B9FF07B /* Pods-SmartHome.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = T2L744R387;
 				INFOPLIST_FILE = SmartHome/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "Shenzhen-smart-house-electronic-technology-co.-LTD.SmartHome";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/SmartHome/SmartHome-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
