@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="model_cell" id="gTV-IL-0wX" customClass="ModelCell2" customModule="SmartHome" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="140" height="140"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="140" height="140"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Sv-DT-baG">
+                        <rect key="frame" x="17" y="102" width="107" height="23"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ITP-nM-Q21">
+                        <rect key="frame" x="40" y="32" width="60" height="60"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="ITP-nM-Q21" secondAttribute="height" multiplier="1:1" id="2RS-Pd-g3n"/>
+                            <constraint firstAttribute="width" constant="60" id="zXK-7j-Xjp"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="2Sv-DT-baG" firstAttribute="top" secondItem="ITP-nM-Q21" secondAttribute="bottom" constant="10" id="1cM-YU-VCO"/>
+                <constraint firstItem="ITP-nM-Q21" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="614-9u-rzI"/>
+                <constraint firstItem="2Sv-DT-baG" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="17" id="AEH-uN-7Xb"/>
+                <constraint firstItem="ITP-nM-Q21" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" constant="-8" id="cIJ-0F-BJq"/>
+                <constraint firstAttribute="bottom" secondItem="2Sv-DT-baG" secondAttribute="bottom" constant="15" id="rHi-fd-zxf"/>
+                <constraint firstAttribute="trailing" secondItem="2Sv-DT-baG" secondAttribute="trailing" constant="16" id="zeG-zd-GsS"/>
+            </constraints>
+            <size key="customSize" width="349" height="218"/>
+            <connections>
+                <outlet property="icon" destination="ITP-nM-Q21" id="kj1-59-X31"/>
+                <outlet property="name" destination="2Sv-DT-baG" id="awT-8f-hWT"/>
+            </connections>
+            <point key="canvasLocation" x="202" y="226"/>
+        </collectionViewCell>
+    </objects>
+</document>

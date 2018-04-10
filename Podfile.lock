@@ -1,0 +1,74 @@
+PODS:
+  - AFNetworking (3.2.0):
+    - AFNetworking/NSURLSession (= 3.2.0)
+    - AFNetworking/Reachability (= 3.2.0)
+    - AFNetworking/Security (= 3.2.0)
+    - AFNetworking/Serialization (= 3.2.0)
+    - AFNetworking/UIKit (= 3.2.0)
+  - AFNetworking/NSURLSession (3.2.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.2.0)
+  - AFNetworking/Security (3.2.0)
+  - AFNetworking/Serialization (3.2.0)
+  - AFNetworking/UIKit (3.2.0):
+    - AFNetworking/NSURLSession
+  - Alamofire (4.5.1)
+  - AliPay (2.1.2)
+  - Masonry (1.1.0)
+  - MJExtension (3.0.13)
+  - MJRefresh (3.1.15.3)
+  - SQLite.swift (0.11.4):
+    - SQLite.swift/standard (= 0.11.4)
+  - SQLite.swift/standard (0.11.4)
+  - UMengUShare/Core (6.4.8.2):
+    - UMengUShare/Network
+  - UMengUShare/Network (6.4.8.2)
+  - UMengUShare/Social/ReducedQQ (6.4.8.2):
+    - UMengUShare/Core
+  - UMengUShare/Social/ReducedSina (6.4.8.2):
+    - UMengUShare/Core
+  - UMengUShare/Social/ReducedWeChat (6.4.8.2):
+    - UMengUShare/Core
+  - UMengUShare/UI (6.4.8.2):
+    - UMengUShare/Core
+  - WechatOpenSDK (1.8.1)
+
+DEPENDENCIES:
+  - AFNetworking (~> 3.2.0)
+  - Alamofire (~> 4.5.1)
+  - AliPay (~> 2.1.2)
+  - Masonry (~> 1.1.0)
+  - MJExtension
+  - MJRefresh (~> 3.1.15.3)
+  - SQLite.swift (from `https://github.com/stephencelis/SQLite.swift.git`)
+  - UMengUShare/Social/ReducedQQ
+  - UMengUShare/Social/ReducedSina
+  - UMengUShare/Social/ReducedWeChat
+  - UMengUShare/UI
+  - WechatOpenSDK (~> 1.8.1)
+
+EXTERNAL SOURCES:
+  SQLite.swift:
+    :git: https://github.com/stephencelis/SQLite.swift.git
+
+CHECKOUT OPTIONS:
+  SQLite.swift:
+    :commit: c052d4153b617d6f16d26ac5b924afe0a6dd5874
+    :git: https://github.com/stephencelis/SQLite.swift.git
+
+SPEC CHECKSUMS:
+  AFNetworking: 8ac6017b94ea105479f7776e5288e48ae9c59bb4
+  Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
+  AliPay: 2bd35a4e486d2a8c035043023cd846e886bb21d1
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MJExtension: 5932755f451458eefa24239358817f8d291240c7
+  MJRefresh: b48380ae2b927b46c4ef000de9adb8dc748e1df7
+  SQLite.swift: 3e3bee21da701b5b9f87c4a672cb54f233505692
+  UMengUShare: 370d180101e13ee0227ae657ab119ba97243d2b3
+  WechatOpenSDK: 491d965d79335070328571d3e79f714549e79a5e
+
+PODFILE CHECKSUM: 7af983f845457f03387cd27bffd837af1c5e70da
+
+COCOAPODS: 1.4.0

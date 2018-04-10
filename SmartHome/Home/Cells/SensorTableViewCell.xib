@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="16G1036" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="SensorTableViewCell" customModule="SmartHome" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K3l-Up-LtU">
+                        <rect key="frame" x="18" y="8" width="38" height="34"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="34" id="Kc0-zP-VU8"/>
+                            <constraint firstAttribute="width" constant="38" id="Lyb-ww-oYl"/>
+                        </constraints>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NYH-Dw-4TA">
+                        <rect key="frame" x="73" y="14" width="122" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="122" id="Tll-7L-dx6"/>
+                            <constraint firstAttribute="height" constant="21" id="uxM-ob-IVd"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="警告" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xQr-jw-KMH">
+                        <rect key="frame" x="258" y="14" width="42" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="42" id="Gid-za-O1e"/>
+                            <constraint firstAttribute="height" constant="21" id="qvs-lm-ZDK"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oHi-DB-0SF">
+                        <rect key="frame" x="0.0" y="43" width="320" height="1"/>
+                        <color key="backgroundColor" red="0.95283776519999996" green="0.95300072430000005" blue="0.95282751320000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="7Dl-3t-GU4"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailingMargin" secondItem="xQr-jw-KMH" secondAttribute="trailing" constant="12" id="6JQ-XA-3TG"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="K3l-Up-LtU" secondAttribute="bottom" constant="-7" id="7ei-d8-H9h"/>
+                    <constraint firstItem="xQr-jw-KMH" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" id="8Mv-Fq-o84"/>
+                    <constraint firstItem="K3l-Up-LtU" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="DXh-B9-KqD"/>
+                    <constraint firstItem="NYH-Dw-4TA" firstAttribute="leading" secondItem="K3l-Up-LtU" secondAttribute="trailing" constant="17" id="N6C-yh-ffn"/>
+                    <constraint firstItem="oHi-DB-0SF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="eag-5H-04y"/>
+                    <constraint firstItem="NYH-Dw-4TA" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" id="fOu-MV-t01"/>
+                    <constraint firstAttribute="trailing" secondItem="oHi-DB-0SF" secondAttribute="trailing" id="ghK-xb-hy7"/>
+                    <constraint firstAttribute="bottom" secondItem="oHi-DB-0SF" secondAttribute="bottom" id="qs7-qN-NFZ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="Simg" destination="K3l-Up-LtU" id="0a7-V7-83G"/>
+                <outlet property="Sjg" destination="xQr-jw-KMH" id="9z9-Tv-mPM"/>
+                <outlet property="Sname" destination="NYH-Dw-4TA" id="SXa-3Q-GHC"/>
+            </connections>
+            <point key="canvasLocation" x="452" y="383"/>
+        </tableViewCell>
+    </objects>
+</document>

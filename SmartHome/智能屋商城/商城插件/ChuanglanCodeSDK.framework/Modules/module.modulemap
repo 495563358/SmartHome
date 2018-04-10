@@ -1,0 +1,6 @@
+framework module ChuanglanCodeSDK {
+  umbrella header "ChuanglanCodeSDK.h"
+
+  export *
+  module * { export * }
+}

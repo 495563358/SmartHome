@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment version="1792" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="JK_LineTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="59.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="list_camera.png" translatesAutoresizingMaskIntoConstraints="NO" id="at8-JI-E5A">
+                        <rect key="frame" x="14" y="14" width="30" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="30" id="EXl-68-z5R"/>
+                            <constraint firstAttribute="height" constant="30" id="fxD-Ut-75V"/>
+                        </constraints>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Y4-ro-3xx">
+                        <rect key="frame" x="225" y="13" width="87" height="30"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                        <state key="normal" title="添加">
+                            <color key="titleColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
+                        <connections>
+                            <action selector="addToHome:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="UFM-yP-IKf"/>
+                        </connections>
+                    </button>
+                    <label opaque="NO" clipsSubviews="YES" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="经常使用" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Vg-Fs-1kw">
+                        <rect key="frame" x="58" y="31" width="154" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25" id="VYc-OR-4ZW"/>
+                            <constraint firstAttribute="width" constant="154" id="kXd-mr-Ugw"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" clipsSubviews="YES" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="会客室" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qeW-5y-giO">
+                        <rect key="frame" x="58" y="3" width="154" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="154" id="2a1-jD-k1c"/>
+                            <constraint firstAttribute="height" constant="25" id="gOw-E7-gpV"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="6Vg-Fs-1kw" secondAttribute="bottom" constant="3" id="0rm-O2-MZZ"/>
+                    <constraint firstItem="qeW-5y-giO" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="3" id="48W-U0-Kfp"/>
+                    <constraint firstItem="qeW-5y-giO" firstAttribute="leading" secondItem="at8-JI-E5A" secondAttribute="trailing" constant="14" id="5Hn-ew-zPQ"/>
+                    <constraint firstItem="at8-JI-E5A" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="14" id="O0F-O4-f5j"/>
+                    <constraint firstItem="at8-JI-E5A" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="QMP-Ad-LY5"/>
+                    <constraint firstItem="6Vg-Fs-1kw" firstAttribute="leading" secondItem="at8-JI-E5A" secondAttribute="trailing" constant="14" id="Sk6-FJ-DaB"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="but" destination="4Y4-ro-3xx" id="5X8-au-B0P"/>
+                <outlet property="equipID" destination="6Vg-Fs-1kw" id="rMG-Gk-fjF"/>
+                <outlet property="titleLabel" destination="qeW-5y-giO" id="y1C-mA-Pmc"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="list_camera.png" width="49" height="49"/>
+    </resources>
+</document>

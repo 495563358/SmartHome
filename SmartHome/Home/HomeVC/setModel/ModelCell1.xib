@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="16G1036" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="model_cell" id="gTV-IL-0wX" customClass="ModelCell1" customModule="SmartHome" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="110" height="131"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="110" height="131"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Sv-DT-baG">
+                        <rect key="frame" x="13" y="87" width="84" height="19"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="84" id="Axn-hF-FWt"/>
+                            <constraint firstAttribute="width" secondItem="2Sv-DT-baG" secondAttribute="height" multiplier="84:19" id="Wqz-hA-imb"/>
+                            <constraint firstAttribute="height" constant="19" id="p1l-Yh-NuB"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ITP-nM-Q21">
+                        <rect key="frame" x="13" y="0.0" width="85" height="85"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="85" id="09F-31-zfg"/>
+                            <constraint firstAttribute="height" constant="85" id="FUk-8g-3Er"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZKT-w0-NPy">
+                        <rect key="frame" x="13" y="108" width="84" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="84" id="367-f4-rdZ"/>
+                            <constraint firstAttribute="width" secondItem="ZKT-w0-NPy" secondAttribute="height" multiplier="21:4" id="Rv7-0y-BHr"/>
+                            <constraint firstAttribute="height" constant="16" id="sMx-7x-czb"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstItem="2Sv-DT-baG" firstAttribute="top" secondItem="ITP-nM-Q21" secondAttribute="bottom" constant="2" id="3ZW-d2-SL2"/>
+                <constraint firstItem="ZKT-w0-NPy" firstAttribute="top" secondItem="2Sv-DT-baG" secondAttribute="bottom" constant="2" id="7Bz-Pf-KmI"/>
+                <constraint firstAttribute="trailing" secondItem="ZKT-w0-NPy" secondAttribute="trailing" constant="13" id="8n0-XE-k7G"/>
+                <constraint firstItem="2Sv-DT-baG" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="13" id="DYM-ee-SgS"/>
+                <constraint firstItem="ITP-nM-Q21" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Dsu-q2-Qno"/>
+                <constraint firstItem="ZKT-w0-NPy" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="13" id="Zlv-Xh-5XM"/>
+                <constraint firstItem="ITP-nM-Q21" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="13" id="gIy-E8-vky"/>
+                <constraint firstAttribute="trailing" secondItem="2Sv-DT-baG" secondAttribute="trailing" constant="13" id="igo-T6-DO2"/>
+            </constraints>
+            <size key="customSize" width="86" height="104"/>
+            <connections>
+                <outlet property="icon" destination="ITP-nM-Q21" id="kj1-59-X31"/>
+                <outlet property="name" destination="2Sv-DT-baG" id="awT-8f-hWT"/>
+                <outlet property="num" destination="ZKT-w0-NPy" id="Cwx-pW-LgQ"/>
+            </connections>
+            <point key="canvasLocation" x="496" y="287.5"/>
+        </collectionViewCell>
+    </objects>
+</document>

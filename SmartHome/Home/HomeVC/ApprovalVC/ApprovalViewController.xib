@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ApprovalViewController" customModule="SmartHome" customModuleProvider="target">
+            <connections>
+                <outlet property="approval" destination="vSu-Tl-5VN" id="sRm-Ja-aym"/>
+                <outlet property="iphone" destination="Bc2-vs-sSy" id="g7R-zV-7dl"/>
+                <outlet property="noButt" destination="AJP-og-3MN" id="LyH-8j-2gz"/>
+                <outlet property="tableview" destination="e3j-SZ-RL0" id="TsW-xz-KfT"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="yesButt" destination="F1T-Ha-YQd" id="ODI-Sr-fUS"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" ambiguous="YES" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入已注册的手机号" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bc2-vs-sSy">
+                    <rect key="frame" x="8" y="19" width="505" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="8aI-8L-Jvc"/>
+                        <constraint firstAttribute="width" secondItem="Bc2-vs-sSy" secondAttribute="height" multiplier="105:10" constant="82" id="uYO-dA-keh"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vSu-Tl-5VN">
+                    <rect key="frame" x="521" y="19" width="71" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="vSu-Tl-5VN" secondAttribute="height" multiplier="71:40" id="82s-yH-YgX"/>
+                        <constraint firstAttribute="height" constant="40" id="cP9-gg-eVp"/>
+                    </constraints>
+                    <state key="normal" title="授权"/>
+                </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="e3j-SZ-RL0">
+                    <rect key="frame" x="8" y="145" width="584" height="514"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F1T-Ha-YQd">
+                    <rect key="frame" x="8" y="98" width="33" height="22"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="F1T-Ha-YQd" secondAttribute="height" multiplier="3:2" id="Mm7-NN-qpj"/>
+                        <constraint firstAttribute="height" constant="22" id="g9V-wN-JvW"/>
+                        <constraint firstAttribute="width" constant="33" id="pGc-xv-Fy5"/>
+                    </constraints>
+                    <state key="normal" image="传感器不选择"/>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="管理员" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lTc-a3-ocJ">
+                    <rect key="frame" x="49" y="98" width="84" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="lTc-a3-ocJ" secondAttribute="height" multiplier="4:1" id="8gd-0V-Mmd"/>
+                        <constraint firstAttribute="height" constant="21" id="AVa-jH-uZh"/>
+                        <constraint firstAttribute="width" constant="84" id="MhY-rJ-MkX"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="普通用户" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K1o-CH-W8r">
+                    <rect key="frame" x="496" y="98" width="96" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="K1o-CH-W8r" secondAttribute="height" multiplier="32:7" id="TIc-tv-TR1"/>
+                        <constraint firstAttribute="height" constant="21" id="byC-Y6-GfY"/>
+                        <constraint firstAttribute="width" constant="96" id="gfr-et-LRW"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AJP-og-3MN">
+                    <rect key="frame" x="455" y="98" width="33" height="22"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="22" id="33B-3S-31b"/>
+                        <constraint firstAttribute="width" constant="33" id="NqL-gL-OGh"/>
+                        <constraint firstAttribute="width" secondItem="AJP-og-3MN" secondAttribute="height" multiplier="3:2" id="pQd-uE-Gcm"/>
+                    </constraints>
+                    <state key="normal" image="传感器选择"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="e3j-SZ-RL0" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="0Jz-Ue-Ptq"/>
+                <constraint firstItem="vSu-Tl-5VN" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="19" id="5Vo-mE-vOM"/>
+                <constraint firstItem="K1o-CH-W8r" firstAttribute="leading" secondItem="AJP-og-3MN" secondAttribute="trailing" constant="8" id="EOs-ox-LlS"/>
+                <constraint firstItem="Bc2-vs-sSy" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="19" id="I2m-zH-rO0"/>
+                <constraint firstAttribute="trailing" secondItem="e3j-SZ-RL0" secondAttribute="trailing" constant="8" id="K00-zF-ivY"/>
+                <constraint firstItem="lTc-a3-ocJ" firstAttribute="top" secondItem="Bc2-vs-sSy" secondAttribute="bottom" constant="39" id="MEB-cM-A3r"/>
+                <constraint firstItem="vSu-Tl-5VN" firstAttribute="leading" secondItem="Bc2-vs-sSy" secondAttribute="trailing" constant="8" id="P9C-Hx-mrX"/>
+                <constraint firstItem="e3j-SZ-RL0" firstAttribute="top" secondItem="AJP-og-3MN" secondAttribute="bottom" constant="25" id="f68-2q-TfQ"/>
+                <constraint firstAttribute="bottom" secondItem="e3j-SZ-RL0" secondAttribute="bottom" constant="8" id="gt5-AX-Ba3"/>
+                <constraint firstAttribute="trailing" secondItem="vSu-Tl-5VN" secondAttribute="trailing" constant="8" id="hBN-IM-ku9"/>
+                <constraint firstItem="F1T-Ha-YQd" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="jpT-Ht-RQ1"/>
+                <constraint firstItem="AJP-og-3MN" firstAttribute="top" secondItem="Bc2-vs-sSy" secondAttribute="bottom" constant="39" id="mbX-uD-Qm9"/>
+                <constraint firstAttribute="trailing" secondItem="K1o-CH-W8r" secondAttribute="trailing" constant="8" id="ppI-zL-uJj"/>
+                <constraint firstItem="F1T-Ha-YQd" firstAttribute="top" secondItem="Bc2-vs-sSy" secondAttribute="bottom" constant="39" id="qn1-Jc-d8u"/>
+                <constraint firstItem="Bc2-vs-sSy" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="vHz-Hd-22A"/>
+                <constraint firstItem="lTc-a3-ocJ" firstAttribute="leading" secondItem="F1T-Ha-YQd" secondAttribute="trailing" constant="8" id="wvg-e1-LBg"/>
+                <constraint firstItem="K1o-CH-W8r" firstAttribute="top" secondItem="vSu-Tl-5VN" secondAttribute="bottom" constant="39" id="zhE-Z2-Hys"/>
+            </constraints>
+            <point key="canvasLocation" x="294" y="249"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="传感器不选择" width="14" height="14"/>
+        <image name="传感器选择" width="14" height="14"/>
+    </resources>
+</document>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="16G1036" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ShotLockCell" rowHeight="63" id="KGk-i7-Jjw" userLabel="ShotLockCell" customClass="ShotLockCell" customModule="SmartHome" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="65"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="evO-Ae-6Lw">
+                        <rect key="frame" x="18" y="15" width="38" height="34"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="38" id="1cf-og-NMO"/>
+                            <constraint firstAttribute="height" constant="34" id="a9y-MK-tTO"/>
+                        </constraints>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aa1-ea-5Uy">
+                        <rect key="frame" x="18" y="0.0" width="48" height="20"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <state key="normal" title="立即执行">
+                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <connections>
+                            <action selector="delayChoseTap:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="7j0-ad-LQT"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8f3-ne-4hx">
+                        <rect key="frame" x="119" y="22" width="181" height="34"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="181" id="2XN-FG-7JG"/>
+                            <constraint firstAttribute="height" constant="34" id="nyC-Gw-D2V"/>
+                        </constraints>
+                        <state key="normal" title="门锁"/>
+                        <connections>
+                            <action selector="open:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="YGp-GY-Uf6"/>
+                        </connections>
+                    </button>
+                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vdI-VJ-JQO">
+                        <rect key="frame" x="0.0" y="64" width="320" height="1"/>
+                        <color key="backgroundColor" red="0.95283776519999996" green="0.95300072430000005" blue="0.95282751320000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="Nnl-ub-rpK"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="vdI-VJ-JQO" secondAttribute="bottom" id="2gV-bU-VOF"/>
+                    <constraint firstAttribute="trailing" secondItem="vdI-VJ-JQO" secondAttribute="trailing" id="46d-nI-f9J"/>
+                    <constraint firstItem="evO-Ae-6Lw" firstAttribute="top" secondItem="aa1-ea-5Uy" secondAttribute="bottom" constant="-5" id="LU5-qk-dbB"/>
+                    <constraint firstItem="aa1-ea-5Uy" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="18" id="PdR-UX-7f6"/>
+                    <constraint firstItem="vdI-VJ-JQO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="VOp-Pe-EbA"/>
+                    <constraint firstItem="aa1-ea-5Uy" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="gKe-M9-v6X"/>
+                    <constraint firstItem="evO-Ae-6Lw" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="18" id="hZa-dp-Ps7"/>
+                    <constraint firstItem="8f3-ne-4hx" firstAttribute="centerY" secondItem="evO-Ae-6Lw" secondAttribute="centerY" constant="7" id="q02-Gs-iwW"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="8f3-ne-4hx" secondAttribute="bottom" id="trM-3W-btK"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="8f3-ne-4hx" secondAttribute="trailing" constant="12" id="uzY-Yz-Ze0"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <connections>
+                <outlet property="btn" destination="evO-Ae-6Lw" id="Zi1-EV-kPN"/>
+                <outlet property="delayBtn" destination="aa1-ea-5Uy" id="zc6-Pa-B9p"/>
+                <outlet property="kai" destination="8f3-ne-4hx" id="P9e-jU-Ulb"/>
+            </connections>
+            <point key="canvasLocation" x="317" y="225.5"/>
+        </tableViewCell>
+    </objects>
+</document>
