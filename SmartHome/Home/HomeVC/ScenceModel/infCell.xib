@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="infCell" customModule="SmartHome" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ast-Xk-yCD">
+                        <rect key="frame" x="3" y="3" width="44" height="44"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <state key="normal" backgroundImage="红外线"/>
+                    </button>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Ast-Xk-yCD" secondAttribute="trailing" constant="3" id="6tP-jl-RE0"/>
+                <constraint firstAttribute="bottom" secondItem="Ast-Xk-yCD" secondAttribute="bottom" constant="3" id="Kof-BR-pvs"/>
+                <constraint firstItem="Ast-Xk-yCD" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="3" id="kId-QR-4aC"/>
+                <constraint firstItem="Ast-Xk-yCD" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="3" id="krr-4j-pfZ"/>
+            </constraints>
+            <size key="customSize" width="51" height="50"/>
+            <connections>
+                <outlet property="but" destination="Ast-Xk-yCD" id="veb-zf-xfw"/>
+            </connections>
+            <point key="canvasLocation" x="687" y="323"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="红外线" width="52" height="51"/>
+    </resources>
+</document>

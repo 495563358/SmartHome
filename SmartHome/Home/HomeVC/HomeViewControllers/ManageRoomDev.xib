@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="16G1036" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ManageRoomDev" customModule="SmartHome" customModuleProvider="target">
+            <connections>
+                <outlet property="addFloorBtn" destination="NV3-qC-jfV" id="x1s-O8-KOj"/>
+                <outlet property="tableView" destination="hVJ-Kx-mC0" id="Oli-dw-tQB"/>
+                <outlet property="tapTableView" destination="LEE-n3-jaC" id="yL5-5Z-NyK"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view autoresizesSubviews="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="NV3-qC-jfV">
+                    <rect key="frame" x="23" y="497" width="554" height="82"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="添加楼层"/>
+                    <state key="highlighted">
+                        <color key="titleColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="handleAddFloor:" destination="-1" eventType="touchUpInside" id="MfO-cp-CpS"/>
+                    </connections>
+                </button>
+                <tableView autoresizesSubviews="NO" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="hVJ-Kx-mC0">
+                    <rect key="frame" x="0.0" y="50" width="600" height="550"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <gestureRecognizers/>
+            <connections>
+                <outletCollection property="gestureRecognizers" destination="LEE-n3-jaC" appends="YES" id="rgn-fo-wQh"/>
+            </connections>
+            <point key="canvasLocation" x="140" y="154"/>
+        </view>
+        <tapGestureRecognizer id="LEE-n3-jaC">
+            <connections>
+                <action selector="handleTapTableView:" destination="-1" id="Z7c-7Q-JCT"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+</document>

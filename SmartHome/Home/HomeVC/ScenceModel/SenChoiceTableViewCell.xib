@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="SenChoiceTableViewCell" customModule="SmartHome" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="315传感器" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p9h-fY-zU0">
+                        <rect key="frame" x="8" y="8" width="87" height="27"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="p9h-fY-zU0" secondAttribute="height" multiplier="29:9" id="YiT-9W-qee"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ovf-fk-7U3">
+                        <rect key="frame" x="98" y="8" width="27" height="27"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="Ovf-fk-7U3" secondAttribute="height" multiplier="1:1" id="Und-9o-hMH"/>
+                            <constraint firstAttribute="height" constant="27" id="ejr-67-MPO"/>
+                            <constraint firstAttribute="width" constant="27" id="tIE-L0-BFL"/>
+                        </constraints>
+                        <state key="normal" backgroundImage="传感器选择"/>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="433传感器" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Cu-r8-crB">
+                        <rect key="frame" x="163" y="8" width="87" height="27"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="27" id="30A-ID-ICc"/>
+                            <constraint firstAttribute="width" constant="87" id="Bxf-uR-GQv"/>
+                            <constraint firstAttribute="width" secondItem="9Cu-r8-crB" secondAttribute="height" multiplier="29:9" id="Z27-Hr-8sK"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iks-36-2am">
+                        <rect key="frame" x="253" y="8" width="27" height="27"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="Iks-36-2am" secondAttribute="height" multiplier="1:1" id="CLh-Yf-T04"/>
+                            <constraint firstAttribute="width" constant="27" id="KWz-Sg-zKv"/>
+                            <constraint firstAttribute="height" constant="27" id="Wgf-EI-2RL"/>
+                        </constraints>
+                        <state key="normal" backgroundImage="传感器不选择"/>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailingMargin" secondItem="Iks-36-2am" secondAttribute="trailing" constant="32" id="LXV-bD-QQH"/>
+                    <constraint firstItem="9Cu-r8-crB" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="Mh5-mH-EHN"/>
+                    <constraint firstItem="p9h-fY-zU0" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" id="cCc-w0-jJI"/>
+                    <constraint firstItem="Ovf-fk-7U3" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="czN-Q8-Q2d"/>
+                    <constraint firstItem="Ovf-fk-7U3" firstAttribute="leading" secondItem="p9h-fY-zU0" secondAttribute="trailing" constant="3" id="fUE-nX-ZbM"/>
+                    <constraint firstItem="p9h-fY-zU0" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="khh-Ic-woI"/>
+                    <constraint firstItem="p9h-fY-zU0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="lay-e0-6Qv"/>
+                    <constraint firstItem="Iks-36-2am" firstAttribute="leading" secondItem="9Cu-r8-crB" secondAttribute="trailing" constant="3" id="q4n-n4-TZO"/>
+                    <constraint firstItem="Iks-36-2am" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="rmS-VS-jzg"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="startTimer" destination="Ovf-fk-7U3" id="NtX-rw-1c8"/>
+                <outlet property="stopTimer" destination="Iks-36-2am" id="RBI-VX-ndK"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="传感器不选择" width="14" height="15"/>
+        <image name="传感器选择" width="14" height="15"/>
+    </resources>
+</document>

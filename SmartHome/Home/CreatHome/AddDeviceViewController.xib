@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="16G1036" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddDeviceViewController" customModule="SmartHome" customModuleProvider="target">
+            <connections>
+                <outlet property="compeletBtn" destination="FnO-FL-9ho" id="Ldr-do-0v2"/>
+                <outlet property="nicknameTF" destination="ukB-lO-1sI" id="jlT-SE-ShB"/>
+                <outlet property="serialNumberTF" destination="Y60-ub-fAy" id="GHH-Ka-aLe"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="添加设备输入框" translatesAutoresizingMaskIntoConstraints="NO" id="FZc-99-IPK">
+                    <rect key="frame" x="35" y="35" width="530" height="71"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="FZc-99-IPK" secondAttribute="height" multiplier="265:28" constant="-141.96428571428567" id="Ebh-Bv-ONg">
+                            <variation key="heightClass=compact" constant="9.4642857142857792"/>
+                            <variation key="heightClass=regular-widthClass=regular" constant="-140.71428571428567"/>
+                        </constraint>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="添加设备输入框" translatesAutoresizingMaskIntoConstraints="NO" id="n2v-A7-YCz">
+                    <rect key="frame" x="35" y="126" width="530" height="71"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="n2v-A7-YCz" secondAttribute="height" multiplier="265:28" constant="-141.96428571428567" id="wzR-BS-hWK">
+                            <variation key="heightClass=compact" constant="9.4642857142857792"/>
+                            <variation key="heightClass=regular-widthClass=regular" constant="-140.71428571428567"/>
+                        </constraint>
+                    </constraints>
+                </imageView>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="设备昵称" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ukB-lO-1sI">
+                    <rect key="frame" x="43" y="133" width="514" height="58"/>
+                    <color key="textColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <action selector="exitKeyboard:" destination="-1" eventType="editingDidEndOnExit" id="KWb-qH-hpr"/>
+                        <action selector="exitKeyboard:" destination="-1" eventType="editingDidEnd" id="kBP-f1-NJq"/>
+                    </connections>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="设备序列号" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Y60-ub-fAy">
+                    <rect key="frame" x="43" y="42" width="514" height="58"/>
+                    <color key="textColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <action selector="exitKeyboard:" destination="-1" eventType="editingDidEndOnExit" id="8MR-ns-SWe"/>
+                        <action selector="exitKeyboard:" destination="-1" eventType="editingDidEnd" id="HTZ-75-OkO"/>
+                    </connections>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FnO-FL-9ho">
+                    <rect key="frame" x="35" y="450" width="530" height="82"/>
+                    <color key="backgroundColor" red="0.094117647058823528" green="0.60392156862745094" blue="0.99215686274509807" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="FnO-FL-9ho" secondAttribute="height" multiplier="265:34" constant="-109.11764705882354" id="CtE-dB-ZNE">
+                            <variation key="heightClass=compact" constant="179.26470588235293"/>
+                            <variation key="heightClass=regular-widthClass=regular" constant="-111.76470588235293"/>
+                        </constraint>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <state key="normal" title="添加">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="highlighted">
+                        <color key="titleColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="handleCompelet:" destination="-1" eventType="touchUpInside" id="3oE-wU-Vv0"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="扫描二维码" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QPy-yN-4md">
+                    <rect key="frame" x="260" y="340" width="80" height="28"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="QPy-yN-4md" secondAttribute="height" multiplier="20:7" id="Fdv-dl-63F"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="0.094117647058823528" green="0.60392156862745094" blue="0.99215686274509807" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="saoyisao.png" translatesAutoresizingMaskIntoConstraints="NO" id="JVW-sz-Jia">
+                    <rect key="frame" x="260" y="244" width="80" height="80"/>
+                    <gestureRecognizers/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="80" id="6AF-N0-ngW"/>
+                        <constraint firstAttribute="width" secondItem="JVW-sz-Jia" secondAttribute="height" multiplier="1:1" id="xN1-Dr-oAo"/>
+                    </constraints>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="AZD-BF-Shf" appends="YES" id="1mB-vb-SSl"/>
+                    </connections>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="n2v-A7-YCz" firstAttribute="top" secondItem="FZc-99-IPK" secondAttribute="bottom" constant="20" id="5WS-I4-edn">
+                    <variation key="heightClass=compact" constant="14"/>
+                </constraint>
+                <constraint firstItem="ukB-lO-1sI" firstAttribute="bottom" secondItem="n2v-A7-YCz" secondAttribute="bottom" constant="-6" id="70p-2e-v8M">
+                    <variation key="heightClass=compact" constant="-8"/>
+                </constraint>
+                <constraint firstItem="JVW-sz-Jia" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="-16" id="Cy7-L2-Qky">
+                    <variation key="heightClass=compact" constant="38"/>
+                </constraint>
+                <constraint firstItem="ukB-lO-1sI" firstAttribute="top" secondItem="n2v-A7-YCz" secondAttribute="top" constant="7" id="MGr-Vq-BH6"/>
+                <constraint firstItem="n2v-A7-YCz" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="35" id="QTt-yp-Khl"/>
+                <constraint firstAttribute="trailing" secondItem="FZc-99-IPK" secondAttribute="trailing" constant="35" id="Rhu-u3-qqT"/>
+                <constraint firstItem="Y60-ub-fAy" firstAttribute="leading" secondItem="FZc-99-IPK" secondAttribute="leading" constant="8" id="TG1-dA-ve7"/>
+                <constraint firstItem="QPy-yN-4md" firstAttribute="top" secondItem="JVW-sz-Jia" secondAttribute="bottom" constant="16" id="eb9-KG-hcw">
+                    <variation key="heightClass=compact" constant="-54"/>
+                </constraint>
+                <constraint firstItem="Y60-ub-fAy" firstAttribute="bottom" secondItem="FZc-99-IPK" secondAttribute="bottom" constant="-6" id="gAA-DK-jxm">
+                    <variation key="heightClass=compact" constant="-8"/>
+                </constraint>
+                <constraint firstItem="FnO-FL-9ho" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="35" id="h2R-gC-NWS"/>
+                <constraint firstItem="FZc-99-IPK" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="35" id="k6U-OY-u5j">
+                    <variation key="heightClass=compact" constant="13"/>
+                    <variation key="heightClass=regular-widthClass=regular" constant="24"/>
+                </constraint>
+                <constraint firstItem="Y60-ub-fAy" firstAttribute="trailing" secondItem="FZc-99-IPK" secondAttribute="trailing" constant="-8" id="kIv-h5-WpJ"/>
+                <constraint firstItem="ukB-lO-1sI" firstAttribute="trailing" secondItem="n2v-A7-YCz" secondAttribute="trailing" constant="-8" id="l5x-2l-Ctf"/>
+                <constraint firstItem="QPy-yN-4md" firstAttribute="width" secondItem="JVW-sz-Jia" secondAttribute="width" id="lRU-RJ-GLz"/>
+                <constraint firstItem="FZc-99-IPK" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="35" id="ngx-Yl-xzH"/>
+                <constraint firstAttribute="trailing" secondItem="FnO-FL-9ho" secondAttribute="trailing" constant="35" id="nkR-Fh-CYc"/>
+                <constraint firstItem="QPy-yN-4md" firstAttribute="centerX" secondItem="JVW-sz-Jia" secondAttribute="centerX" id="pEL-Jl-tQ3">
+                    <variation key="heightClass=compact" constant="105"/>
+                </constraint>
+                <constraint firstItem="ukB-lO-1sI" firstAttribute="leading" secondItem="n2v-A7-YCz" secondAttribute="leading" constant="8" id="tOW-bH-fuA"/>
+                <constraint firstAttribute="trailing" secondItem="n2v-A7-YCz" secondAttribute="trailing" constant="35" id="u55-MB-hkW"/>
+                <constraint firstItem="Y60-ub-fAy" firstAttribute="top" secondItem="FZc-99-IPK" secondAttribute="top" constant="7" id="uwO-ai-L0w"/>
+                <constraint firstAttribute="bottom" secondItem="FnO-FL-9ho" secondAttribute="bottom" constant="68" id="v2m-3F-qnR">
+                    <variation key="heightClass=compact" constant="21"/>
+                    <variation key="heightClass=regular-widthClass=regular" constant="92"/>
+                </constraint>
+                <constraint firstItem="JVW-sz-Jia" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="y2v-v7-qPS">
+                    <variation key="heightClass=compact" constant="-52"/>
+                </constraint>
+            </constraints>
+            <point key="canvasLocation" x="426" y="233"/>
+        </view>
+        <tapGestureRecognizer id="AZD-BF-Shf">
+            <connections>
+                <action selector="handleScanning:" destination="-1" id="Ss5-eW-SVe"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+    <resources>
+        <image name="saoyisao.png" width="79" height="79"/>
+        <image name="添加设备输入框" width="281" height="50"/>
+    </resources>
+</document>

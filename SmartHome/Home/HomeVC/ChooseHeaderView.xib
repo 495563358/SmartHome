@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="16G1036" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="chooseheaderview" id="U6b-Vx-4bR" customClass="ChooseHeaderView" customModule="SmartHome" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="家用灯" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oRO-wV-W51">
+                    <rect key="frame" x="8" y="0.0" width="304" height="50"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="oRO-wV-W51" secondAttribute="bottom" id="AWc-jv-jJm"/>
+                <constraint firstAttribute="trailing" secondItem="oRO-wV-W51" secondAttribute="trailing" constant="8" id="H0F-iF-6pH"/>
+                <constraint firstItem="oRO-wV-W51" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="XAi-Y5-JLb"/>
+                <constraint firstItem="oRO-wV-W51" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" constant="8" id="kWG-bX-ukw"/>
+            </constraints>
+            <connections>
+                <outlet property="viewTitleLabel" destination="oRO-wV-W51" id="jtt-Xg-RoO"/>
+            </connections>
+        </collectionReusableView>
+    </objects>
+</document>

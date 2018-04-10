@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="equiptableequipcell" id="KGk-i7-Jjw" customClass="EquipTableEquipCell" customModule="SmartHome" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KEQ-82-eiJ">
+                        <rect key="frame" x="40" y="12" width="24" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="24" id="Fxe-3D-78f"/>
+                            <constraint firstAttribute="height" constant="20" id="isW-EV-Gmi"/>
+                        </constraints>
+                    </imageView>
+                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pn5-Py-Tu0">
+                        <rect key="frame" x="0.0" y="42" width="400" height="1"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="Az2-0i-Dtr"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d1j-OK-Wx6">
+                        <rect key="frame" x="78" y="6.5" width="218" height="30.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstItem="KEQ-82-eiJ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="24" id="8Jx-uo-PKm"/>
+                    <constraint firstItem="d1j-OK-Wx6" firstAttribute="leading" secondItem="KEQ-82-eiJ" secondAttribute="trailing" constant="14" id="Dzl-dU-7WJ"/>
+                    <constraint firstAttribute="trailing" secondItem="pn5-Py-Tu0" secondAttribute="trailing" constant="-80" id="EKT-NL-p7J"/>
+                    <constraint firstItem="KEQ-82-eiJ" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="KEZ-GF-BkF"/>
+                    <constraint firstAttribute="bottom" secondItem="pn5-Py-Tu0" secondAttribute="bottom" constant="0.5" id="Lly-M9-Sm9"/>
+                    <constraint firstItem="d1j-OK-Wx6" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="jAb-Cp-awJ"/>
+                    <constraint firstItem="pn5-Py-Tu0" firstAttribute="top" secondItem="d1j-OK-Wx6" secondAttribute="bottom" constant="5" id="n3J-4V-eIo"/>
+                    <constraint firstAttribute="trailing" secondItem="d1j-OK-Wx6" secondAttribute="trailing" constant="24" id="qHO-xn-ycP"/>
+                    <constraint firstItem="pn5-Py-Tu0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="tNs-rR-5SP"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="iconImage" destination="KEQ-82-eiJ" id="h3C-MT-mxe"/>
+                <outlet property="nameLabel" destination="d1j-OK-Wx6" id="bD4-S8-X9o"/>
+            </connections>
+            <point key="canvasLocation" x="340" y="290"/>
+        </tableViewCell>
+    </objects>
+</document>

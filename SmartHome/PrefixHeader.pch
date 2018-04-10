@@ -1,0 +1,55 @@
+//
+//  PrefixHeader.pch
+//  SmartHome
+//
+//  Created by Smart house on 2018/1/25.
+//  Copyright © 2018年 Verb. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+
+#define BaseHttpUrl @"http://120.77.250.17:8080"
+
+#import "Masonry.h"
+#import "DCConsts.h" // 常量
+#import "Macros.h" // 宏
+#import "DCSpeedy.h" //便捷方法
+#import "UIView+DCExtension.h" // UIView分类
+#import "DCObjManager.h"  //存取
+#import "DCNotificationCenterName.h" //通知
+
+#define ResourceFront @"http://mall.znhomes.com/app/index.php?i=195&c=entry&m=ewei_shopv2&do=mobile&"
+#define AddressPath   @"http://mall.znhomes.com/attachment/"
+#define DetilPath     @"http://mall.znhomes.com/app/index.php?i=195&c=entry&m=ewei_shopv2&do=mobile&r=goods.product&cate="
+
+#define Sc_w [UIScreen mainScreen].bounds.size.width
+
+#define Sc_h [UIScreen mainScreen].bounds.size.height
+
+#define Sc_bounds [UIScreen mainScreen].bounds
+
+#define Sc_center [UIApplication sharedApplication].keyWindow.center
+
+#define My_gray [UIColor colorWithRed:245/255.0 green:245/255.0 blue:245/255.0 alpha:1.0]
+
+
+#define App_document [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)lastObject]
+
+#define Color_system [UIColor colorWithRed:69/255.0 green:167/255.0 blue:251/255.0 alpha:1.0]
+
+#define color(r,g,b,al) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:al]
+
+
+#define mainWindowss [UIApplication sharedApplication].keyWindow
+
+#define Percentage [UIScreen mainScreen].bounds.size.width / 375
+
+#define ShowMsg(msg) [[[UIAlertView alloc]initWithTitle:msg message:nil delegate:nil cancelButtonTitle:@"我知道了" otherButtonTitles:nil] show]
+
+
+#endif /* PrefixHeader_pch */

@@ -1,0 +1,334 @@
+/* 
+  IpCameraClient.strings
+  SmartHome
+
+  Created by Smart house on 2018/2/5.
+  Copyright © 2018年 Verb. All rights reserved.
+*/
+IPCamera = "Camera";
+AddCamera = "Add Camera";
+EditCamera = "Edit Camera" ;
+CameraName = "Name";
+IpAddr = "IP Address";
+Port = "Port";
+User = "Username";
+Pwd = "Password";
+NewPwd = "New Password";
+OK = "OK";
+Cancel = "Cancel";
+SearchCamera = "Search Camera" ;
+Back = "Back";
+Hide = "hide";
+Connecting = "Connecting...";
+Options = "Options";
+Livestream = "Livestream";
+Edit = "Edit";
+Setting = "Camera Setting";
+Delete = "Delete";
+DeviceID = "ID:";
+CameraType = "TYPE:";
+PPPStatus = "Status:" ;
+CameraID = "UID" ;
+InputCameraName = "Please input camera name";
+InputCameraID = "Please input camera id";
+InputUserName = "Please input user name";
+InputPassword = "Please input password";
+CameraInfo = "Camera Information";
+Done = "Done";
+OnlineCD-ROM = "Online CD";
+PPPPModeP2P = "p2p connected";
+PPPPModeRelay = "p2p relay";
+PPPPModeUnknown = "unknown";
+PPPPStatusUnknown = "unknown";
+PPPPStatusConnecting = "connecting";
+PPPPStatusInitialing = "initialing";
+PPPPStatusOnline = "on line";
+PPPPStatusConnectFailed = "connect failed";
+PPPPStatusInvaliduserpwd = "invalid password";
+PPPPStatusDisconnected = "disconnected";
+PPPPStatusInvalidID = "invalid ID";
+PleaseInputCamreraName = "please input camera name";
+RelayModeEnd = "End of Relay Mode";
+PleaseInputCameraID = "Please input camera ID";
+PleaseInputUserName = "Please input user name";
+CameraIsNotOnline = "off line";
+Version = "Version";
+DefaultVideoParams = "set default video parameter ";
+UnknownResolution = "unknown resolution";
+PPPPMode = "Mode:";
+PPPPStatusConnectTimeout = "connect timeout";
+RelayModeTimeout = "relay mode:";
+RelayMode = "relay mode";
+CountDown = "Countdown";
+StrSeconds = "sec";
+ScanDisplayMessage = "Place a QR Code inside the viewfinder rectangle to scan it.";
+ScanQRCode = "Scan QR Code";
+ClickScan = "Scan";
+LiveView = "View";
+Network = "Network";
+WifiSetting = "WiFi Setting";
+WifiList = "Choose WiFi";
+EnterPwd = "Input password";
+Loading = "Loading...";
+WillSet = "will set";
+NotSetting = "not setting";
+About = "About";
+UserSetting = "User Setting";
+TakePictureSuccess = "Take a picture successfully";
+PwdSetting = "Password Setting";
+AlarmSetting="Alarm Setting";
+ClockSetting="Time Setting";
+
+UserName = "Username";
+datetimeDeviceTime = "Camera time";
+datetimeDeviceTiming = " Sync with server";
+datetimeDeviceTimingServer = "NTP Server";
+datetimeDeviceTimezone = "Time zone";
+datetimeDeviceTimeLocal = "Sync with local time";
+alarmMotionEnable = "Motion detect armed";
+alarmMotionLevel = "Motion detect sensibility";
+alarmExtern = " Extern input armed";
+alarmExternLevel = "Trigger level";
+alarmExternMode = "Trigger mode";
+alarmMotionPreset = "Preset linkage";
+alarmMotionIO = "IO linkage";
+alarmMotionIOLevel = "Output level";
+alarmMail = "Send email";
+alarmPicEnable = "FTP upload";
+alarmPicTimer = "FTP upload interval";
+
+alarm_text_a1 = "High";
+alarm_text_a2 = "Low";
+
+
+datetimeZone0 = "(GMT -11:00) Midway Islands, Samoa Islands";
+datetimeZone1 = "(GMT -10:00) Hawaii";
+datetimeZone2 = "(GMT -09:00) Alaska Standard";
+datetimeZone3 = "(GMT -08:00) Pacific Standard(USA and Canada)";
+datetimeZone4 = "(GMT -07:00) Mountain Standard(USA and Canada)";
+datetimeZone5 = "(GMT -06:00) Central Standard(USA and Canada), Mexico City";
+datetimeZone6 = "(GMT -05:00) Eastern Standard(USA and Canada), Lima, Bogota";
+datetimeZone7 = "(GMT -04:00) Atlantic Standard (Canada), Santiago, La Paz";
+datetimeZone8 = "(GMT -03:30) Newfoundland";
+datetimeZone9 = "(GMT -03:00) Brasilia, Buenos Aires, Georgetown";
+datetimeZone10 = "(GMT -02:00) South Geogia I.";
+datetimeZone11 = "(GMT -01:00) Reykjavik";
+datetimeZone12 = "(GMT) Greenwich mean time; London, Lisbon, Casablanca";
+datetimeZone13 = "(GMT +01:00) Brussels, Paris, Berlin, Rome, Madrid, Stockholm, Beograd, Praha";
+datetimeZone14 = "(GMT +02:00) Athens, Jerusalem, Cairo, Helsinki";
+datetimeZone15 = "(GMT +03:00) Nairobi, Riyadh, Moscow";
+datetimeZone16 = "(GMT +03:30) Tehran";
+datetimeZone17 = "(GMT +04:00) Baku, Tbilisi, Abu Dhabi, Muscat";
+datetimeZone18 = "(GMT +04:30) Kabul";
+datetimeZone19 = "(GMT +05:00) Islamabad, Karachi, Tashkent";
+datetimeZone20 = "(GMT +05:30) Bombay, Calcutta, Madras, New Delhi";
+datetimeZone21 = "(GMT +06:00) Astana, Almaty, Dhaka, Colombo";
+datetimeZone22 = "(GMT +07:00) Astana, Almaty, Dhaka, Colombo";
+datetimeZone23 = "(GMT +08:00) Beijing, Singapore, Taipei";
+datetimeZone24 = "(GMT +09:00) Seoul, Yakutsk, Tokyo";
+datetimeZone25 = "(GMT +09:30) Darwin";
+datetimeZone26 = "(GMT +10:00) Guam, Melbourne, Sydney, Port Moresby, Vladivostok";
+datetimeZone27 = "(GMT +11:00) Magadan, Solomon Islands, New Calenonia";
+datetimeZone28 = "(GMT +12:00) Auckland, Wellington, Fiji Islands";
+
+highdefinition = "High definition";
+commondefinition = "Normal definition";
+
+ImageQualityHighest = "Image Quality 05";
+ImageQualityHigh = "Image Quality 04";
+ImageQualityMiddle = "Image Quality 03";
+ImageQualityLow = "Image Quality 02";
+ImageQualityLowest = "Image Quality 01";
+ImageQualitymobile = "Image Quality 00";
+
+MotionLevelHighest = "Highest";
+MotionLevelHigh="High";
+MotionLevelMiddle="Normal";
+MotionLevelLow="Low";
+MotionLevelLowest = "Lowest";
+MotionLevelmobile = "Mobile phone";
+DropListMotionLevel="Motion level";
+DropListTriggerLevel="Trigger level";
+DropListPreset="Preset";
+DropListOutputLevel="Output level";
+DropListUploadInterval="Upload interval";
+DropListTimeZone="Time Zone";
+DropListNtpServer="NTP Server";
+
+LAN = "LAN";
+Search = "Search";
+
+Alarm = "Alarm";
+Picture = "Picture";
+Record = "Record";
+TFRecord = "TF Record";
+Local = "Local ";
+Remote = "Remote";
+LocalPic = "Local Pictures";
+LocalRec = "Local Record";
+SavePictureSuccess = "Save picture to album successfully" ;
+
+Message= "Message";
+DeletePicture = "Delete the picture?";
+TouchAddCamera = "Add Camera";
+
+FTPSetting = "FTP Setting";
+FTPServer = "Server" ;
+FTPUser = "User";
+FTPPwd = "Password";
+FTPPort = "Port";
+FTPUploadInterval = "Upload interval";
+InputFtpServer = "Please input ftp server";
+InputFtpUser = "Please input user name";
+InputFtpPwd = "Please input password";
+MailSetting = "Mail Setting";
+MailSender = "Sender";
+MailSmtpSvr = "SMTP Server";
+MailSmtpPort = "SMTP Port";
+MailAuth = "Need Authentication";
+MailUser = "User Name";
+MailPwd = "Password";
+MailRecv1 = "Receiver 1";
+MailRecv2 = "Receiver 2";
+MailRecv3 = "Receiver 3";
+MailRecv4 = "Receiver 4";
+InputMailSender = "Please input mail sender";
+InputMailServer = "Please input mail server";
+InputMailUser = "Please input user name";
+InputMailPwd = "Please input password";
+InputMailRecv = "Please input mail receiver";
+alarmRecord = "Alarm Record";
+Album = "Album";
+Refresh = "Refresh";
+Preset = "Preset";
+replace = "Sure to replace this preset position?";
+Menu = "Menu";
+Event = "Event";
+Whetherdelete = "Sure to delete?";
+selected = "All selected";
+Invert = "Invert selection";
+Contrast = "Contrast";
+Brightness = "Brightness";
+Horizontal  = "Horizontal mirror";
+Vertical = "Vertical mirror";
+MotionDetection = "Motion Detection";
+ExternalInput = "External input";
+TimerRecording = "Timer recording";
+UpdatePrompt = "Update prompt";
+TemporarilyUpdate = "Temporarily do not want to update";
+Update = "Update";
+UpdateContent = "Update content";
+currentlanguage = "ioscontentsEnglish";//更新提示时显示内容标示
+Discoveryofnewversion = "New version is valid";
+Download = "Download URL:";
+Information = "Information, please visit:";
+PwdChangedSuc = "Password changed successfully, the camera will reboot. It takes about 60 seconds.";
+Splite = "Multi-screen";
+NoCamera = "No camera online!";
+
+Login = "Login";
+Register = "Register";
+LoginFailed = "Login Failed";
+LoginFailedMessage = "User name or password is error.";
+CheckNetWork = "Please check the network situation.";
+UserNameEmpty = "The username cannot be empty.";
+PwdEmpty = "The password cannot be empty.";
+RealNameEmpty = "Real name must be filled.";
+AddressEmpty = "Must fill in the address.";
+EmailEmpty = "The email cannot be empty.";
+PhoneNumberEmpty = "The phone number cannot be empty.";
+DifferentPwd = "Two passwords are different, please re-enter.";
+RealName = "Real Name";
+Mail = "Email";
+Address = "Address";
+ConfirmPassword = "Confirm password";
+PhoneNumber = "Phone number";
+Submit = "Submit";
+SuccessfulRegistration = "Register successfully";
+RegistrationFailed = " Register failed";
+
+WIFISetSucInfomation = " WiFi setting is successful,the camera will restart takes about 60 seconds. Now you can unplug the cable of the camera above.";
+GetMore = "Get More";
+
+Noevents = "No events";
+Clickhereformoreevents = "Click here for more events";
+Eventacquisitioniscomplete = "Event acquisition is complete";
+
+FocalLength = "Focal Length";
+Zoom = "Zoom";
+ZoomOut = "Zoom Out";
+
+On = "On";
+Off = "OFF";
+
+PlayViewMode = "View Mode";
+
+Close = "Closure";
+Disconnect = "Disconnect";
+
+RebootCam = "Whether to restart the camera?";
+RebootCamera = "Reboot the camera";
+Reboot = "Reboot";
+
+SDSetting = "SD Setting";
+SDStatus = "SD Status";
+SDTotal = "SD Total";
+SDFree = "SD Remaining capacity";
+SDFormat = "SD Format";
+SDFormatTitle = "Sure to format the SD card?";
+SDFormatDescription = "SD Cary data will be deleted all. The formatting operation takes about 20 seconds, please refresh the page after 20 seconds.";
+RecordSize = "SD Record Size";
+SDInfomation = "SD Information";
+SDReady = "SD Ready";
+SDRecording = "SD card recording";
+SDStopRecord = "SD stop recording";
+SDNON = " Unformatted SD card or SD card is not inserted";
+
+RecordTime = "Record Time(minute)";
+TimeRange = "Recording time range:5~180 minutes";
+Looprewrite = "Loop rewrite";
+Schedulerecording = "Schedule recording";
+RecordSchedule = "Record Schedule";
+
+Monday = "Monday";
+Tuesday = "Tuesday";
+Wednesday = "Wednesday";
+Thursday = "Thursday";
+Friday = "Friday";
+Saturday = "Saturday";
+Sunday = "Sunday";
+
+StartTime = "Start Time";
+EndTime = "End Time";
+Repeat = "Repeat";
+OpenRecord = "Start Record";
+SetRecSchedule = "Set Record Schedule";
+AddRecordSchedule = "Add Record Schedule";
+
+SelectedRecordTime = "Please select a recording time plan";
+ConfirmRecordTime = "Confirmed plans to add recording time";
+TimeNotEmpty = "Time can not be empty";
+LookCurrentRecordSchedule = "View the current recording schedule";
+
+ConfirmSaveSDSetting = "Confirm to save the changes?";
+
+ADD_WIFISETTING_CONE_ADD = "Connected";
+
+FirmwareUpgrade = "Firmware Upgrade";
+CamFirmwareInfo = "Camera firmware information";
+NewestFirmwareInfo = "Latest firmware information";
+UIFirmware = "Interface Firmware";
+SysFirmware = "System Firmware";
+WhetherUpgradeService = "Whether to upgrade the firmware version on the service";
+WhetherUpgradeNewest = "Whether a firmware upgrade to the latest version";
+UpgradeTimeDes = "Firmware upgrade takes a minute, please wait. . .";
+NewestVer = "Is already the newest version";
+
+PleaseWait = "Please Wait";
+message = "message";
+PFZB_UPGRADE_UPCANCEL_ADD = "The upgrade fails";
+"PFZB_UPGRADE_INFO_ADD"                 ="Upgrade";
+
+
+Warn_AlertMessage                   ="Your device password belonging to the original password, there is a big security risk! Whether modifications to the device password?";
+tip_pwd                             ="Dangerous";

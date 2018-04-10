@@ -7,7 +7,25 @@
 		<key>SmartHome.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>3</integer>
+			<integer>6</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>953E6BE02016C0F80091C8B0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>953E6BF72016C0F90091C8B0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>953E6C022016C0F90091C8B0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>
