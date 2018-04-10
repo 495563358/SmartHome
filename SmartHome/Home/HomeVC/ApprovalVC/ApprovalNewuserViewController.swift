@@ -291,7 +291,6 @@ class ApprovalNewuserViewController: UIViewController,UIGestureRecognizerDelegat
             showMsg(msg: "请输入已注册用户的手机号")
             return
         }
-        
         if(!manageBtn.isSelected && !usualBtn.isSelected){
             showMsg(msg: "请选择授权账号类型")
             return
@@ -300,7 +299,7 @@ class ApprovalNewuserViewController: UIViewController,UIGestureRecognizerDelegat
             userNum = userPhonenum.text! as NSString
         }
         
-        
+        reloadDeviceData()
         
         var uploadModel = [ChainModel]()
         var uploadIds = [String]()
