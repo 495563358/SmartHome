@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import LJContactManager
 
 class ApprovalNewuserViewController: UIViewController,UIGestureRecognizerDelegate,postApprovalDevice{
     
@@ -60,7 +61,6 @@ class ApprovalNewuserViewController: UIViewController,UIGestureRecognizerDelegat
             let leftLab = UILabel.init(frame: CGRect(x: 0, y: 0, width: 65, height: 50))
             leftLab.text = "手机号:"
             leftLab.textAlignment = .center
-            
             userPhonenum.backgroundColor = UIColor.white
             userPhonenum.borderStyle = .none
             userPhonenum.placeholder = "请输入已注册用户的手机号"
@@ -68,6 +68,15 @@ class ApprovalNewuserViewController: UIViewController,UIGestureRecognizerDelegat
             userPhonenum.keyboardType = .numberPad
             userPhonenum.leftView = leftLab
             userPhonenum.leftViewMode = .always
+            
+            let rightView = UIButton(frame: CGRect(x: 0, y: 0, width: 60, height: 50))
+            let contact = UIImageView(frame: CGRect(x: 10, y: 10, width: 30, height: 30))
+            contact.image = UIImage(named: "icon_add_model")
+            rightView.addTarget(self, action: #selector(ApprovalNewuserViewController.getcontactNum), for: .touchUpInside)
+            rightView.addSubview(contact)
+            userPhonenum.rightView = rightView
+            userPhonenum.rightViewMode = .always
+            
             self.view .addSubview(userPhonenum)
         }else{
             firedNum.backgroundColor = UIColor.white
@@ -183,6 +192,16 @@ class ApprovalNewuserViewController: UIViewController,UIGestureRecognizerDelegat
         self.view.addSubview(view2)
         self.view.addSubview(approvalBtn)
     }
+    
+    @objc func getcontactNum(){
+        
+        LJContactManager.sharedInstance().selectContact(at: self) { (name, phone) in
+            let updataPhone = (phone! as NSString).replacingOccurrences(of: "-", with: "")
+            print("更改后的电话 \(updataPhone)")
+            self.userPhonenum.text = updataPhone
+        }
+    }
+    
     @objc func senderSelected(sender:UIButton){
         if sender.isSelected{
             return
@@ -242,7 +261,7 @@ class ApprovalNewuserViewController: UIViewController,UIGestureRecognizerDelegat
         //先移除
         choosedDeviceSource.removeAll()
         //拼装被授权的房间里面的设备
-        for var building in choosedRoomSource{
+        for building in choosedRoomSource{
             if building.isApproval == true{
                 switch building.buildType{
                 case .buildFloor:
@@ -253,7 +272,7 @@ class ApprovalNewuserViewController: UIViewController,UIGestureRecognizerDelegat
                     choosedDeviceSource.append(ff)
                     break
                 case .buildRoom:
-                    for var temp in tDataSource{
+                    for temp in tDataSource{
                         if temp.room?.roomCode == building.buildCode{
                             //添加房间
                             choosedDeviceSource.append(temp)
@@ -277,7 +296,7 @@ class ApprovalNewuserViewController: UIViewController,UIGestureRecognizerDelegat
     func getApprovalDeviceData(datas: [FloorOrRoomOrEquip]) {
         choosedDeviceSource = datas
         
-        for var temp in choosedDeviceSource {
+        for temp in choosedDeviceSource {
             if temp.type == .equip{
                 print("\(temp.equip?.name) - \(temp.equip?.isApproval)")
             }
@@ -298,13 +317,13 @@ class ApprovalNewuserViewController: UIViewController,UIGestureRecognizerDelegat
         if userNum.length == 0 {
             userNum = userPhonenum.text! as NSString
         }
-        
+        self.view.endEditing(true)
         reloadDeviceData()
         
         var uploadModel = [ChainModel]()
         var uploadIds = [String]()
         //处理情景模式
-        for var modelInfo in self.modelData{
+        for modelInfo in self.modelData{
             if modelInfo.isApproval == true{
                 let model = ChainModel()
                 model.modelIcon = modelInfo.modelIcon
@@ -316,11 +335,11 @@ class ApprovalNewuserViewController: UIViewController,UIGestureRecognizerDelegat
         }
         
         let upModelIdstr = dataDeal.toJSONString(jsonSource: uploadIds as AnyObject)
-        
+        print(upModelIdstr)
         
         print(choosedDeviceSource)
         var subArr: [[String : String]] = []
-        for var temp in choosedDeviceSource {
+        for temp in choosedDeviceSource {
             
             if temp.type == .equip{
                 var suDic = ["roomCode" : temp.equip?.roomCode]
@@ -373,6 +392,27 @@ class ApprovalNewuserViewController: UIViewController,UIGestureRecognizerDelegat
                     showMsg(msg: "服务器异常,请稍后再试")
                     return
                 }else{
+                    if (backdata["message"] as! String) == "该账户尚未注册"{
+                        
+                        let alertVC = UIAlertController.init(title: "提示", message: "该账户尚未注册,赶紧分享给他吧!", preferredStyle: .alert)
+                        alertVC.addAction(UIAlertAction.init(title: "取消", style: .cancel, handler: nil))
+                        alertVC.addAction(UIAlertAction.init(title: "分享", style: .default, handler: { (alertAction) in
+                            UMSocialUIManager.setPreDefinePlatforms([4,5,35,1,2,0])
+                            UMSocialUIManager.removeAllCustomPlatformWithoutFilted()
+                            UMSocialShareUIConfig.shareInstance().sharePageGroupViewConfig.sharePageGroupViewPostionType = .bottom
+                            UMSocialShareUIConfig.shareInstance().sharePageScrollViewConfig.shareScrollViewPageItemStyleType = .iconAndBGRadius
+                            UMSocialUIManager.showShareMenuViewInWindow { (platformType, userInfo) -> Void in
+                                let VC = UMShareTypeViewController.init(type: platformType)
+                                VC?.titleName = "赶紧来注册智能屋吧!"
+                                VC?.typeName = "走进智能屋，生活更美好！"//无线智能家居全屋智能化管理
+                                VC?.imageUrl = "https://is1-ssl.mzstatic.com/image/thumb/Purple128/v4/b0/44/a7/b044a78c-9b92-dccb-351b-f4f2faebe7fd/mzl.pfggmexx.png/690x0w.jpg"
+                                VC?.shareLink = "http://www.znhome.co/code/code.html"
+                                VC?.shareWebPage(to: platformType)
+                            }
+                        }))
+                        self.present(alertVC, animated: true, completion: nil)
+                        return
+                    }
                     showMsg(msg: backdata["message"] as! String)
                 }
             }

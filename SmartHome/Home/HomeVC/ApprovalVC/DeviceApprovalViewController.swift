@@ -28,7 +28,6 @@ class DeviceApprovalViewController: UITableViewController,UIGestureRecognizerDel
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        dump(tDic)
         
         self.navigationItem.title = "设备权限"
         self.view.backgroundColor = mygrayColor
@@ -53,9 +52,7 @@ class DeviceApprovalViewController: UITableViewController,UIGestureRecognizerDel
     @objc func backClick(){
         
         if(self.delegate != nil){
-            
             delegate?.getApprovalDeviceData(datas: self.tDataSource)
-            
         }
         
         self.navigationController?.popViewController(animated: true)
@@ -87,7 +84,7 @@ class DeviceApprovalViewController: UITableViewController,UIGestureRecognizerDel
             return whiteCell
         }
         let model = tDataSource[indexPath.row]
-        print("----------------Row行数 = \(indexPath.row)\n\n")
+        print("授权设备列表第 \(indexPath.row) 行 \n")
         dump(model)
         switch model.type {
         case .floor:

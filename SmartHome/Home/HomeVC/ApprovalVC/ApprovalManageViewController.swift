@@ -28,20 +28,17 @@ class ApprovalManageViewController: UITableViewController, UIGestureRecognizerDe
     func reloadClassifyDataSource() {
         self.getRoomInfoFotClassify()
         BaseHttpService.sendRequestAccess(classifyEquip_do, parameters: ["userPhone":BaseHttpService.getUserPhoneType()]) { (data) -> () in
-            print(data)
             dataDeal.clearEquipTable()
             if data.count != 0{
                 
                 let arr = data as! [[String : AnyObject]]
                 for e in arr {
-                    print("更新数据库设备")
                     let equip = Equip(equipID: e["deviceAddress"] as! String)
                     equip.name = e["nickName"] as! String
                     equip.roomCode = e["roomCode"] as! String
                     equip.userCode = e["userCode"] as! String
                     equip.type = e["deviceType"] as! String
                     equip.num  = String( describing: e["validationCode"])
-                    print(String( describing: e["validationCode"]))
                     equip.icon  = e["icon"] as! String
                     equip.hostDeviceCode = e["deviceCode"] == nil ? "" : e["deviceCode"] as!String
                     // equip.num  =  e["validationCode"] == nil ? "" : e["validationCode"]as!String
@@ -64,7 +61,7 @@ class ApprovalManageViewController: UITableViewController, UIGestureRecognizerDe
         
     }
     func getRoomInfoFotClassify(){
-        print("移除")
+        print("移除 getRoomInfoFotClassify ")
         self.tDic.removeAll()
         self.tDataSource.removeAll()
         //先去更新数据库 再从数据库中解析
@@ -127,7 +124,7 @@ class ApprovalManageViewController: UITableViewController, UIGestureRecognizerDe
         gainAuthorizeList()
         //刷新情景模式
         modelData.removeAll()
-        for var temp in app.models{
+        for temp in app.models{
             let model = EditChainModel()
             model.modelIcon = temp.modelIcon
             model.modelId = temp.modelId
@@ -193,7 +190,7 @@ class ApprovalManageViewController: UITableViewController, UIGestureRecognizerDe
             if any.count == 0{
                 return
             }
-            for var i in 0...any.count-1{
+            for i in 0...any.count-1{
                 self.approvalUserData.append(((any as! NSArray)[i] as! NSDictionary)["userPhone"] as! String)
             }
             self.tableView.reloadData()
@@ -284,8 +281,8 @@ class ApprovalManageViewController: UITableViewController, UIGestureRecognizerDe
                     accountOperationType = Int((backInfo["accountOperationType"] as! NSString).intValue)
                 }
                 
-                for var model in self.modelData{
-                    for var modelId in modeldataArr{
+                for model in self.modelData{
+                    for modelId in modeldataArr{
                         if model.modelId == modelId{
                             model.isApproval = true
                         }
@@ -307,10 +304,10 @@ class ApprovalManageViewController: UITableViewController, UIGestureRecognizerDe
                     let set = NSSet.init(array: tempArr)
                     //修改房间权限
                     var flag:Bool = false
-                    for var building in self.dataSource{
+                    for building in self.dataSource{
                         if building.buildType == .buildRoom{
                             flag = false
-                            for var temp in set{
+                            for temp in set{
                                 if (temp as! String) == building.buildCode{
                                     flag = true
                                 }
@@ -321,13 +318,13 @@ class ApprovalManageViewController: UITableViewController, UIGestureRecognizerDe
                     }
 //                    print(self.tDic)
                     //修改设备权限
-                    for var temp in set{
+                    for temp in set{
                         print(temp as! String)
                         //获取字典中的设备数据
                         if (self.tDic[temp as! String] != nil){
-                            var equips = self.tDic[temp as! String]
+                            let equips = self.tDic[temp as! String]
                             print(equips as Any)
-                            for var equip in equips!{
+                            for equip in equips!{
                                 equip.isApproval = false
                             }
                             //遍历网络请求的所有设备
@@ -336,7 +333,7 @@ class ApprovalManageViewController: UITableViewController, UIGestureRecognizerDe
                                 if equipInfo["roomCode"] as! String == temp as! String{
                                     if equipInfo["isAuthorited"] as! String == "1"{
                                         
-                                        for var equip in equips!{
+                                        for equip in equips!{
                                             //将字典中的对应设备授权更改
                                             dump(equip)
                                             print("\n\n\(equipInfo["deviceAddress"]!) --- \(equip.equipID)\n\n")

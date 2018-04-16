@@ -378,7 +378,7 @@
     backBtn.contentEdgeInsets = UIEdgeInsetsMake(0, -16, 0, 0);
     self.navigationItem.hidesBackButton = YES;
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:backBtn];
-    self.navigationController.interactivePopGestureRecognizer.delegate = (id)self;
+//    self.navigationController.interactivePopGestureRecognizer.delegate = (id)self;
     
     
 }

@@ -328,7 +328,8 @@ class HomeVC: UIViewController,UITableViewDataSource,UITableViewDelegate,UIAlert
         choos.callBlock(block: { (indexpath) -> () in
             self.turnToCurrentRoom(indexpath)
         })
-
+        
+        
         self.navigationController?.pushViewController(choos, animated: true)
         floorNameArr.removeAll()
         roomNameArr.removeAll()
@@ -789,7 +790,6 @@ class HomeVC: UIViewController,UITableViewDataSource,UITableViewDelegate,UIAlert
                 self.refreshStatus()
                 })
         }
-        
         
         sideView?.isHidden = false
        

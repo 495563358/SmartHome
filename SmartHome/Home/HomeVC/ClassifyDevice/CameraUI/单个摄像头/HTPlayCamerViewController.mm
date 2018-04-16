@@ -71,10 +71,10 @@
             strPPPPStatus = NSLocalizedStringFromTable(@"非法设备号", @STR_LOCALIZED_FILE_NAME, nil);
             break;
         case PPPP_STATUS_ON_LINE:
-            strPPPPStatus = NSLocalizedStringFromTable(@"已连接", @STR_LOCALIZED_FILE_NAME, nil);
+            strPPPPStatus = NSLocalizedStringFromTable(@"摄像机已连接", @STR_LOCALIZED_FILE_NAME, nil);
             break;
         case PPPP_STATUS_DEVICE_NOT_ON_LINE:
-            strPPPPStatus = NSLocalizedStringFromTable(@"不在线", @STR_LOCALIZED_FILE_NAME, nil);
+            strPPPPStatus = NSLocalizedStringFromTable(@"摄像机不在线", @STR_LOCALIZED_FILE_NAME, nil);
             break;
         case PPPP_STATUS_CONNECT_TIMEOUT:
             strPPPPStatus = NSLocalizedStringFromTable(@"连接超时", @STR_LOCALIZED_FILE_NAME, nil);
@@ -86,22 +86,23 @@
             strPPPPStatus = NSLocalizedStringFromTable(@"未知状态", @STR_LOCALIZED_FILE_NAME, nil);
             break;
     }
-    
+    if(status == PPPP_STATUS_CONNECT_FAILED || status == PPPP_STATUS_DISCONNECT || status == PPPP_STATUS_INVALID_ID || status == PPPP_STATUS_DEVICE_NOT_ON_LINE || status == PPPP_STATUS_CONNECT_TIMEOUT || status == PPPP_STATUS_INVALID_USER_PWD || status == PPPP_STATUS_UNKNOWN || status == PPPP_STATUS_ON_LINE){
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [MBProgressHUD hideAllHUDsForView:mainWindowss animated:YES];
+            [self.view makeToast:strPPPPStatus];
+        });
+    }
     
     //如果是PPP断开，则停止播放
     if (statusType == MSG_NOTIFY_TYPE_PPPP_STATUS && status == PPPP_STATUS_DISCONNECT) {
         NSLog(@"连接断开");
         [self performSelectorOnMainThread:@selector(StopPlay:) withObject:nil waitUntilDone:NO];
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [MBProgressHUD hideAllHUDsForView:mainWindowss animated:YES];
-        });
     }
     dispatch_async(dispatch_get_main_queue(),^{
         self.statusLabel.text=strPPPPStatus;
         if (status == PPPP_STATUS_ON_LINE) {
             NSLog(@"连接正常");
             [self starVideo:nil];
-            [MBProgressHUD hideAllHUDsForView:mainWindowss animated:YES];
         }
         
     });
@@ -120,11 +121,9 @@
 #pragma mark -
 #pragma mark ParamNotify
 -(void)ParamNotify:(int)paramType params:(void *)params{
-    
     if (paramType == CGI_IEGET_CAM_PARAMS) {
         NSLog(@"参数种类 = 6003");
     }
-    
     if (paramType == STREAM_CODEC_TYPE){
         NSLog(@"参数种类 = 6040");
     }
@@ -133,19 +132,18 @@
 
 #pragma mark -
 #pragma mark ImageNotify
-
 -(void)ImageNotify:(UIImage *)image timestamp:(NSInteger)timestamp{
-    NSLog(@"图片通知ImageNotify......%ld", (long)timestamp);
+    NSLog(@"图片通知ImageNotify  时间 = %ld", (long)timestamp);
     if (m_videoFormat == -1) {
         m_videoFormat = 0;
     }
     [self performSelector:@selector(refreshImage:) withObject:image];
 }
 
+/* 视频处理 */
 -(void)YUVNotify:(Byte *)yuv length:(int)length width:(int)width height:(int)height timestamp:(unsigned int)timestamp{
     
     if (bPlaying == NO) {
-        
         [self performSelectorOnMainThread:@selector(CreateGLView) withObject:nil waitUntilDone:YES];
         [self updataResolution:width height:height];
         bPlaying = YES;
@@ -250,11 +248,46 @@
     return image;
 }
 
+//View处理
 - (BOOL)prefersStatusBarHidden
 {
     return YES;//隐藏为YES，显示为NO
 }
 
+/* 出现时 */
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        if (_m_PPPPChannelMgt == nil) {
+            _m_PPPPChannelMgtCondition = [[NSCondition alloc] init];
+            _m_PPPPChannelMgt = new CPPPPChannelManagement();
+            _m_PPPPChannelMgt->pCameraViewController = self;
+            //[self Initialize:nil];
+            [self ConnectCam:self.username psw:self.password];
+        }
+        else{
+            [self starVideo:nil];
+        }
+    });
+    
+    self.navigationController.interactivePopGestureRecognizer.enabled = NO;
+    self.navigationController.navigationBar.hidden = YES;
+}
+
+
+/* 消失时 */
+-(void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    [self stopVideo:nil];
+    if (_m_PPPPChannelMgt == nil) {
+        [self stopCamera:nil];
+    }
+    _m_PPPPChannelMgt->StopAll();
+    _m_PPPPChannelMgt = nil;
+    self.navigationController.navigationBar.hidden = NO;
+}
 
 - (void)viewDidLoad
 {
@@ -381,40 +414,6 @@
     UIGraphicsEndImageContext();
     return newimage;
 }
-
--(void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-    dispatch_async(dispatch_get_global_queue(0, 0), ^{
-        if (_m_PPPPChannelMgt == nil) {
-            _m_PPPPChannelMgtCondition = [[NSCondition alloc] init];
-            _m_PPPPChannelMgt = new CPPPPChannelManagement();
-            _m_PPPPChannelMgt->pCameraViewController = self;
-//            [self Initialize:nil];
-            [self ConnectCam:self.username psw:self.password];
-        }
-        else{
-            [self starVideo:nil];
-        }
-    });
-    self.navigationController.navigationBar.hidden = YES;
-    self.navigationController.interactivePopGestureRecognizer.enabled = NO;
-    
-}
--(void)viewWillDisappear:(BOOL)animated
-{
-    [super viewWillDisappear:animated];
-    [self stopVideo:nil];
-    if (_m_PPPPChannelMgt == nil) {
-        [self stopCamera:nil];
-    }
-    _m_PPPPChannelMgt->StopAll();
-    _m_PPPPChannelMgt = nil;
-    self.navigationController.navigationBar.hidden = NO;
-    self.navigationController.interactivePopGestureRecognizer.enabled = YES;
-}
-
-
 
 - (IBAction)Initialize:(id)sender {
     st_PPPP_NetInfo NetInfo;

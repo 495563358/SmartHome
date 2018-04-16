@@ -195,6 +195,15 @@ static NSString *const DCDetailPicCellID = @"DCDetailPicCell";
         [controller addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
         }]];
         
+        //解决iPad无法跳转的问题
+        if([controller respondsToSelector:@selector(popoverPresentationController)])
+        {
+            controller.popoverPresentationController.sourceView = weakSelf.view;
+            controller.popoverPresentationController.permittedArrowDirections = UIPopoverArrowDirectionAny;
+            
+            controller.popoverPresentationController.sourceRect = CGRectMake((weakSelf.view.dc_width - 320) / 2.0, (weakSelf.view.dc_height - 44) / 2.0, 320, 44);
+        }
+        
         [weakSelf presentViewController:controller animated:YES completion:nil];
     };
     

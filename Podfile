@@ -22,4 +22,6 @@ pod 'AliPay', '~> 2.1.2'
 pod 'WechatOpenSDK', '~> 1.8.1'
 pod 'Masonry', '~> 1.1.0'
 
+pod 'LJContactManager', '~> 1.0.2'
+
 end

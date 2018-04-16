@@ -350,6 +350,12 @@ class BaseHttpService: NSObject {
                     
                 }
                 let str = (response.result.value as! NSDictionary)["message"]as!String
+                
+                if str == "该账户尚未注册"{
+                    successBlock(response.result.value as AnyObject)
+                    return
+                }
+                
                 BaseHttpService.showMMSSGG(str)
                 let separArr:[String] = str.components(separatedBy: ",")
                 if separArr.last == "离线"{

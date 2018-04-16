@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>智能屋Debug</string>
+	<string>智能屋</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -17,7 +17,7 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>2.1.9</string>
+	<string>2.2.0</string>
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
@@ -128,7 +128,7 @@
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>2.1.9</string>
+	<string>2.2.0</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>wechat</string>
@@ -179,6 +179,8 @@
 		<string>timapiV1</string>
 		<string>alipay</string>
 		<string>alipayshare</string>
+		<string>baidumap</string>
+		<string>iosamap</string>
 	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
@@ -194,7 +196,7 @@
 	<key>NSCameraUsageDescription</key>
 	<string>我们需要访问相机来设置您的个人信息</string>
 	<key>NSContactsUsageDescription</key>
-	<string>我们需要访问您的通讯录来查找您可能认识的人</string>
+	<string>我们需要访问通讯录来为您展示授权列表</string>
 	<key>NSHealthShareUsageDescription</key>
 	<string>我们需要访问健康分享来为您设置适合的起床时间</string>
 	<key>NSHealthUpdateUsageDescription</key>
@@ -210,7 +212,7 @@
 	<key>NSMotionUsageDescription</key>
 	<string>我们需要访问运动与健身来为您设置情景模式</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>我们需要访问相册来设置您的个人信息</string>
+	<string>我们需要访问相册来设置您的个人信息或保存图片</string>
 	<key>NSRemindersUsageDescription</key>
 	<string>我们需要访问提醒事项来为您添加事件提醒</string>
 	<key>UIBackgroundModes</key>

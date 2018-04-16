@@ -78,9 +78,7 @@ class HeadCell: UITableViewCell {
             bgImg.image = UIImage(named: "img_cloudy")
             iconImg.image = UIImage(named: "icon_cloudy")
             break
-          
             
-        
         }
         
     }

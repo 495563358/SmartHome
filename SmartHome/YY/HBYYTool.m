@@ -193,7 +193,7 @@
     }else if (sender.state == UIGestureRecognizerStateEnded){
         NSLog(@"结束录音");
         [_talkBtn setBackgroundImage:[UIImage imageNamed:@"yuyin_yuan"] forState:UIControlStateNormal];
-        [self performSelector:@selector(stopListening) withObject:nil afterDelay:1.5];
+        [self performSelector:@selector(stopListening) withObject:nil afterDelay:1.0];
         
         
     }
@@ -282,6 +282,7 @@
     [_iFlySpeechSynthesizer setParameter:@" tts.pcm"
                                   forKey: [IFlySpeechConstant TTS_AUDIO_PATH]];
     
+    [_iFlySpeechSynthesizer setParameter:@"20000" forKey:[IFlySpeechConstant NET_TIMEOUT]];
 //    [_iFlySpeechSynthesizer startSpeaking: @"你好。"];
     
     

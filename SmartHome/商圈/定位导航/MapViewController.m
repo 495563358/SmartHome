@@ -333,7 +333,7 @@
     
     
     if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"iosamap://"]]){
-        // -- 使用 canOpenURL 判断需要在info.plist 的 LSApplicationQueriesSchemes 添加 baidumap 。
+        // -- 使用 canOpenURL 判断需要在info.plist 的 LSApplicationQueriesSchemes 添加 iosamap 。
         [alertVC addAction:[UIAlertAction actionWithTitle:@"使用高德地图" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
             NSString *url = [[NSString stringWithFormat:@"iosamap://path?sourceApplication=applicationName&sid=BGVIS1&slat=%lf&slon=%lf&sname=我的位置&did=BGVIS2&dlat=%lf&dlon=%lf&dname=%@&dev=0&m=0&t=%@&backScheme=%@",fromCoordinateChina.latitude,fromCoordinateChina.longitude,toCoordinateChina.latitude,toCoordinateChina.longitude,newDest.destinationName,@"0",@"SmerHomer2016"] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
             bool isBaiduOpen = [[UIApplication sharedApplication] openURL:[NSURL URLWithString:url]];

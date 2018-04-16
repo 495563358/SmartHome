@@ -595,17 +595,14 @@
         });
     }
     if ([_GLViewControllerDict objectForKey:szdid]) {
-        
-//        NSLog(@"MySxtScorllView YUVNotify  strDID = %@",szdid);
-        
+        NSLog(@"MySxtScorllView YUVNotify  strDID = %@",szdid);
         [(MyGLViewController *)[_GLViewControllerDict objectForKey:szdid] WriteYUVFrame:yuv Len:length width:width height:height];
         m_YUVDataLock = (NSCondition *)[_conditonDict objectForKey:szdid];
         NSInteger indexNum = [(NSNumber *)[_datasDict objectForKey:szdid] integerValue];
 
         int yuvlength = width * height * 3 / 2;
-
-
-        [m_YUVDataLock lock];
+        
+//        [m_YUVDataLock lock];
 
         switch (indexNum) {
             case 0:
@@ -635,7 +632,7 @@
                 memcpy(m_pYUVData, yuv, yuvlength);
                 break;
         }
-        [m_YUVDataLock unlock];
+//        [m_YUVDataLock unlock];
 
     }
     

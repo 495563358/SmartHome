@@ -73,7 +73,6 @@
     self.navigationItem.hidesBackButton = YES;
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:backBtn];
     self.navigationController.interactivePopGestureRecognizer.delegate = (id)self;
-    
 }
 
 -(void)viewWillAppear:(BOOL)animated{
