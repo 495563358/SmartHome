@@ -16,12 +16,16 @@ class RedViewController: UIViewController,UITableViewDataSource,UITableViewDeleg
     var dic = [String:String]()
     var indexqj:IndexPath?
     var arr = ((UIApplication.shared.delegate) as! AppDelegate).infArr
+    //禁止添加
+    var forbiddenCreate = "0"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         //请求服务器该模板信息 1 abc 2 dict【“键值”：“名字” ，。。。】
         self.table.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height)
        // self.navigationController?.title = "模块选择"
         self.navigationItem.title = NSLocalizedString("红外", comment: "")
+        
 
         self.view.addSubview(self.table)
         // Do any additional setup after loading the view.
@@ -32,12 +36,26 @@ class RedViewController: UIViewController,UITableViewDataSource,UITableViewDeleg
         self.table.frame.size.height=self.table.frame.size.height-64
         self.table.delegate = self
         self.table.dataSource = self
-        if !isMoni &&  BaseHttpService.GetAccountOperationType() != "2"{
+        if !isMoni &&  BaseHttpService.GetAccountOperationType() != "2" && forbiddenCreate == "0"{
             let but = UIBarButtonItem(image: UIImage(named: "添加房间"), style: .plain, target: self, action: #selector(RedViewController.handleBack(_:)))
             
-            let helpBtn = UIBarButtonItem(image: UIImage(named: "deviceList"), style: .plain, target: self, action: #selector(RedViewController.helpClick))
+            let helpBtn = UIBarButtonItem(image: UIImage(named: "yuyin_icon_bangzhu"), style: .plain, target: self, action: #selector(RedViewController.helpClick))
             
             self.navigationItem.rightBarButtonItems = [but,helpBtn]
+        }else{
+            let helpBtn = UIBarButtonItem(image: UIImage(named: "yuyin_icon_bangzhu"), style: .plain, target: self, action: #selector(RedViewController.helpClick))
+            
+            if forbiddenCreate == "F0"{
+                self.navigationItem.title = "电视"
+            }else if forbiddenCreate == "G0"{
+                self.navigationItem.title = "空调"
+            }else if forbiddenCreate == "H0"{
+                self.navigationItem.title = "背景音乐"
+            }else if forbiddenCreate == "I0"{
+                self.navigationItem.title = "变色灯"
+            }
+            
+            self.navigationItem.rightBarButtonItem = helpBtn
         }
 
     }
@@ -204,10 +222,85 @@ class RedViewController: UIViewController,UITableViewDataSource,UITableViewDeleg
             //(cell as! ThirdTableViewCell).detajson()
             cell!.selectionStyle = UITableViewCellSelectionStyle.none
             return cell!
-
-        default :
+        case "F":
+            var cell:UITableViewCell?
+            cell = tableView.dequeueReusableCell(withIdentifier: "NormalTVTableViewCell"+String(indexPath.row))
+            if cell == nil{
+                
+                cell = NormalTVTableViewCell.init(style: UITableViewCellStyle.default, reuseIdentifier: "NormalTVTableViewCell"+String(indexPath.row))
+                (cell as! NormalTVTableViewCell).index = Int(str1)!
+                (cell as! NormalTVTableViewCell).equip = self.equip
+                (cell as! NormalTVTableViewCell).dic = self.dic
+                (cell as! NormalTVTableViewCell).setup()
+            }
+            print("cell")
             
-         
+            
+            
+            (cell as! NormalTVTableViewCell).isMoni = self.isMoni
+            (cell as! NormalTVTableViewCell).indexqj = self.indexqj
+            //(cell as! ThirdTableViewCell).detajson()
+            cell!.selectionStyle = UITableViewCellSelectionStyle.none
+            return cell!
+        case "G":
+            var cell:UITableViewCell?
+            cell = tableView.dequeueReusableCell(withIdentifier: "NormalACTableViewCell"+String(indexPath.row))
+            if cell == nil{
+                
+                cell = NormalACTableViewCell.init(style: UITableViewCellStyle.default, reuseIdentifier: "NormalTVTableViewCell"+String(indexPath.row))
+                (cell as! NormalACTableViewCell).index = Int(str1)!
+                (cell as! NormalACTableViewCell).equip = self.equip
+                (cell as! NormalACTableViewCell).dic = self.dic
+                (cell as! NormalACTableViewCell).setup()
+            }
+            print("cell")
+            
+            
+            
+            (cell as! NormalACTableViewCell).isMoni = self.isMoni
+            (cell as! NormalACTableViewCell).indexqj = self.indexqj
+            //(cell as! ThirdTableViewCell).detajson()
+            cell!.selectionStyle = UITableViewCellSelectionStyle.none
+            return cell!
+        case "H":
+            var cell:UITableViewCell?
+            cell = tableView.dequeueReusableCell(withIdentifier: "NormalBMTableViewCell"+String(indexPath.row))
+            if cell == nil{
+                
+                cell = NormalBMTableViewCell.init(style: UITableViewCellStyle.default, reuseIdentifier: "NormalBMTableViewCell"+String(indexPath.row))
+                (cell as! NormalBMTableViewCell).index = Int(str1)!
+                (cell as! NormalBMTableViewCell).equip = self.equip
+                (cell as! NormalBMTableViewCell).dic = self.dic
+                (cell as! NormalBMTableViewCell).setup()
+            }
+            print("cell")
+            
+            
+            (cell as! NormalBMTableViewCell).isMoni = self.isMoni
+            (cell as! NormalBMTableViewCell).indexqj = self.indexqj
+            //(cell as! ThirdTableViewCell).detajson()
+            cell!.selectionStyle = UITableViewCellSelectionStyle.none
+            return cell!
+        case "I":
+            var cell:UITableViewCell?
+            cell = tableView.dequeueReusableCell(withIdentifier: "NormalColorLampTableViewCell"+String(indexPath.row))
+            if cell == nil{
+                
+                cell = NormalColorLampTableViewCell.init(style: UITableViewCellStyle.default, reuseIdentifier: "NormalBMTableViewCell"+String(indexPath.row))
+                (cell as! NormalColorLampTableViewCell).index = Int(str1)!
+                (cell as! NormalColorLampTableViewCell).equip = self.equip
+                (cell as! NormalColorLampTableViewCell).dic = self.dic
+                (cell as! NormalColorLampTableViewCell).setup()
+            }
+            print("cell")
+            
+            
+            (cell as! NormalColorLampTableViewCell).isMoni = self.isMoni
+            (cell as! NormalColorLampTableViewCell).indexqj = self.indexqj
+            //(cell as! ThirdTableViewCell).detajson()
+            cell!.selectionStyle = UITableViewCellSelectionStyle.none
+            return cell!
+        default :
             
             return UITableViewCell()
         }
@@ -225,6 +318,8 @@ class RedViewController: UIViewController,UITableViewDataSource,UITableViewDeleg
             return ScreenHeight/2*1.35
         }else if str == "E"{
             return ScreenHeight/2*1.25
+        }else if str == "F" || str == "G" || str == "H" || str == "I"{
+            return UIScreen.main.bounds.size.height - 64
         }
         return UIScreen.main.bounds.size.height/2 * 1.15
     }

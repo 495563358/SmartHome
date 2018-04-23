@@ -30,7 +30,7 @@ class BaseHttpService: NSObject {
             } else {
                 if (response.result.value!as![String:AnyObject]).keys.contains("statusCode"){
                     print("服务器返回异常数据")
-                    return;
+                    return
                 }
                 //                if response.result.value!["success"] as! Bool == true{
                 //                    successBlock(response.result.value! )
@@ -77,8 +77,6 @@ class BaseHttpService: NSObject {
 //            multipartFormData.appendBodyPart(data: data, name: "fileupload", fileName:randomNumAndLetter(), mimeType: "image/jpeg")     }, encodingMemoryThreshold: 10 * 1024 * 1024) { (result) -> Void in
 //                //successBlock(result)
 //        }
-        
-        
         
     }
     
@@ -476,14 +474,15 @@ class BaseHttpService: NSObject {
         case "该主机已被绑定","您没有绑定主机","主机处于离线状态","不能重复绑定主机","摄像头密码不能为空","正在执行情景模式","解绑成功","解绑失败,请重新解绑","当前版本暂时只能授权用户7个","授权失败","网络超时,查询失败","连续输错5次，APP远程开启锁定10分钟。","操作失败,密码错误","服务器发生异常","网络超时,通讯失败","设置失败,管理员密码错误","没有临时密码列表","操作失败,管理员密码错误","没有临时密码,请先设置个临时密码","主机已被绑定","服务器尚未添设该主机,请联系管理员处理","密码不正确","旧密码不正确","手机号或密码不正确","验证码错误","控制盒不能添加传感器","邮箱格式不正确","该邮箱已被其他账号绑定,请重新填写","当前ip请求频繁","该账号已注册,请去登录","手机号码格式不正确","该手机号码未注册","验证码已失效,请重新获取","验证码输入错误,请重新输入","修改失败","该邮箱未绑定过账号","该账户尚未注册","操作失败,门反锁","您已使用过该昵称","该情景模式没有情景信息":
             
             showMsg(msg: str)
-            
+            break
+        case "您还没学习过该按键":
+            showMsg(msg: "您还没学习过该按键,您可以点击右上角的提示按钮查看学习方式")
             break
         default:
             if str.count > 8{
                 print("提示字符串为:\(str)")
                 if (str as NSString).substring(with: NSMakeRange(0, 4)) == "连续输错"{
                     print("设置失败")
-                    
                 }
             }
             break

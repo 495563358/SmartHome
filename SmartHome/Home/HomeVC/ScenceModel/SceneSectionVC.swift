@@ -14,7 +14,7 @@ class SceneSectionVC: UICollectionViewController,DeleModels2,UIGestureRecognizer
     
     var itemDataSource: [String : [String]] = [NSLocalizedString("长按可修改您的情景模式", comment: "") : ["huijia","anfang", "guandeng", "huike", "jiucan","kaideng", "lijia", "qichuang", "qiye", "shangban", "shuijiao", "xiaban", "yingyuan", "yinyue", "youxi"]]
     
-    let nameArr:[String] = ["回家","安防","熄灯","会客","就餐","开灯","离家","起床","夜间","上班","安睡","下班","影院","音乐","游戏"]
+    let nameArr:[String] = ["回家","安防","关灯","会客","就餐","开灯","离家","起床","夜间","上班","睡觉","下班","影院","音乐","游戏"]
     
     //var arr = [UIImage(imageLiteral: "icon1.png"),UIImage(imageLiteral: "icon2.png"),UIImage(imageLiteral: "icon3.png"),UIImage(imageLiteral: "icon4.png"),UIImage(imageLiteral: "icon5.png"),UIImage(imageLiteral: "icon6.png"),UIImage(imageLiteral: "icon7.png"),UIImage(imageLiteral: "icon8.png"),]
     

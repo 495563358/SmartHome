@@ -239,7 +239,6 @@ class ChangeLoginVC: UIViewController  {
 
                 } else{
                     showMsg(msg: NSLocalizedString(any["message"] as! String, comment: ""))
-                    
                 }//失效
                 
                 print(any)

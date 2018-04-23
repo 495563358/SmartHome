@@ -209,6 +209,14 @@ class InfraredCell: UITableViewCell,UIActionSheetDelegate {
                         VC.dic = kv as! [String:String]
                         app.infArr = arr
                         VC.arr = arr
+                        
+                        //是否禁止添加
+                        for str in arr{
+                            if str == "F0" || str == "G0" || str == "H0" || str == "I0"{
+                                VC.forbiddenCreate = str
+                            }
+                        }
+                        
                         //app.infArr = ["A0","B0","C0"]
                         self.parentController()? .navigationController?.pushViewController(VC, animated: true)
                     }

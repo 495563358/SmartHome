@@ -26,21 +26,22 @@ class DeviceTypechoose: UIViewController,UITableViewDelegate,UITableViewDataSour
         let name10 = ["电视"]
         let name11 = ["315热水器开关","433热水器开关"]
         let name12 = ["315调光开关","433调光开关","ZigBee调光开关"]
-        let name13 = ["315智能晾衣架","433智能晾衣架"]
-        let name14 = ["315电动门窗","433电动门窗"]
-        let name15 = ["315电动升降架","433电动升降架"]
-        let name16 = ["315电动幕布","电动幕布"]
-        let name17 = ["影音设备"]
-        let name18 = ["315空气净化器","433空气净化器"]
-        let name19 = ["315净水机","433净水机"]
+        let name13 = ["变色灯"]
+        let name14 = ["315智能晾衣架","433智能晾衣架"]
+        let name15 = ["315电动门窗","433电动门窗"]
+        let name16 = ["315电动升降架","433电动升降架"]
+        let name17 = ["315电动幕布","电动幕布"]
+        let name18 = ["影音设备"]
+        let name19 = ["315空气净化器","433空气净化器"]
+        let name20 = ["315净水机","433净水机"]
         
-        let name20 = ["315水管阀门","433水管阀门"]
-        let name21 = ["315燃气阀门","433燃气阀门"]
+        let name21 = ["315水管阀门","433水管阀门"]
+        let name22 = ["315燃气阀门","433燃气阀门"]
         
         //9 电视 10 空调
-        let name22 = ["315浇花灌溉开关","433浇花灌溉开关"]
+        let name23 = ["315浇花灌溉开关","433浇花灌溉开关"]
         
-        var namesMarr = [name1,name2,name3,name4,name5,name6,name7,name8,name9,name10,name11,name12,name13,name14,name15,name16,name17,name18,name19,name20,name21,name22]
+        var namesMarr = [name1,name2,name3,name4,name5,name6,name7,name8,name9,name10,name11,name12,name13,name14,name15,name16,name17,name18,name19,name20,name21,name22,name23]
         
         return namesMarr as NSArray
     }()
@@ -49,14 +50,14 @@ class DeviceTypechoose: UIViewController,UITableViewDelegate,UITableViewDataSour
     let _tableview = UITableView.init(frame: CGRect(x: 0, y: 0, width: ScreenWidth, height: ScreenHeight - 64), style: UITableViewStyle.grouped)
     
     var _namesArr:[String] = []
-    let _imagesArr:[String] = ["普通灯泡","智能门锁","摄像头","窗帘","窗帘电机","卷帘","排风扇","插座","挂式空调","电视","热水器","调光灯泡","智能晾衣架","电动门窗","电动升降架","电动幕布","影音设备","空气净化器","净水机","阀门","电磁阀","浇花灌溉"]
+    let _imagesArr:[String] = ["普通灯泡","智能门锁","摄像头","窗帘","窗帘电机","卷帘","排风扇","插座","挂式空调","电视","热水器","调光灯泡","变色灯","智能晾衣架","电动门窗","电动升降架","电动幕布","影音设备","空气净化器","净水机","阀门","电磁阀","浇花灌溉"]
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         _namesArr = namesMarr[index] as! [String]
-        self.navigationItem.title = ["灯光开关","智能门锁","摄像头","窗帘开关","窗帘电机","卷帘开关","排风扇","插座","空调","电视","热水器","调光开关","智能晾衣架","电动门窗","电动升降架","电动幕布","影音设备","空气净化器","净水机","水管阀门","燃气阀门","浇花灌溉"][index]
+        self.navigationItem.title = ["灯光开关","智能门锁","摄像头","窗帘开关","窗帘电机","卷帘开关","排风扇","插座","空调","电视","热水器","调光开关","变色灯","智能晾衣架","电动门窗","电动升降架","电动幕布","影音设备","空气净化器","净水机","水管阀门","燃气阀门","浇花灌溉"][index]
         _tableview.delegate = self
         _tableview.dataSource = self
         _tableview.tableHeaderView = UIView.init(frame: CGRect(x: 0, y: 0, width: ScreenWidth, height: 0.01))
@@ -92,7 +93,6 @@ class DeviceTypechoose: UIViewController,UITableViewDelegate,UITableViewDataSour
         equipAddVC.indexNum = self.index
         
         var typeNum:Int = index
-        ["0灯光开关","1智能门锁","2摄像头","3窗帘开关","4窗帘电机","5卷帘开关","6排风扇","7插座","8空调","9电视","10热水器","11调光开关","12智能晾衣架","13电动门窗","14电动升降架","15电动幕布","16影音设备","17空气净化器","18净水机","19水管阀门","20燃气阀门","21浇花灌溉"]
         switch index{
         case 0://灯光开关
             typeNum = 1
@@ -121,28 +121,31 @@ class DeviceTypechoose: UIViewController,UITableViewDelegate,UITableViewDataSour
         case 11://调光
             typeNum = 2
             break
-        case 12://智能晾衣架
-            typeNum = 3
-            break
-        case 13://门窗
-            typeNum = 3
-            break
-        case 14://升降架
-            typeNum = 3
-            break
-        case 15://电动幕布
-            typeNum = 3
-            break
-        case 17://空气净化器
+        case 12://变色灯
             typeNum = 1
             break
-        case 18://净水机
+        case 13://智能晾衣架
+            typeNum = 3
+            break
+        case 14://门窗
+            typeNum = 3
+            break
+        case 15://升降架
+            typeNum = 3
+            break
+        case 16://电动幕布
+            typeNum = 3
+            break
+        case 18://空气净化器
             typeNum = 1
             break
-        case 19://水管
+        case 19://净水机
             typeNum = 1
             break
-        case 20://燃气
+        case 20://水管
+            typeNum = 1
+            break
+        case 21://燃气
             typeNum = 1
             break
         default:

@@ -435,9 +435,65 @@
     for (ChainModel *m  in appd.models) {
         if ([resultFromJson containsString:m.modelName])
         {
+            NSString *mess = @"";
+            if ([m.modelName isEqualToString:@"开灯"]) {
+                mess = @"已为您打开灯";
+            }else if ([m.modelName isEqualToString:@"关灯"]){
+                mess = @"已为您关闭灯";
+            }
+            else if ([m.modelName isEqualToString:@"回家"]){
+                mess = @"欢迎回家";
+            }
+            else if ([m.modelName isEqualToString:@"安防"]){
+                mess = @"已启动安防模式";
+            }
+            else if ([m.modelName isEqualToString:@"会客"]){
+                mess = @"已为您设置为会客模式";
+            }
+            else if ([m.modelName isEqualToString:@"就餐"]){
+                mess = @"已为您设置为就餐模式";
+            }
+            else if ([m.modelName isEqualToString:@"离家"]){
+                mess = @"早点回来哦";
+            }
+            else if ([m.modelName isEqualToString:@"起床"]){
+                mess = @"美好的一天等待着您";
+            }
+            else if ([m.modelName isEqualToString:@"关灯"]){
+                mess = @"已为您关闭灯";
+            }
+            else if ([m.modelName isEqualToString:@"夜间"]){
+                mess = @"已设置为夜间模式";
+            }
+            else if ([m.modelName isEqualToString:@"上班"]){
+                mess = @"工作顺利哦";
+            }
+            else if ([m.modelName isEqualToString:@"睡觉"]){
+                mess = @"晚安,好梦哦";
+            }
+            else if ([m.modelName isEqualToString:@"下班"]){
+                mess = @"欢迎回家";
+            }
+            else if ([m.modelName isEqualToString:@"影院"]){
+                mess = @"已设置为影院模式";
+            }
+            else if ([m.modelName isEqualToString:@"音乐"]){
+                mess = @"已设置为音乐模式";
+            }
+            else if ([m.modelName isEqualToString:@"游戏"]){
+                mess = @"已打开游戏模式";
+            }
+            else if ([m.modelName containsString:@"开"]){
+                mess = [NSString stringWithFormat:@"已为您%@",m.modelName];
+            }else if ([m.modelName containsString:@"关"]){
+                mess = [NSString stringWithFormat:@"已为您%@",m.modelName];
+            }
+            else{
+                mess = @"已为您执行";
+            }
             
-            [_iFlySpeechSynthesizer startSpeaking:@"已执行"];
-            [self reloadMessage:@"robot" andMessage:@"已执行"];
+            [_iFlySpeechSynthesizer startSpeaking:mess];
+            [self reloadMessage:@"robot" andMessage:mess];
             [BaseHttpService sendRequestAccess: [NSString stringWithFormat:@"%@/smarthome.IMCPlatform/xingUser/commandmodel.action",BaseHttpUrl] parameters:@{@"modelId":m.modelId} success:^(id backJson) {
             }];
             
@@ -445,8 +501,8 @@
         }
     }
     
-    [_iFlySpeechSynthesizer startSpeaking:@"您还没有添加这个情景,请先添加情景"];
-    [self reloadMessage:@"robot" andMessage:@"您还没有添加这个情景,请先添加情景"];
+    [_iFlySpeechSynthesizer startSpeaking:@"您好像还没有这个情景模式,请先添加"];
+    [self reloadMessage:@"robot" andMessage:@"您好像还没有这个情景模式,请先添加"];
     if (isLast)
     {
         // NSLog(@"听写结果(json)：%@",  _reString);

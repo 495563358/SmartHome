@@ -45,7 +45,6 @@ class ChangeRegisterVC: UIViewController,UIAlertViewDelegate  {
 
         super.viewDidLoad()
         
-//        self.navigationController?.navigationItem.title = "用户注册"
       
         self.configView()
         loginBtn.setTitle(NSLocalizedString("提交", comment: ""), for: UIControlState())
@@ -76,6 +75,8 @@ class ChangeRegisterVC: UIViewController,UIAlertViewDelegate  {
         let image:UIImage = imageWithColor(color: UIColor.clear)
         self.navigationController!.navigationBar.setBackgroundImage(image, for: UIBarMetrics.default)
         self.navigationController!.navigationBar.shadowImage=image
+        
+        self.navigationController?.navigationItem.title = "用户注册"
         
     }
 

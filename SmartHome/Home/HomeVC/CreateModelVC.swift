@@ -223,32 +223,23 @@ class CreateModelVC: UIViewController,UITableViewDataSource,UITableViewDelegate,
     }
     //返回某个节中的行数
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-       
-       
         return app.modelEquipArr.count + 1
-
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-     
         var cell:UITableViewCell?
-     
             if app.modelEquipArr.count ==  indexPath.row
             {
-            
              cell = tableView.dequeueReusableCell(withIdentifier: "NoDeviceCell")
                   (cell as! NoDeviceCell).showLabel.text = NSLocalizedString("点击为情景模式添加设备", comment: "")
                // cell?.selectionStyle = UITableViewCellSelectionStyle.None
                 return cell!
-
             }
             let equip = app.modelEquipArr[indexPath.row] as! Equip
             if equip.type == "1"
             {//开关设备
                  cell = tableView.dequeueReusableCell(withIdentifier: "LightCell")
-                
                  cell?.backgroundColor = UIColor.white
-               
                 (cell as! LightCell).isMoni = true
                 (cell as! LightCell).index = indexPath
                 (cell as! LightCell).setModel(equip)
@@ -256,8 +247,7 @@ class CreateModelVC: UIViewController,UITableViewDataSource,UITableViewDelegate,
                     (cell as!LightCell).delayBtn.isHidden = true
                 }
             }
-        else
-        if equip.type == "999"
+        else if equip.type == "999"
         {//门锁
             
             cell = tableView.dequeueReusableCell(withIdentifier: "ShotLockCell")

@@ -13,7 +13,7 @@ class ChainVC: UICollectionViewController {
     
     var itemDataSource: [String : [String]] = [NSLocalizedString("为你的情景选取图标", comment: "") : ["huijia","anfang", "guandeng", "huike", "jiucan","kaideng", "lijia", "qichuang", "qiye", "shangban", "shuijiao", "xiaban", "yingyuan", "yinyue", "youxi"]]
 //    ["icon1.png", "icon2.png", "icon3.png", "icon4.png", "icon5.png","icon6.png", "icon7.png", "icon8.png"]
-    let nameArr:[String] = ["回家","安防","熄灯","会客","就餐","开灯","离家","起床","夜间","上班","安睡","下班","影院","音乐","游戏"]
+    let nameArr:[String] = ["回家","安防","关灯","会客","就餐","开灯","离家","起床","夜间","上班","睡觉","下班","影院","音乐","游戏"]
     
 //var arr = [UIImage(imageLiteral: "icon1.png"),UIImage(imageLiteral: "icon2.png"),UIImage(imageLiteral: "icon3.png"),UIImage(imageLiteral: "icon4.png"),UIImage(imageLiteral: "icon5.png"),UIImage(imageLiteral: "icon6.png"),UIImage(imageLiteral: "icon7.png"),UIImage(imageLiteral: "icon8.png"),]
     

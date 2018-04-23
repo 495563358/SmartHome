@@ -16,7 +16,7 @@ class ChainEquipAddVC: UIViewController, UIGestureRecognizerDelegate,UITableView
     var tableview:UITableView = UITableView.init(frame: UIScreen.main.bounds, style: .grouped)
     
     let imgArr:[String] = ["huijia","anfang", "guandeng", "huike", "jiucan","kaideng", "lijia", "qichuang", "qiye", "shangban", "shuijiao", "xiaban", "yingyuan", "yinyue", "youxi"]
-    let nameArr:[String] = ["回家","安防","熄灯","会客","就餐","开灯","离家","起床","夜间","上班","安睡","下班","影院","音乐","游戏"]
+    let nameArr:[String] = ["回家","安防","关灯","会客","就餐","开灯","离家","起床","夜间","上班","睡觉","下班","影院","音乐","游戏"]
     
     var arr = [String]()
     fileprivate var compeletBlock: ((Equip,IndexPath)->())?

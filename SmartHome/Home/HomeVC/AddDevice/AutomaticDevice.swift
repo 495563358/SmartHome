@@ -163,7 +163,7 @@ class AutomaticDevice: UIViewController, UICollectionViewDataSource, UICollectio
         self.navigationController!.navigationBar.barTintColor = UIColor.init(red: 14/255.0, green: 173/255.0, blue: 254/255.0, alpha: 1)
         
         
-        navigationItem.title = NSLocalizedString("搜索附件设备", comment: "")
+        navigationItem.title = NSLocalizedString("搜索附近设备", comment: "")
         
         let header = MJRefreshNormalHeader()
         header.setRefreshingTarget(self, refreshingAction: #selector(AutomaticDevice.MJRefreshHeaderReload))

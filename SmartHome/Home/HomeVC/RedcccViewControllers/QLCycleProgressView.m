@@ -17,6 +17,7 @@
 @property (nonatomic, strong) UIBezierPath *progressPath;
 @property (nonatomic, strong) UILabel *countJump;
 @property (nonatomic, strong) dispatch_source_t timer;
+@property (nonatomic, strong) UILabel *tipLabel;
 @end
 
 @implementation QLCycleProgressView
@@ -30,13 +31,13 @@
         _needAnimation = 1.0;
         [self backgroundCyclePath];
         
-        UILabel *lab = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, frame.size.width/2, 20)];
-        lab.center = CGPointMake(self.center.x, self.bounds.size.height * 0.75);
-        lab.text = @"当前室温";
-        lab.font = [UIFont systemFontOfSize:20];
-        lab.textColor = Color_system;
-        lab.textAlignment = NSTextAlignmentCenter;
-        [self addSubview:lab];
+        self.tipLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, frame.size.width/2, 20)];
+        _tipLabel.center = CGPointMake(self.center.x, self.bounds.size.height * 0.75);
+        _tipLabel.text = @"当前室温";
+        _tipLabel.font = [UIFont systemFontOfSize:20];
+        _tipLabel.textColor = self.mainColor;
+        _tipLabel.textAlignment = NSTextAlignmentCenter;
+        [self addSubview:_tipLabel];
         
     }
     return self;
@@ -160,6 +161,7 @@
     _backBorderLayer.strokeColor = mainColor.CGColor;
     _progressLayer.strokeColor = mainColor.CGColor;
     _countJump.textColor = mainColor;
+    _tipLabel.textColor = mainColor;
 }
 
 - (void)setFillColor:(UIColor *)fillColor {

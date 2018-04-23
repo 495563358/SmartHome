@@ -84,6 +84,8 @@
 		9501EEAF2021BEA100C4F356 /* SystemUpgradeViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9501EE692021BEA100C4F356 /* SystemUpgradeViewController.mm */; };
 		9501EEB02021BEA100C4F356 /* SystemUpgradeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9501EE6A2021BEA100C4F356 /* SystemUpgradeViewController.xib */; };
 		950EF88D207B096800EF8A00 /* ApprovalModelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950EF88C207B096800EF8A00 /* ApprovalModelViewController.swift */; };
+		950F78C7208976A500CD33AD /* NormalColorLampTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950F78C6208976A500CD33AD /* NormalColorLampTableViewCell.swift */; };
+		950F78CB2089D80F00CD33AD /* iflyMSC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 950F78CA2089D80F00CD33AD /* iflyMSC.framework */; };
 		95116DCF2029B1E600B7220C /* ChoseDeviceForModel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95116DCD2029B1E500B7220C /* ChoseDeviceForModel.xib */; };
 		95116DD02029B1E600B7220C /* ChoseDeviceForModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95116DCE2029B1E600B7220C /* ChoseDeviceForModel.swift */; };
 		95193C3620196F7600CD8870 /* SideHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95193C3420196F7600CD8870 /* SideHeaderCell.swift */; };
@@ -124,6 +126,7 @@
 		95193C842019E35A00CD8870 /* EquipTableEquipCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95193C802019E35900CD8870 /* EquipTableEquipCell.swift */; };
 		95193C852019E35A00CD8870 /* EquipTableFloorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95193C812019E35A00CD8870 /* EquipTableFloorCell.swift */; };
 		95193C862019E35A00CD8870 /* EquipTableFloorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95193C822019E35A00CD8870 /* EquipTableFloorCell.xib */; };
+		951CFAA22086D52900684EAF /* AddInfraredDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951CFAA12086D52900684EAF /* AddInfraredDevice.swift */; };
 		952137B2206C8FF000CD4DCB /* ToolTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 952137B1206C8FF000CD4DCB /* ToolTableViewCell.m */; };
 		95261E92202158A500AA1932 /* JK_LineTableViewCell.mm in Sources */ = {isa = PBXBuildFile; fileRef = 95261E6E202158A500AA1932 /* JK_LineTableViewCell.mm */; };
 		95261E93202158A500AA1932 /* JK_LineTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95261E6F202158A500AA1932 /* JK_LineTableViewCell.xib */; };
@@ -375,7 +378,6 @@
 		955F81EE20577A0D00252F47 /* YYTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 955F81DB20577A0D00252F47 /* YYTool.m */; };
 		956853C2204506B500A67A82 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 956853C1204506B500A67A82 /* UserNotifications.framework */; };
 		956853C620454C5700A67A82 /* libUMessage_Sdk_1.5.0a.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 956853C420454C5600A67A82 /* libUMessage_Sdk_1.5.0a.a */; };
-		956C19362057C88C00513969 /* iflyMSC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 956C19352057C88C00513969 /* iflyMSC.framework */; };
 		957805522072160700AF647A /* DCCommentsItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 957805512072160700AF647A /* DCCommentsItem.m */; };
 		957805612072169700AF647A /* DCComImagesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 957805542072169100AF647A /* DCComImagesView.m */; };
 		957805622072169700AF647A /* DCCommentsCntCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 957805552072169100AF647A /* DCCommentsCntCell.xib */; };
@@ -609,6 +611,9 @@
 		959DE578201823D3000E3C84 /* UIImageView+HighlightedWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 959DE566201823D3000E3C84 /* UIImageView+HighlightedWebCache.m */; };
 		959DE579201823D3000E3C84 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 959DE568201823D3000E3C84 /* UIImageView+WebCache.m */; };
 		959DE57A201823D3000E3C84 /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 959DE56A201823D3000E3C84 /* UIView+WebCacheOperation.m */; };
+		95A55ECB208826EB008C03D9 /* NormalTVTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A55ECA208826EB008C03D9 /* NormalTVTableViewCell.swift */; };
+		95A595DB20888722009F1474 /* NormalACTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A595DA20888722009F1474 /* NormalACTableViewCell.swift */; };
+		95A595DD20889BB2009F1474 /* NormalBMTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A595DC20889BB2009F1474 /* NormalBMTableViewCell.swift */; };
 		95BC6F1E20186382004801A1 /* CommunityVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BC6F1D20186381004801A1 /* CommunityVC.swift */; };
 		95BC6F262018690D004801A1 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BC6F242018690D004801A1 /* HomeVC.swift */; };
 		95BC6F272018690D004801A1 /* HomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95BC6F252018690D004801A1 /* HomeVC.xib */; };
@@ -811,6 +816,8 @@
 		9501EE692021BEA100C4F356 /* SystemUpgradeViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SystemUpgradeViewController.mm; sourceTree = "<group>"; };
 		9501EE6A2021BEA100C4F356 /* SystemUpgradeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SystemUpgradeViewController.xib; sourceTree = "<group>"; };
 		950EF88C207B096800EF8A00 /* ApprovalModelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApprovalModelViewController.swift; sourceTree = "<group>"; };
+		950F78C6208976A500CD33AD /* NormalColorLampTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalColorLampTableViewCell.swift; sourceTree = "<group>"; };
+		950F78CA2089D80F00CD33AD /* iflyMSC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = iflyMSC.framework; sourceTree = "<group>"; };
 		95116DCD2029B1E500B7220C /* ChoseDeviceForModel.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChoseDeviceForModel.xib; sourceTree = "<group>"; };
 		95116DCE2029B1E600B7220C /* ChoseDeviceForModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoseDeviceForModel.swift; sourceTree = "<group>"; };
 		95193C3420196F7600CD8870 /* SideHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideHeaderCell.swift; sourceTree = "<group>"; };
@@ -853,6 +860,7 @@
 		95193C802019E35900CD8870 /* EquipTableEquipCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EquipTableEquipCell.swift; sourceTree = "<group>"; };
 		95193C812019E35A00CD8870 /* EquipTableFloorCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EquipTableFloorCell.swift; sourceTree = "<group>"; };
 		95193C822019E35A00CD8870 /* EquipTableFloorCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EquipTableFloorCell.xib; sourceTree = "<group>"; };
+		951CFAA12086D52900684EAF /* AddInfraredDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddInfraredDevice.swift; sourceTree = "<group>"; };
 		952137B0206C8FF000CD4DCB /* ToolTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ToolTableViewCell.h; sourceTree = "<group>"; };
 		952137B1206C8FF000CD4DCB /* ToolTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToolTableViewCell.m; sourceTree = "<group>"; };
 		95261E6D202158A500AA1932 /* JK_LineTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JK_LineTableViewCell.h; sourceTree = "<group>"; };
@@ -1329,7 +1337,6 @@
 		956853C1204506B500A67A82 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
 		956853C420454C5600A67A82 /* libUMessage_Sdk_1.5.0a.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libUMessage_Sdk_1.5.0a.a; sourceTree = "<group>"; };
 		956853C520454C5600A67A82 /* UMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMessage.h; sourceTree = "<group>"; };
-		956C19352057C88C00513969 /* iflyMSC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = iflyMSC.framework; sourceTree = "<group>"; };
 		957805502072160600AF647A /* DCCommentsItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCCommentsItem.h; sourceTree = "<group>"; };
 		957805512072160700AF647A /* DCCommentsItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCCommentsItem.m; sourceTree = "<group>"; };
 		957805542072169100AF647A /* DCComImagesView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCComImagesView.m; sourceTree = "<group>"; };
@@ -1761,6 +1768,9 @@
 		959DE568201823D3000E3C84 /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
 		959DE569201823D3000E3C84 /* UIView+WebCacheOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WebCacheOperation.h"; sourceTree = "<group>"; };
 		959DE56A201823D3000E3C84 /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
+		95A55ECA208826EB008C03D9 /* NormalTVTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalTVTableViewCell.swift; sourceTree = "<group>"; };
+		95A595DA20888722009F1474 /* NormalACTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalACTableViewCell.swift; sourceTree = "<group>"; };
+		95A595DC20889BB2009F1474 /* NormalBMTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalBMTableViewCell.swift; sourceTree = "<group>"; };
 		95BC6F1D20186381004801A1 /* CommunityVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommunityVC.swift; sourceTree = "<group>"; };
 		95BC6F242018690D004801A1 /* HomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		95BC6F252018690D004801A1 /* HomeVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeVC.xib; sourceTree = "<group>"; };
@@ -1854,7 +1864,7 @@
 				952CC5C420206FBA007B192C /* AudioToolbox.framework in Frameworks */,
 				952CC5C220206FA9007B192C /* AVFoundation.framework in Frameworks */,
 				952CC5BF20206F9F007B192C /* AddressBook.framework in Frameworks */,
-				956C19362057C88C00513969 /* iflyMSC.framework in Frameworks */,
+				950F78CB2089D80F00CD33AD /* iflyMSC.framework in Frameworks */,
 				952CC5C020206F9F007B192C /* AddressBookUI.framework in Frameworks */,
 				952CC5BC20206F8E007B192C /* QuartzCore.framework in Frameworks */,
 				952CC5BA20206F83007B192C /* Foundation.framework in Frameworks */,
@@ -2620,6 +2630,10 @@
 				95404076201ECF1F006DA1E9 /* ThirdTableViewCell.swift */,
 				95404074201ECF07006DA1E9 /* FourthTableViewCell.swift */,
 				95404072201ECEF7006DA1E9 /* FifthTableViewCell.swift */,
+				95A55ECA208826EB008C03D9 /* NormalTVTableViewCell.swift */,
+				95A595DA20888722009F1474 /* NormalACTableViewCell.swift */,
+				95A595DC20889BB2009F1474 /* NormalBMTableViewCell.swift */,
+				950F78C6208976A500CD33AD /* NormalColorLampTableViewCell.swift */,
 				9540407F201EEA9A006DA1E9 /* QLCycleProgressView.h */,
 				9540407E201EEA9A006DA1E9 /* QLCycleProgressView.m */,
 			);
@@ -2872,6 +2886,7 @@
 				954EE602201B275E00A3C343 /* VerificationDevice.swift */,
 				954EE608201B2E7000A3C343 /* AutomaticDevice.swift */,
 				954EE609201B2E7100A3C343 /* AutomaticDevice.xib */,
+				951CFAA12086D52900684EAF /* AddInfraredDevice.swift */,
 				95261EC620215F1800AA1932 /* SmartHomeIPCameraVC.h */,
 				95261EC520215F1800AA1932 /* SmartHomeIPCameraVC.m */,
 			);
@@ -2921,7 +2936,7 @@
 		955F81B920577A0D00252F47 /* lib */ = {
 			isa = PBXGroup;
 			children = (
-				956C19352057C88C00513969 /* iflyMSC.framework */,
+				950F78CA2089D80F00CD33AD /* iflyMSC.framework */,
 				955F81BB20577A0D00252F47 /* ISRDataHelper.h */,
 				955F81BC20577A0D00252F47 /* ISRDataHelper.m */,
 				955F81BD20577A0D00252F47 /* PopupView.h */,
@@ -4552,11 +4567,13 @@
 				9501EE902021BEA100C4F356 /* SetRecordTimeViewController.mm in Sources */,
 				95116DD02029B1E600B7220C /* ChoseDeviceForModel.swift in Sources */,
 				954EE603201B275E00A3C343 /* AddDevicetoRoom.swift in Sources */,
+				95A595DD20889BB2009F1474 /* NormalBMTableViewCell.swift in Sources */,
 				954EE5DB201AFA5A00A3C343 /* ChainEquipAddVC.swift in Sources */,
 				957AFA022022BEA500FEED28 /* TZAssetModel.m in Sources */,
 				952CC4B620205078007B192C /* PPPPChannel.mm in Sources */,
 				9578063D2072194400AF647A /* UIColor+DCColorChange.m in Sources */,
 				952CC4AF20205078007B192C /* LocalPlayback.mm in Sources */,
+				95A595DB20888722009F1474 /* NormalACTableViewCell.swift in Sources */,
 				954040CB201EF894006DA1E9 /* NSString+Contains.m in Sources */,
 				9578068F2072194400AF647A /* YBPopupMenuPath.m in Sources */,
 				95193C772019DF3C00CD8870 /* RoomCell.swift in Sources */,
@@ -4565,6 +4582,7 @@
 				959883BF2016D70E002C473B /* Https.swift in Sources */,
 				957AFA252022BEA500FEED28 /* WLZ_ChangeCountView.m in Sources */,
 				954EE5F6201B146E00A3C343 /* AboutUSViewController.swift in Sources */,
+				95A55ECB208826EB008C03D9 /* NormalTVTableViewCell.swift in Sources */,
 				955F81DE20577A0D00252F47 /* PopupView.m in Sources */,
 				95BC6F7520186AC7004801A1 /* SensorTableViewCell.swift in Sources */,
 				957AF9FC2022BEA500FEED28 /* ChoseView.m in Sources */,
@@ -4722,6 +4740,7 @@
 				9578065C2072194400AF647A /* UIView+DCRolling.m in Sources */,
 				957AFA642022BEF300FEED28 /* BusinessSearchVC.m in Sources */,
 				95261EB420215C0F00AA1932 /* HTCameraStatus.mm in Sources */,
+				950F78C7208976A500CD33AD /* NormalColorLampTableViewCell.swift in Sources */,
 				95BC6F8820187367004801A1 /* SunDataPicker.m in Sources */,
 				954C674B20171E62004332D9 /* ChangeSetPasVC.swift in Sources */,
 				95BC6F5E20186AC7004801A1 /* DuYaCell.swift in Sources */,
@@ -4892,6 +4911,7 @@
 				954EE5A0201AB73400A3C343 /* EquipSetVC.swift in Sources */,
 				9501EE872021BEA100C4F356 /* SDCardCell.m in Sources */,
 				952CC4BB20205078007B192C /* SearchListMgt.mm in Sources */,
+				951CFAA22086D52900684EAF /* AddInfraredDevice.swift in Sources */,
 				957806872072194400AF647A /* XWFilterAnimator+XWMod.m in Sources */,
 				954040EB201EF895006DA1E9 /* NSDate+CalculateDay.m in Sources */,
 				957806892072194400AF647A /* XWFilterAnimator+XWRipple.m in Sources */,

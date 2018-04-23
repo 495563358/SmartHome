@@ -1050,7 +1050,6 @@ class HomeVC: UIViewController,UITableViewDataSource,UITableViewDelegate,UIAlert
                  cell?.backgroundColor = UIColor.white
             
                 //(cell as! UnkownCell).setModel(equip)
-            
             }
          
         }
