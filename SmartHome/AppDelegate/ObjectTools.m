@@ -18,7 +18,6 @@
 
 //Push
 
-
 @implementation ObjectTools
 
 static AFHTTPSessionManager *afnManager = nil;
@@ -74,8 +73,8 @@ static AFHTTPSessionManager *afnManager = nil;
         afnManager.requestSerializer = [AFHTTPRequestSerializer serializer];
         afnManager.responseSerializer = [AFJSONResponseSerializer serializer];
         afnManager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
+        
     });
-    
     return afnManager;
 }
 
@@ -93,5 +92,6 @@ static AFHTTPSessionManager *afnManager = nil;
     [[NSUserDefaults standardUserDefaults] registerDefaults:newdict];
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
+
 
 @end

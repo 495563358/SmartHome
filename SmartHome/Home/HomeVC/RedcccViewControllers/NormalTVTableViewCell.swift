@@ -52,8 +52,8 @@ class NormalTVTableViewCell: UITableViewCell,UIActionSheetDelegate,UIAlertViewDe
         openBut.setBackgroundImage(UIImage(named: "开电视"), for: UIControlState())
         //openBut.showBadgeWithStyle(WBadgeStyleRedDot, value: 22, animationType: WBadgeAnimTypeNone)
         closBut.setBackgroundImage(UIImage(named: "关电视"), for: UIControlState())
-        openBut.addTarget(self, action: #selector(FirstTableViewCell.butt(_:)), for: UIControlEvents.touchUpInside)
-        closBut.addTarget(self, action: #selector(FirstTableViewCell.butt(_:)), for: UIControlEvents.touchUpInside)
+        openBut.addTarget(self, action: #selector(NormalTVTableViewCell.butt(_:)), for: UIControlEvents.touchUpInside)
+        closBut.addTarget(self, action: #selector(NormalTVTableViewCell.butt(_:)), for: UIControlEvents.touchUpInside)
         openBut.tag = (index)*500+1+250
         closBut.tag = (index)*500+2+250
         self.addLongPass(openBut)
@@ -87,15 +87,15 @@ class NormalTVTableViewCell: UITableViewCell,UIActionSheetDelegate,UIAlertViewDe
         Imaview.autoresizingMask = UIViewAutoresizing.flexibleWidth
         middleView.addSubview(Imaview)
         //添加上下左右确定
-        let Upbut = UIButton(frame: CGRect(x: middleView.frame.size.width/2-13*scalew,y: 15*scaleh,width: 27*scalew,height: 15*scaleh))
+        let Upbut = UIButton(frame: CGRect(x: middleView.frame.size.width/2-23*scalew,y: 5*scaleh,width: 47*scalew,height: 35*scaleh))
         
-        let lowerbut = UIButton(frame: CGRect(x: middleView.frame.size.width/2-13*scalew,y: middleView.frame.size.height - 15*scaleh-20*scaleh,width: 27*scalew,height: 15*scaleh))
+        let lowerbut = UIButton(frame: CGRect(x: Upbut.mj_x,y: middleView.frame.size.height - 15*scaleh-40*scaleh,width: 47*scalew,height: 35*scaleh))
         
-        let Leftbut = UIButton(frame: CGRect(x: 15*scalew,y: middleView.frame.size.width/2 - 13*scaleh,width: 15*scalew,height: 27*scaleh))
+        let Leftbut = UIButton(frame: CGRect(x: 25*scalew,y: middleView.frame.size.width/2 - 23*scaleh,width: 35*scalew,height: 47*scaleh))
         
-        let rightbut = UIButton(frame: CGRect(x: middleView.frame.size.width-15*scalew-20*scalew,y: middleView.frame.size.width/2 - 13*scaleh,width: 15*scalew,height: 27*scaleh))
+        let rightbut = UIButton(frame: CGRect(x: middleView.frame.size.width-15*scalew-30*scalew,y: middleView.frame.size.width/2 - 23*scaleh,width: 35*scalew,height: 47*scaleh))
         
-        let middlebut = UIButton(frame: CGRect(x: middleView.frame.size.width/2-30*scalew,y: middleView.frame.size.height/2-30*scaleh,width: 60*scalew,height: 60*scaleh))
+        let middlebut = UIButton(frame: CGRect(x: middleView.frame.size.width/2-30*scalew,y: middleView.frame.size.height/2-25*scaleh,width: 60*scalew,height: 60*scaleh))
         
         middleView.addSubview(Upbut)
         middleView.addSubview(lowerbut)

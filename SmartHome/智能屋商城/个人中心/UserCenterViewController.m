@@ -565,7 +565,6 @@
     
     self.userInfo = [NSMutableDictionary dictionaryWithDictionary:dict1];
     
-    
     //    获取token
     [[ObjectTools sharedManager] POST:LoadPath parameters:dict1 progress:^(NSProgress * _Nonnull uploadProgress) {
         

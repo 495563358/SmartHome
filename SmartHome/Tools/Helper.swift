@@ -137,13 +137,10 @@ func getIconByType(type:String)->String
 }
 typealias CompleteUpdateDeviceInfo = () -> ()
 func updateDeviceInfo(complete:@escaping CompleteUpdateDeviceInfo){
-    
      print("更新设备信息")
-
     BaseHttpService.sendRequestAccess(classifyEquip_do, parameters: [:]) { (data) -> () in
         dataDeal.clearEquipTable()
         print(data)
-
         if data.count != 0{
            //设备
             let arr = data as! [[String : AnyObject]]
@@ -157,30 +154,21 @@ func updateDeviceInfo(complete:@escaping CompleteUpdateDeviceInfo){
                 equip.icon  = e["icon"] as! String
                 equip.hostDeviceCode = e["deviceCode"] == nil ? "" : e["deviceCode"] as!String
                 equip.num  =  e["validationCode"] == nil ? "" : e["validationCode"]as!String
-
-
                 if equip.icon == ""{
                     equip.icon = getIconByType(type: equip.type)
                 }
                 equip.saveEquip()
-
             }
-
         }
         complete()
     }
-
 }
 
 
 
 typealias CompleteUpdateRoomInfo = () -> ()
 func updateRoomInfo(complete:@escaping CompleteUpdateRoomInfo){
-    
-    
     print("更新房间信息")
-    
-    
     let parameters=["userPhone":BaseHttpService.getUserPhoneType()];
     BaseHttpService .sendRequestAccess(getroom_do, parameters: parameters as NSDictionary) { (anyObject) -> () in
        dataDeal.clearRoomAndFloorTable()
@@ -194,23 +182,17 @@ func updateRoomInfo(complete:@escaping CompleteUpdateRoomInfo){
             let f = Floor(floorCode:(dic as! NSDictionary)["floorCode"] as! String)
             f.name = (dic as! NSDictionary)["floorName"] as! String
             f.saveFloor()
-
         }
         let roomInfo = ((anyObject as! NSArray)[0] as! NSDictionary)["roomInfo"]
-
         for dic in (roomInfo as!NSArray)
         {
             let r = Room(roomCode:(dic as! NSDictionary)["roomCode"] as! String)
             r.name = (dic as! NSDictionary)["roomName"] as! String
             r.floorCode =  (dic as! NSDictionary)["floorCode"] as! String
             r.saveRoom()
-
         }
          complete()
-
     }
-    
-    
 }
 //typealias CompletereadRoomInfo = () -> ()
 //func readRoomInfo(complete:CompletereadRoomInfo)

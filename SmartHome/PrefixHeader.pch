@@ -23,6 +23,13 @@
 #import "DCObjManager.h"  //存取
 #import "DCNotificationCenterName.h" //通知
 
+#import <MJRefresh/MJRefresh.h>
+#import "ObjectTools.h"
+#import "BaseocHttpService.h"
+
+//vender
+#import "UIView+Toast.h"
+
 #define ResourceFront @"http://mall.znhomes.com/app/index.php?i=195&c=entry&m=ewei_shopv2&do=mobile&"
 #define AddressPath   @"http://mall.znhomes.com/attachment/"
 #define DetilPath     @"http://mall.znhomes.com/app/index.php?i=195&c=entry&m=ewei_shopv2&do=mobile&r=goods.product&cate="
@@ -50,6 +57,10 @@
 #define Percentage [UIScreen mainScreen].bounds.size.width / 375
 
 #define ShowMsg(msg) [[[UIAlertView alloc]initWithTitle:msg message:nil delegate:nil cancelButtonTitle:@"我知道了" otherButtonTitles:nil] show]
+
+#define CLog(format, ...)  NSLog(format, ## __VA_ARGS__)
+
+#define NSLog(FORMAT, ...) printf("%s\n", [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
 
 
 #endif /* PrefixHeader_pch */

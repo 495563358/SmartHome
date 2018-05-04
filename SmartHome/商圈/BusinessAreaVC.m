@@ -177,7 +177,6 @@
         tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
     }
     
-    
     return self.mdata.count;
 }
 

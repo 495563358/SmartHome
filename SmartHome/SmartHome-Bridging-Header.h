@@ -56,6 +56,7 @@
 
 #import "MallVCViewController.h"
 #import "BusinessAreaVC.h"
+#import "MerchantVC.h"
 
 #import "UMessage.h"
 

@@ -50,7 +50,8 @@ class TabbarC: UITabBarController {
         let homeNav:UINavigationController = UINavigationController(rootViewController: homevc)
         
         
-        let setModelVC:BusinessAreaVC = BusinessAreaVC()
+        let setModelVC:MerchantVC = MerchantVC()
+//        let setModelVC:BusinessAreaVC = BusinessAreaVC()
         setModelVC.tabBarItem.title=NSLocalizedString("商圈", comment: "")
         setModelVC.tabBarItem.image=modelIcon
         setModelVC.tabBarItem.selectedImage=modelIconSelected
@@ -92,7 +93,7 @@ class TabbarC: UITabBarController {
         
         self.tabBar.bringSubview(toFront: self.btn)
         self.tabBar.tintColor=mainColor
-        
+        self.selectedIndex = 1
         // Do any additional setup after loading the view.
     }
     
@@ -105,7 +106,6 @@ class TabbarC: UITabBarController {
             self.navigationController?.tabBarController?.selectedIndex = 0
         }
     }
-    
     
     
     override func didReceiveMemoryWarning() {

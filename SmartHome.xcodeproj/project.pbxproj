@@ -83,9 +83,10 @@
 		9501EEAE2021BEA100C4F356 /* DownloadFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 9501EE672021BEA100C4F356 /* DownloadFile.m */; };
 		9501EEAF2021BEA100C4F356 /* SystemUpgradeViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9501EE692021BEA100C4F356 /* SystemUpgradeViewController.mm */; };
 		9501EEB02021BEA100C4F356 /* SystemUpgradeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9501EE6A2021BEA100C4F356 /* SystemUpgradeViewController.xib */; };
+		9506EE5A209AA1CB00AF12E2 /* MerchRecommend.m in Sources */ = {isa = PBXBuildFile; fileRef = 9506EE59209AA1CB00AF12E2 /* MerchRecommend.m */; };
+		9506EE5D209AA7A900AF12E2 /* MerchschemeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9506EE5C209AA7A900AF12E2 /* MerchschemeCell.m */; };
 		950EF88D207B096800EF8A00 /* ApprovalModelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950EF88C207B096800EF8A00 /* ApprovalModelViewController.swift */; };
 		950F78C7208976A500CD33AD /* NormalColorLampTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950F78C6208976A500CD33AD /* NormalColorLampTableViewCell.swift */; };
-		950F78CB2089D80F00CD33AD /* iflyMSC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 950F78CA2089D80F00CD33AD /* iflyMSC.framework */; };
 		95116DCF2029B1E600B7220C /* ChoseDeviceForModel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95116DCD2029B1E500B7220C /* ChoseDeviceForModel.xib */; };
 		95116DD02029B1E600B7220C /* ChoseDeviceForModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95116DCE2029B1E600B7220C /* ChoseDeviceForModel.swift */; };
 		95193C3620196F7600CD8870 /* SideHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95193C3420196F7600CD8870 /* SideHeaderCell.swift */; };
@@ -228,6 +229,8 @@
 		952CC5CC2020723D007B192C /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 952CC5CB2020723C007B192C /* libz.tbd */; };
 		952CC5CE2020726C007B192C /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 952CC5CD2020726C007B192C /* libbz2.tbd */; };
 		952CC5D020207291007B192C /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 952CC5CF20207291007B192C /* libiconv.tbd */; };
+		952CD95120917CDD0067DF80 /* MerchIntroduceVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 952CD95020917CDD0067DF80 /* MerchIntroduceVC.m */; };
+		953395B4209BF1BC0019B805 /* NewMerchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 953395B3209BF1BC0019B805 /* NewMerchCell.m */; };
 		9533E9D6204FB35E0064E69E /* RoomApprovalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9533E9D5204FB35E0064E69E /* RoomApprovalViewController.swift */; };
 		9533E9D8204FB3A10064E69E /* RoomApprovalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9533E9D7204FB3A10064E69E /* RoomApprovalTableViewCell.swift */; };
 		9533E9DA204FBC6E0064E69E /* DeviceApprovalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9533E9D9204FBC6E0064E69E /* DeviceApprovalViewController.swift */; };
@@ -305,6 +308,7 @@
 		954C675B201721CF004332D9 /* NSString+Contains.m in Sources */ = {isa = PBXBuildFile; fileRef = 954C6756201721CF004332D9 /* NSString+Contains.m */; };
 		954C675C201721CF004332D9 /* UIViewController+EZBackPop.m in Sources */ = {isa = PBXBuildFile; fileRef = 954C6758201721CF004332D9 /* UIViewController+EZBackPop.m */; };
 		954C676020172B92004332D9 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 954C675F20172B92004332D9 /* MBProgressHUD.m */; };
+		954CC37B208DE9C5003C0ED9 /* MerchantVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 954CC37A208DE9C5003C0ED9 /* MerchantVC.m */; };
 		954EE599201AB6D000A3C343 /* AddDeviceAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954EE597201AB6CF00A3C343 /* AddDeviceAlert.swift */; };
 		954EE59A201AB6D000A3C343 /* AddDeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954EE598201AB6D000A3C343 /* AddDeviceViewController.swift */; };
 		954EE59C201AB6D600A3C343 /* AddDeviceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 954EE59B201AB6D500A3C343 /* AddDeviceViewController.xib */; };
@@ -595,6 +599,11 @@
 		959883D52016DDED002C473B /* SensorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959883CB2016DDED002C473B /* SensorModel.swift */; };
 		959883D62016DDED002C473B /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959883CC2016DDED002C473B /* UserModel.swift */; };
 		959883D72016DDED002C473B /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959883CD2016DDED002C473B /* WeatherModel.swift */; };
+		959D1FF920940F4E00235166 /* iflyMSC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 959D1FF820940F4E00235166 /* iflyMSC.framework */; };
+		959D1FFC209443DC00235166 /* MerchentDescCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 959D1FFB209443DC00235166 /* MerchentDescCell.m */; };
+		959D1FFF20944AE600235166 /* MerchentIdeaCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 959D1FFE20944AE600235166 /* MerchentIdeaCell.m */; };
+		959D20022094502300235166 /* MerchantCommCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 959D20012094502300235166 /* MerchantCommCell.m */; };
+		959D20062094586000235166 /* HBCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 959D20052094586000235166 /* HBCommentCell.m */; };
 		959DE56B201823D3000E3C84 /* MKAnnotationView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 959DE54B201823D3000E3C84 /* MKAnnotationView+WebCache.m */; };
 		959DE56C201823D3000E3C84 /* NSData+ImageContentType.m in Sources */ = {isa = PBXBuildFile; fileRef = 959DE54D201823D3000E3C84 /* NSData+ImageContentType.m */; };
 		959DE56D201823D3000E3C84 /* SDImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 959DE54F201823D3000E3C84 /* SDImageCache.m */; };
@@ -815,9 +824,12 @@
 		9501EE682021BEA100C4F356 /* SystemUpgradeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemUpgradeViewController.h; sourceTree = "<group>"; };
 		9501EE692021BEA100C4F356 /* SystemUpgradeViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SystemUpgradeViewController.mm; sourceTree = "<group>"; };
 		9501EE6A2021BEA100C4F356 /* SystemUpgradeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SystemUpgradeViewController.xib; sourceTree = "<group>"; };
+		9506EE58209AA1CB00AF12E2 /* MerchRecommend.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MerchRecommend.h; sourceTree = "<group>"; };
+		9506EE59209AA1CB00AF12E2 /* MerchRecommend.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MerchRecommend.m; sourceTree = "<group>"; };
+		9506EE5B209AA7A900AF12E2 /* MerchschemeCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MerchschemeCell.h; sourceTree = "<group>"; };
+		9506EE5C209AA7A900AF12E2 /* MerchschemeCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MerchschemeCell.m; sourceTree = "<group>"; };
 		950EF88C207B096800EF8A00 /* ApprovalModelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApprovalModelViewController.swift; sourceTree = "<group>"; };
 		950F78C6208976A500CD33AD /* NormalColorLampTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalColorLampTableViewCell.swift; sourceTree = "<group>"; };
-		950F78CA2089D80F00CD33AD /* iflyMSC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = iflyMSC.framework; sourceTree = "<group>"; };
 		95116DCD2029B1E500B7220C /* ChoseDeviceForModel.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChoseDeviceForModel.xib; sourceTree = "<group>"; };
 		95116DCE2029B1E600B7220C /* ChoseDeviceForModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoseDeviceForModel.swift; sourceTree = "<group>"; };
 		95193C3420196F7600CD8870 /* SideHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideHeaderCell.swift; sourceTree = "<group>"; };
@@ -1131,6 +1143,10 @@
 		952CC5CB2020723C007B192C /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		952CC5CD2020726C007B192C /* libbz2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = usr/lib/libbz2.tbd; sourceTree = SDKROOT; };
 		952CC5CF20207291007B192C /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
+		952CD94F20917CDD0067DF80 /* MerchIntroduceVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MerchIntroduceVC.h; sourceTree = "<group>"; };
+		952CD95020917CDD0067DF80 /* MerchIntroduceVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MerchIntroduceVC.m; sourceTree = "<group>"; };
+		953395B2209BF1BC0019B805 /* NewMerchCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewMerchCell.h; sourceTree = "<group>"; };
+		953395B3209BF1BC0019B805 /* NewMerchCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewMerchCell.m; sourceTree = "<group>"; };
 		9533E9D5204FB35E0064E69E /* RoomApprovalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomApprovalViewController.swift; sourceTree = "<group>"; };
 		9533E9D7204FB3A10064E69E /* RoomApprovalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomApprovalTableViewCell.swift; sourceTree = "<group>"; };
 		9533E9D9204FBC6E0064E69E /* DeviceApprovalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceApprovalViewController.swift; sourceTree = "<group>"; };
@@ -1238,6 +1254,8 @@
 		954C6758201721CF004332D9 /* UIViewController+EZBackPop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+EZBackPop.m"; sourceTree = "<group>"; };
 		954C675E20172B92004332D9 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		954C675F20172B92004332D9 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		954CC379208DE9C5003C0ED9 /* MerchantVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MerchantVC.h; sourceTree = "<group>"; };
+		954CC37A208DE9C5003C0ED9 /* MerchantVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MerchantVC.m; sourceTree = "<group>"; };
 		954EE597201AB6CF00A3C343 /* AddDeviceAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddDeviceAlert.swift; sourceTree = "<group>"; };
 		954EE598201AB6D000A3C343 /* AddDeviceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddDeviceViewController.swift; sourceTree = "<group>"; };
 		954EE59B201AB6D500A3C343 /* AddDeviceViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddDeviceViewController.xib; sourceTree = "<group>"; };
@@ -1735,6 +1753,15 @@
 		959883CB2016DDED002C473B /* SensorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SensorModel.swift; sourceTree = "<group>"; };
 		959883CC2016DDED002C473B /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		959883CD2016DDED002C473B /* WeatherModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
+		959D1FF820940F4E00235166 /* iflyMSC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = iflyMSC.framework; sourceTree = "<group>"; };
+		959D1FFA209443DC00235166 /* MerchentDescCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MerchentDescCell.h; sourceTree = "<group>"; };
+		959D1FFB209443DC00235166 /* MerchentDescCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MerchentDescCell.m; sourceTree = "<group>"; };
+		959D1FFD20944AE600235166 /* MerchentIdeaCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MerchentIdeaCell.h; sourceTree = "<group>"; };
+		959D1FFE20944AE600235166 /* MerchentIdeaCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MerchentIdeaCell.m; sourceTree = "<group>"; };
+		959D20002094502300235166 /* MerchantCommCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MerchantCommCell.h; sourceTree = "<group>"; };
+		959D20012094502300235166 /* MerchantCommCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MerchantCommCell.m; sourceTree = "<group>"; };
+		959D20042094586000235166 /* HBCommentCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HBCommentCell.h; sourceTree = "<group>"; };
+		959D20052094586000235166 /* HBCommentCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HBCommentCell.m; sourceTree = "<group>"; };
 		959DE54A201823D3000E3C84 /* MKAnnotationView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKAnnotationView+WebCache.h"; sourceTree = "<group>"; };
 		959DE54B201823D3000E3C84 /* MKAnnotationView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKAnnotationView+WebCache.m"; sourceTree = "<group>"; };
 		959DE54C201823D3000E3C84 /* NSData+ImageContentType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+ImageContentType.h"; sourceTree = "<group>"; };
@@ -1864,7 +1891,7 @@
 				952CC5C420206FBA007B192C /* AudioToolbox.framework in Frameworks */,
 				952CC5C220206FA9007B192C /* AVFoundation.framework in Frameworks */,
 				952CC5BF20206F9F007B192C /* AddressBook.framework in Frameworks */,
-				950F78CB2089D80F00CD33AD /* iflyMSC.framework in Frameworks */,
+				959D1FF920940F4E00235166 /* iflyMSC.framework in Frameworks */,
 				952CC5C020206F9F007B192C /* AddressBookUI.framework in Frameworks */,
 				952CC5BC20206F8E007B192C /* QuartzCore.framework in Frameworks */,
 				952CC5BA20206F83007B192C /* Foundation.framework in Frameworks */,
@@ -2936,7 +2963,7 @@
 		955F81B920577A0D00252F47 /* lib */ = {
 			isa = PBXGroup;
 			children = (
-				950F78CA2089D80F00CD33AD /* iflyMSC.framework */,
+				959D1FF820940F4E00235166 /* iflyMSC.framework */,
 				955F81BB20577A0D00252F47 /* ISRDataHelper.h */,
 				955F81BC20577A0D00252F47 /* ISRDataHelper.m */,
 				955F81BD20577A0D00252F47 /* PopupView.h */,
@@ -3750,6 +3777,13 @@
 				957AFA562022BEF200FEED28 /* 技术培训 */,
 				957AFA5B2022BEF200FEED28 /* 智能体验 */,
 				957AFA5E2022BEF200FEED28 /* 智能装修 */,
+				954CC379208DE9C5003C0ED9 /* MerchantVC.h */,
+				954CC37A208DE9C5003C0ED9 /* MerchantVC.m */,
+				952CD94F20917CDD0067DF80 /* MerchIntroduceVC.h */,
+				952CD95020917CDD0067DF80 /* MerchIntroduceVC.m */,
+				9506EE58209AA1CB00AF12E2 /* MerchRecommend.h */,
+				9506EE59209AA1CB00AF12E2 /* MerchRecommend.m */,
+				959D20032094525E00235166 /* MerchentViews */,
 			);
 			path = "商圈";
 			sourceTree = "<group>";
@@ -3917,6 +3951,25 @@
 				959883CD2016DDED002C473B /* WeatherModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		959D20032094525E00235166 /* MerchentViews */ = {
+			isa = PBXGroup;
+			children = (
+				953395B2209BF1BC0019B805 /* NewMerchCell.h */,
+				953395B3209BF1BC0019B805 /* NewMerchCell.m */,
+				959D1FFA209443DC00235166 /* MerchentDescCell.h */,
+				959D1FFB209443DC00235166 /* MerchentDescCell.m */,
+				959D1FFD20944AE600235166 /* MerchentIdeaCell.h */,
+				959D1FFE20944AE600235166 /* MerchentIdeaCell.m */,
+				959D20002094502300235166 /* MerchantCommCell.h */,
+				959D20012094502300235166 /* MerchantCommCell.m */,
+				959D20042094586000235166 /* HBCommentCell.h */,
+				959D20052094586000235166 /* HBCommentCell.m */,
+				9506EE5B209AA7A900AF12E2 /* MerchschemeCell.h */,
+				9506EE5C209AA7A900AF12E2 /* MerchschemeCell.m */,
+			);
+			path = MerchentViews;
 			sourceTree = "<group>";
 		};
 		959DE549201823D3000E3C84 /* SDWebImage */ = {
@@ -4547,6 +4600,7 @@
 				95404075201ECF07006DA1E9 /* FourthTableViewCell.swift in Sources */,
 				959883C02016D70E002C473B /* LocationManager.swift in Sources */,
 				954EE5E7201B0FAF00A3C343 /* ApprovalViewController.swift in Sources */,
+				959D20022094502300235166 /* MerchantCommCell.m in Sources */,
 				957AF9352022AF6300FEED28 /* UMShareTypeViewController.m in Sources */,
 				9540407B201ECF40006DA1E9 /* FirstTableViewCell.swift in Sources */,
 				9578064B2072194400AF647A /* DCPlaceholderTextView.m in Sources */,
@@ -4629,6 +4683,7 @@
 				955F81E520577A0D00252F47 /* SBJson4StreamWriterState.m in Sources */,
 				95BC6F5D20186AC7004801A1 /* ChainModel.swift in Sources */,
 				959DE572201823D3000E3C84 /* SDWebImageManager.m in Sources */,
+				9506EE5A209AA1CB00AF12E2 /* MerchRecommend.m in Sources */,
 				957806862072194400AF647A /* XWFilterAnimator+XWMask.m in Sources */,
 				95BC6F7920186AC7004801A1 /* ShotLockCell.swift in Sources */,
 				9533E9DA204FBC6E0064E69E /* DeviceApprovalViewController.swift in Sources */,
@@ -4680,6 +4735,7 @@
 				952CC4A820205078007B192C /* CameraDBUtils.mm in Sources */,
 				95193C422019798300CD8870 /* FailedVC.swift in Sources */,
 				95404082201EEDB0006DA1E9 /* RedccViewController.swift in Sources */,
+				959D1FFC209443DC00235166 /* MerchentDescCell.m in Sources */,
 				95BC6F7D20186AC7004801A1 /* SmartLockCell.swift in Sources */,
 				957806772072194400AF647A /* SDWaitingView.m in Sources */,
 				95193C672019DE1E00CD8870 /* ManageRoomDev.swift in Sources */,
@@ -4711,6 +4767,7 @@
 				959883D12016DDED002C473B /* Getui.swift in Sources */,
 				957806702072194400AF647A /* XWInteractiveTransition.m in Sources */,
 				95193C4E20197A4300CD8870 /* HTCameras.mm in Sources */,
+				952CD95120917CDD0067DF80 /* MerchIntroduceVC.m in Sources */,
 				957AFA102022BEA500FEED28 /* TabButton.m in Sources */,
 				957AFA122022BEA500FEED28 /* SDCycleScrollView.m in Sources */,
 				9528A9AF201D585C00A0239C /* infCell.swift in Sources */,
@@ -4724,6 +4781,7 @@
 				952CC4BA20205078007B192C /* SearchDVS.mm in Sources */,
 				957AFA072022BEA500FEED28 /* TZImagePickerController.m in Sources */,
 				9578064A2072194400AF647A /* DCObjManager.m in Sources */,
+				959D1FFF20944AE600235166 /* MerchentIdeaCell.m in Sources */,
 				9526208120219C5E00AA1932 /* HIKLoadViewItem.m in Sources */,
 				9578069F2072261600AF647A /* UIView+Toast.m in Sources */,
 				954EE5D8201AF9D700A3C343 /* SceneSectionVC.swift in Sources */,
@@ -4855,9 +4913,11 @@
 				957805642072169700AF647A /* DCComHeadView.m in Sources */,
 				9501EE9D2021BEA100C4F356 /* AlarmController.mm in Sources */,
 				954EE5B5201AB9E600A3C343 /* ChooseIconVC.swift in Sources */,
+				959D20062094586000235166 /* HBCommentCell.m in Sources */,
 				957806832072194400AF647A /* XWFilterAnimator+XWBoxBlur.m in Sources */,
 				957806682072194400AF647A /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
 				957AFA612022BEF300FEED28 /* BusinessAreaVC.m in Sources */,
+				954CC37B208DE9C5003C0ED9 /* MerchantVC.m in Sources */,
 				95BC6F2B201869B0004801A1 /* MineSideView.m in Sources */,
 				952CC4B320205078007B192C /* PCMRecorder.mm in Sources */,
 				957806432072194400AF647A /* DCNotificationCenterName.m in Sources */,
@@ -4895,6 +4955,7 @@
 				959883BE2016D70E002C473B /* Helper.swift in Sources */,
 				957806842072194400AF647A /* XWFilterAnimator+XWCopyMachine.m in Sources */,
 				957AFA6B2022BEF300FEED28 /* BBTableViewCell.m in Sources */,
+				9506EE5D209AA7A900AF12E2 /* MerchschemeCell.m in Sources */,
 				9501EE942021BEA100C4F356 /* UserPwdSetViewController.mm in Sources */,
 				957AFA262022BEA500FEED28 /* CommssionViewController.m in Sources */,
 				95BC6F6820186AC7004801A1 /* lockCell.swift in Sources */,
@@ -4974,6 +5035,7 @@
 				957AFA6C2022BEF300FEED28 /* DestinationMode.m in Sources */,
 				957AFA232022BEA500FEED28 /* ShopCarModel.m in Sources */,
 				952CC4A720205078007B192C /* APICommon.mm in Sources */,
+				953395B4209BF1BC0019B805 /* NewMerchCell.m in Sources */,
 				957AFA162022BEA500FEED28 /* TAPageControl.m in Sources */,
 				959DE56D201823D3000E3C84 /* SDImageCache.m in Sources */,
 				9578065B2072194400AF647A /* DCTitleRolling.m in Sources */,
@@ -5217,7 +5279,7 @@
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = com.shenzhen.maibao;
+				PRODUCT_BUNDLE_IDENTIFIER = com.shenzhen.maibao.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -5285,7 +5347,7 @@
 					"$(PROJECT_DIR)/SmartHome/Tools/UMessage_Sdk_1.5.0a",
 				);
 				OTHER_LDFLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = com.shenzhen.maibao;
+				PRODUCT_BUNDLE_IDENTIFIER = com.shenzhen.maibao.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";

@@ -29,7 +29,7 @@ class AutomaticDevice: UIViewController, UICollectionViewDataSource, UICollectio
     @IBOutlet var collectionView: UICollectionView!
     @IBOutlet var tableView: UITableView!
     var test = true
-    var sender:UILongPressGestureRecognizer?
+    var sender:UITapGestureRecognizer?
     
     var cDataSource: [Equip] = []
     var tDataSource: [FloorOrRoomOrEquip] = []
@@ -234,8 +234,7 @@ class AutomaticDevice: UIViewController, UICollectionViewDataSource, UICollectio
         
         cell.equipImage.image = UIImage(named: equip.icon)
         cell.tag = indexPath.row
-        let longPressGR = UILongPressGestureRecognizer(target: self, action: #selector(AutomaticDevice.longPress(_:)))
-        longPressGR.minimumPressDuration = 0.01;
+        let longPressGR = UITapGestureRecognizer(target: self, action: #selector(AutomaticDevice.tapPress(_:)))
         cell.addGestureRecognizer(longPressGR)
         return cell
     }
@@ -245,19 +244,16 @@ class AutomaticDevice: UIViewController, UICollectionViewDataSource, UICollectio
     
     
     //按钮长按事件
-    @objc func longPress(_ sender:UILongPressGestureRecognizer){
-        if  sender.state == UIGestureRecognizerState.began{
-            if sender.view?.tag < cDataSource.count {
-                 self.sender = sender
-                let actionsheet = UIActionSheet()
-                actionsheet.addButton(withTitle: NSLocalizedString("取   消", comment: ""))
-                actionsheet.addButton(withTitle: NSLocalizedString("删   除", comment: ""))
-                actionsheet.addButton(withTitle: NSLocalizedString("选择房间", comment: ""))
-                actionsheet.cancelButtonIndex=0
-                actionsheet.delegate=self
-                actionsheet.show(in: self.view);
-                
-            }
+    @objc func tapPress(_ sender:UITapGestureRecognizer){
+        if sender.view?.tag < cDataSource.count {
+            self.sender = sender
+            let actionsheet = UIActionSheet()
+            actionsheet.addButton(withTitle: NSLocalizedString("取   消", comment: ""))
+            actionsheet.addButton(withTitle: NSLocalizedString("删   除", comment: ""))
+            actionsheet.addButton(withTitle: NSLocalizedString("选择房间", comment: ""))
+            actionsheet.cancelButtonIndex=0
+            actionsheet.delegate=self
+            actionsheet.show(in: self.view);
             
         }
         

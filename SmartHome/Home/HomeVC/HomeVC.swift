@@ -945,9 +945,7 @@ class HomeVC: UIViewController,UITableViewDataSource,UITableViewDelegate,UIAlert
                 return cell!
             }
             let equip = deviceDataSource[indexPath.row] as! Equip
-            
             print("设备名称及型号  \(equip.name)   \(equip.type) \(equip.icon)")
-            
             if equip.type == "1"
             {//开关设备
                  cell = self.homeTableView.dequeueReusableCell(withIdentifier: "LightCell", for: indexPath)
@@ -957,27 +955,23 @@ class HomeVC: UIViewController,UITableViewDataSource,UITableViewDelegate,UIAlert
                     (self.deviceDataSource[indexPath.row] as! Equip).status = str
                 }
                 (cell as! LightCell).setModel(equip)
-                
             }
             else if Int(equip.type) >= 1000 && Int(equip.type)<2000 {
                 //开关分开
                 cell = self.homeTableView.dequeueReusableCell(withIdentifier: "ShotLightCell", for: indexPath)
                 cell?.backgroundColor = UIColor.white
-              
                 (cell as! ShotLightCell).setModel(equip)
             }
             else if Int(equip.type) >= 3000 && Int(equip.type)<4000 {
                 //开关停 窗帘
                 cell = self.homeTableView.dequeueReusableCell(withIdentifier: "ShotWindowCell", for: indexPath)
                 cell?.backgroundColor = UIColor.white
-              
                 (cell as! ShotWindowCell).setModel(equip)
             }
             else if equip.type == "999"{
                 //射频锁
                 cell = self.homeTableView.dequeueReusableCell(withIdentifier: "ShotLockCell", for: indexPath)
                 cell?.backgroundColor = UIColor.white
-              
                 (cell as! ShotLockCell).setModel(equip)
             }
             else if equip.type == "2" || equip.type == "4"/*||judgeType(equip.type, type: "2")*/
@@ -994,16 +988,13 @@ class HomeVC: UIViewController,UITableViewDataSource,UITableViewDelegate,UIAlert
             {
                 cell = self.homeTableView.dequeueReusableCell(withIdentifier: "Modulate2Cell", for: indexPath)
                 cell?.backgroundColor = UIColor.white
-                
                 (cell as! Modulate2Cell).setModel(equip)
-            
             }
                 //todo
             else if equip.type == "99" || equip.type == "98" || equip.type == "8192" || equip.type == "500" || equip.type == "501"
                 {//红外学习设备
                     cell = self.homeTableView.dequeueReusableCell(withIdentifier: "InfraredCell", for: indexPath)
                     cell?.backgroundColor = UIColor.white
-                  
                     (cell as! InfraredCell).setModel(equip)
             }
             else if equip.type == "998"
@@ -1014,7 +1005,6 @@ class HomeVC: UIViewController,UITableViewDataSource,UITableViewDelegate,UIAlert
             }
             else if equip.type == "8" || equip.type == "32"
             {
-                
                 cell = self.homeTableView.dequeueReusableCell(withIdentifier: "boxCell", for: indexPath)
                 cell?.backgroundColor = UIColor.white
                 print(equip)
@@ -1032,7 +1022,6 @@ class HomeVC: UIViewController,UITableViewDataSource,UITableViewDelegate,UIAlert
                 //杜亚电机
                 cell = self.homeTableView.dequeueReusableCell(withIdentifier: "DuYaCell", for: indexPath)
                 cell?.backgroundColor = UIColor.white
-                
                 (cell as! DuYaCell).setModel(equip)
             }
             else if Int(equip.type) == 5314
@@ -1040,15 +1029,12 @@ class HomeVC: UIViewController,UITableViewDataSource,UITableViewDelegate,UIAlert
                 //杜亚电机
                 cell = self.homeTableView.dequeueReusableCell(withIdentifier: "SmartLockCell", for: indexPath)
                 cell?.backgroundColor = UIColor.white
-                
                 (cell as! SmartLockCell).setModel(equip)
             }
             else
             {
-            
                 cell = self.homeTableView.dequeueReusableCell(withIdentifier: "UnkownCell", for: indexPath)
                  cell?.backgroundColor = UIColor.white
-            
                 //(cell as! UnkownCell).setModel(equip)
             }
          

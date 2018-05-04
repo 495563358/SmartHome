@@ -437,7 +437,7 @@ class NormalBMTableViewCell: UITableViewCell,UIActionSheetDelegate,UIAlertViewDe
         }
         print(dataDeal.toJSONString(jsonSource: datajson as AnyObject))
         print("H"+String(index))
-        print("完成添加F")
+        print("完成添加H")
         let jsonDic = ["classesInfo":"H"+String(self.index) ,
                        "infraredButtonsInfo":dataDeal.toJSONString(jsonSource: datajson as AnyObject),
                        "deviceAddress":equip!.equipID,

@@ -88,7 +88,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,WXApiDelegate,UNUserNotifi
         ObjectTools.createShare()
         ObjectTools.removeHead()
         
-        IFlySpeechUtility.createUtility("appid=5a61a669,timeout=20000")
+        IFlySpeechUtility.createUtility("appid=5ae3d768,timeout=20000")
         
         // Override point for customization after application launch.
         return true

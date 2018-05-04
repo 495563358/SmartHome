@@ -72,7 +72,7 @@ class ThirdTableViewCell: UITableViewCell,UIActionSheetDelegate,UIAlertViewDeleg
         self.leb.contentHorizontalAlignment = UIControlContentHorizontalAlignment.center
         self.leb.titleLabel?.font = UIFont.systemFont(ofSize: 45.0)
         self.leb.setTitleColor(systemColor, for: UIControlState())
-        self.leb.tag = (index)*500 + 100  + 5
+        self.leb.tag = (index)*500 + 100 + 5
         self.leb.addTarget(self, action: "butt:", for: UIControlEvents.touchUpInside )
         addLongPass(self.leb)
         
@@ -125,6 +125,8 @@ class ThirdTableViewCell: UITableViewCell,UIActionSheetDelegate,UIAlertViewDeleg
         
         Tvc1.addSubview(lbut!)
         Tvc1.addSubview(rbut!)
+        addLongPass(lbut!)
+        addLongPass(rbut!)
        
 
         self.addSubview(leab)
@@ -171,7 +173,6 @@ class ThirdTableViewCell: UITableViewCell,UIActionSheetDelegate,UIAlertViewDeleg
         self.addSubview(TwoBut)
         self.addSubview(ThreeBut)
         
-        
     }
     var temperature = 0 //红外的唯一表示
     //var current = 16 //当前温度
@@ -212,13 +213,13 @@ class ThirdTableViewCell: UITableViewCell,UIActionSheetDelegate,UIAlertViewDeleg
     //var zhileng = 9
     //var zhire = 24
     var zhileng = 19
-   // var zhire = 34
+   // var zhire = 34  按钮点击事件
     @objc func butt(_ but:UIButton){
-        
+        print(zhileng)
         switch but.tag{
         case (index)*500 + 100  + 1:
-
             //加
+            //如果是制热 调整视图 计算气温
             if bool{
                 if zhileng+15 >= 39{
                     return
@@ -238,18 +239,16 @@ class ThirdTableViewCell: UITableViewCell,UIActionSheetDelegate,UIAlertViewDeleg
                 self.smallProgress!.progress = CGFloat(zhileng+6 - 15) / 15.0
                 self.leb.setTitle("\(zhileng+6)°", for: UIControlState())
             }
-            
-
-             print("1,\(temperature),\(bool)")
+            print("点击的按钮tag值 = 1,气温 = \(temperature), 是否制热 = \(bool)")
             if self.isMoni
             {
-//                self.equip?.status = String(temperature)+","+(self.leb.titleLabel?.text)!
-//                app.modelEquipArr.replaceObjectAtIndex((indexqj?.row)!, withObject: self.equip!)
-//                
-//                self.parentController()?.navigationController!.popViewControllerAnimated(true)
+                self.equip?.status = String(temperature)+","+(self.leb.titleLabel?.text)!
+                app.modelEquipArr.replaceObject(at: (indexqj?.row)!, with: self.equip!)
+                
+                self.parentController()?.navigationController!.popViewController(animated: true)
                 return
             }
-            print("----"+String(temperature));
+            print("气温----"+String(temperature));
             if isBool == 1{
                 let parameters = ["deviceAddress":equip!.equipID,
                     "isStudy":String(isBool),
@@ -298,33 +297,14 @@ class ThirdTableViewCell: UITableViewCell,UIActionSheetDelegate,UIAlertViewDeleg
              print("2,\(temperature),\(bool)")
             if self.isMoni
             {
-//                self.equip?.status = String(temperature)+","+(self.leb.titleLabel?.text)!
-//                app.modelEquipArr.replaceObjectAtIndex((indexqj?.row)!, withObject: self.equip!)
-//                
-//                self.parentController()?.navigationController!.popViewControllerAnimated(true)
+                self.equip?.status = String(temperature)+","+(self.leb.titleLabel?.text)!
+                app.modelEquipArr.replaceObject(at: (indexqj?.row)!, with: self.equip!)
+                
+                self.parentController()?.navigationController!.popViewController(animated: true)
                 return
             }
             print("----"+String(temperature));
-            if isBool == 1
-            {
-                let parameters = ["deviceAddress":equip!.equipID,
-                    "isStudy":String(isBool),
-                    "infraredButtonsValuess":String(temperature)+","+"C"]
-                print(parameters)
-                BaseHttpService .sendRequestAccess(studyandcommand, parameters:parameters as NSDictionary) { (response) -> () in
-                    print(response)
-                }
-            }
-            else
-            {
-                let parameters = ["deviceAddress":equip!.equipID,
-                    "isStudy":String(isBool),
-                    "infraredButtonsValuess":String(temperature)]
-                print(parameters)
-                BaseHttpService .sendRequestAccess(studyandcommand, parameters:parameters as NSDictionary) { (response) -> () in
-                    print(response)
-                }
-            }
+            
 
            
             break
@@ -422,12 +402,32 @@ class ThirdTableViewCell: UITableViewCell,UIActionSheetDelegate,UIAlertViewDeleg
                 }
             }
             
-
             break
         default :
-            
-        break
+            if isBool == 1
+            {
+                let parameters = ["deviceAddress":equip!.equipID,
+                                  "isStudy":String(isBool),
+                                  "infraredButtonsValuess":String(temperature)+","+"C"]
+                print(parameters)
+                BaseHttpService .sendRequestAccess(studyandcommand, parameters:parameters as NSDictionary) { (response) -> () in
+                    print(response)
+                }
+            }
+            else
+            {
+                let parameters = ["deviceAddress":equip!.equipID,
+                                  "isStudy":String(isBool),
+                                  "infraredButtonsValuess":String(temperature)]
+                print(parameters)
+                BaseHttpService .sendRequestAccess(studyandcommand, parameters:parameters as NSDictionary) { (response) -> () in
+                    print(response)
+                }
+            }
+            break
         }
+        
+        
     }
 
     func parentController()->UIViewController?

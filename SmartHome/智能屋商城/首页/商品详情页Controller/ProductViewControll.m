@@ -1182,7 +1182,7 @@ static NSString *const ProductImagesCellID = @"ProductImagesCell";
     productNameLabel.text = _productName;
     
     
-    UILabel *subLabel = [[UILabel alloc]initWithFrame:CGRectMake(10, 35, 200, 30)];
+    UILabel *subLabel = [[UILabel alloc]initWithFrame:CGRectMake(10, 35, ScreenW-100, 30)];
     subLabel.text = _typeName;
     subLabel.font = [UIFont systemFontOfSize:15];
     subLabel.textColor = Color_system;

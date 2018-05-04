@@ -14,8 +14,6 @@ class NormalACTableViewCell: UITableViewCell,UIActionSheetDelegate,UIAlertViewDe
     var equip:Equip?
     var smallProgress:QLCycleProgressView? =  QLCycleProgressView(frame: CGRect(x: 0,y: 30,width: ScreenWidth/1.8 ,height: ScreenWidth/1.8))
     var leb = UIButton()
-    var lbut:UIButton?
-    var rbut:UIButton?
     var isMoni = false
     var dic = [String:String]();
     //判断学习还是控制
@@ -45,10 +43,10 @@ class NormalACTableViewCell: UITableViewCell,UIActionSheetDelegate,UIAlertViewDe
         //开关
         openBut.setBackgroundImage(UIImage(named: "开电视"), for: UIControlState())
         closBut.setBackgroundImage(UIImage(named: "关电视"), for: UIControlState())
-        openBut.tag = (index)*500 + 300 + 6
-        closBut.tag = (index)*500 + 300  + 7
-        openBut.addTarget(self, action: "butt:", for: UIControlEvents.touchUpInside )
-        closBut.addTarget(self, action: "butt:", for: UIControlEvents.touchUpInside )
+        openBut.tag = (index)*500 + 300 + 3
+        closBut.tag = (index)*500 + 300  + 4
+        openBut.addTarget(self, action: #selector(NormalACTableViewCell.butt(_:)), for: UIControlEvents.touchUpInside )
+        closBut.addTarget(self, action: #selector(NormalACTableViewCell.butt(_:)), for: UIControlEvents.touchUpInside )
         addLongPass(openBut)
         addLongPass(closBut)
         //文字
@@ -75,8 +73,7 @@ class NormalACTableViewCell: UITableViewCell,UIActionSheetDelegate,UIAlertViewDe
         self.leb.titleLabel?.font = UIFont.systemFont(ofSize: 45.0)
         self.leb.setTitleColor(UIColor.white, for: UIControlState())
         self.leb.tag = (index)*500 + 300  + 5
-        self.leb.addTarget(self, action: "butt:", for: UIControlEvents.touchUpInside )
-        addLongPass(self.leb)
+        
         
         
         //按钮view
@@ -86,14 +83,16 @@ class NormalACTableViewCell: UITableViewCell,UIActionSheetDelegate,UIAlertViewDe
         sbut.titleLabel?.font = UIFont.systemFont(ofSize: 18)
         sbut.backgroundColor = UIColor.clear
         sbut.tag = (index)*500 + 300  + 1
-        sbut.addTarget(self, action: "butt:", for: UIControlEvents.touchUpInside )
-        //减
+        sbut.addTarget(self, action: #selector(NormalACTableViewCell.butt(_:)), for: UIControlEvents.touchUpInside )
+        addLongPass(sbut)
         
+        //减
         let xbut = UIButton(frame: CGRect(x: 20*scalew,y: self.smallProgress!.center.y,width: 40*scalew,height: 40*scalew))
         xbut.setImage(UIImage(named: "ac_-"), for: UIControlState())
         xbut.titleLabel?.font = UIFont.systemFont(ofSize: 18)
         xbut.tag = (index)*500 + 300  + 2
-        xbut.addTarget(self, action: "butt:", for: UIControlEvents.touchUpInside )
+        xbut.addTarget(self, action: #selector(NormalACTableViewCell.butt(_:)), for: UIControlEvents.touchUpInside )
+        addLongPass(xbut)
         xbut.backgroundColor = UIColor.clear
         
         
@@ -102,7 +101,7 @@ class NormalACTableViewCell: UITableViewCell,UIActionSheetDelegate,UIAlertViewDe
         
         let imgArr = ["ac_zhileng","ac_zhire","ac_shuimian","ac_dinshi","ac_baifeng","ac_fengsu","ac_chushi","ac_moshi","ac_gongneng"]
         
-        var btag = 20
+        var btag = 40
         for var i in 0...2
         {
             
@@ -111,7 +110,7 @@ class NormalACTableViewCell: UITableViewCell,UIActionSheetDelegate,UIAlertViewDe
                 let but = UIButton(frame: CGRect(x: CGFloat(Float(j))*spaceX + openBut.mj_x,y: CGFloat(Float(i))*spaceY + ScreenHeight/2-20*scaleh-40,width: 75*scalew,height: 75*scalew))
 //                but.backgroundColor = UIColor.white
                 but.tag = (index)*500 + 300 + btag
-                but.setBackgroundImage(UIImage(named: imgArr[btag - 20]), for: UIControlState())
+                but.setBackgroundImage(UIImage(named: imgArr[btag - 40]), for: UIControlState())
                 self.addSubview(but)
                 but.addTarget(self, action: #selector(NormalACTableViewCell.butt(_:)), for: UIControlEvents.touchUpInside)
                 but.titleLabel?.font = UIFont.systemFont(ofSize: 15.0)
@@ -132,8 +131,6 @@ class NormalACTableViewCell: UITableViewCell,UIActionSheetDelegate,UIAlertViewDe
         self.addSubview(openBut)
         self.addSubview(closBut)
         
-        
-        
     }
     var temperature = 0 //红外的唯一表示
     //var current = 16 //当前温度
@@ -144,11 +141,11 @@ class NormalACTableViewCell: UITableViewCell,UIActionSheetDelegate,UIAlertViewDe
     
     func detajson(_ set:@escaping setJson){
         var dic = Dictionary<String,String>()
-        dic["\((index)*500 + 300 + 7)"] = "关"
-        dic["\((index)*500 + 300 + 6)"] = "开"
-        dic["\((index)*500 + 300 + 40)"] = "功能"
-        dic["\((index)*500 + 300 + 41)"] = "模式"
-        dic["\((index)*500 + 300 + 42)"] = "定时"
+        dic["\((index)*500 + 300 + 4)"] = "关"
+        dic["\((index)*500 + 300 + 3)"] = "开"
+        dic["\((index)*500 + 300 + 40)"] = "制冷"
+        dic["\((index)*500 + 300 + 41)"] = "制热"
+        dic["\((index)*500 + 300 + 42)"] = "睡眠"
         for var i in 10...39
         {
             if i<25{
@@ -205,10 +202,9 @@ class NormalACTableViewCell: UITableViewCell,UIActionSheetDelegate,UIAlertViewDe
             print("1,\(temperature),\(bool)")
             if self.isMoni
             {
-                //                self.equip?.status = String(temperature)+","+(self.leb.titleLabel?.text)!
-                //                app.modelEquipArr.replaceObjectAtIndex((indexqj?.row)!, withObject: self.equip!)
-                //
-                //                self.parentController()?.navigationController!.popViewControllerAnimated(true)
+                self.equip?.status = String(temperature)+","+(self.leb.titleLabel?.text)!
+                app.modelEquipArr.replaceObject(at: (indexqj?.row)!, with: self.equip!)
+                self.parentController()?.navigationController!.popViewController(animated: true)
                 return
             }
             print("----"+String(temperature));
@@ -233,10 +229,33 @@ class NormalACTableViewCell: UITableViewCell,UIActionSheetDelegate,UIAlertViewDe
             
             break
         case (index)*500 + 300  + 2:
-            
+            print(zhileng)
             //减
+            
+            if isBool == 1
+            {
+                let parameters = ["deviceAddress":equip!.equipID,
+                                  "isStudy":String(isBool),
+                                  "infraredButtonsValuess":String(temperature)+","+"G"]
+                print(parameters)
+                BaseHttpService .sendRequestAccess(studyandcommand, parameters:parameters as NSDictionary) { (response) -> () in
+                    print(response)
+                }
+            }
+            else
+            {
+                let parameters = ["deviceAddress":equip!.equipID,
+                                  "isStudy":String(isBool),
+                                  "infraredButtonsValuess":String(temperature)]
+                print(parameters)
+                BaseHttpService .sendRequestAccess(studyandcommand, parameters:parameters as NSDictionary) { (response) -> () in
+                    print(response)
+                }
+                return;
+            }
+            
             if bool{
-                if zhileng+15 < 26{
+                if zhileng+15 < 25{
                     return
                 }
                 zhileng = zhileng-1
@@ -245,7 +264,7 @@ class NormalACTableViewCell: UITableViewCell,UIActionSheetDelegate,UIAlertViewDe
                 self.smallProgress!.progress = CGFloat(zhileng-9) / 15.0
                 self.leb.setTitle("\(zhileng+15-9)°", for: UIControlState())
             }else{
-                if zhileng < 11{
+                if zhileng < 10{
                     return
                 }
                 zhileng = zhileng - 1
@@ -267,64 +286,13 @@ class NormalACTableViewCell: UITableViewCell,UIActionSheetDelegate,UIAlertViewDe
                 return
             }
             print("----"+String(temperature));
-            if isBool == 1
-            {
-                let parameters = ["deviceAddress":equip!.equipID,
-                                  "isStudy":String(isBool),
-                                  "infraredButtonsValuess":String(temperature)+","+"G"]
-                print(parameters)
-                BaseHttpService .sendRequestAccess(studyandcommand, parameters:parameters as NSDictionary) { (response) -> () in
-                    print(response)
-                }
-            }
-            else
-            {
-                let parameters = ["deviceAddress":equip!.equipID,
-                                  "isStudy":String(isBool),
-                                  "infraredButtonsValuess":String(temperature)]
-                print(parameters)
-                BaseHttpService .sendRequestAccess(studyandcommand, parameters:parameters as NSDictionary) { (response) -> () in
-                    print(response)
-                }
-            }
+            
             
             
             break
-        case (index)*500 + 300  + 3:
+        case (index)*500 + 300  + 40:
             //制冷
             bool = false
-            lbut?.isSelected = true
-            rbut?.isSelected = false
-            break
-        case (index)*500 + 300  + 4:
-            //制热
-            bool = true
-            lbut?.isSelected = false
-            rbut!.isSelected = true
-            break
-        case (index)*500 + 300  + 5:
-            
-            if self.isMoni
-            {
-                self.equip?.status = String(temperature)+","+(self.leb.titleLabel?.text)!+","+"G"
-                app.modelEquipArr.replaceObject(at: (indexqj?.row)!, with: self.equip!)
-                print(self.equip?.status)
-                self.parentController()?.navigationController!.popViewController(animated: true)
-                return
-            }
-            
-            break
-        case (index)*500 + 300  + 6:
-            if self.isMoni
-            {
-                self.equip?.status = String(but.tag)+","+("开")+","+"G"
-                app.modelEquipArr.replaceObject(at: (indexqj?.row)!, with: self.equip!)
-                
-                self.parentController()?.navigationController!.popViewController(animated: true)
-                return
-            }
-            //temperature = (index?.row)!*100 + 1
-            
             if isBool == 1
             {
                 print("----"+String(but.tag));
@@ -347,10 +315,72 @@ class NormalACTableViewCell: UITableViewCell,UIActionSheetDelegate,UIAlertViewDe
                     print(response)
                 }
             }
+            break
+        case (index)*500 + 300  + 41:
+            //制热
+            bool = true
+            if isBool == 1
+            {
+                print("----"+String(but.tag));
+                let parameters = ["deviceAddress":equip!.equipID,
+                                  "isStudy":String(isBool),
+                                  "infraredButtonsValuess":String(but.tag)+","+"G"]
+                print(parameters)
+                BaseHttpService .sendRequestAccess(studyandcommand, parameters:parameters as NSDictionary) { (response) -> () in
+                    print(response)
+                }
+            }
+            else
+            {
+                print("----"+String(but.tag));
+                let parameters = ["deviceAddress":equip!.equipID,
+                                  "isStudy":String(isBool),
+                                  "infraredButtonsValuess":String(but.tag)]
+                print(parameters)
+                BaseHttpService .sendRequestAccess(studyandcommand, parameters:parameters as NSDictionary) { (response) -> () in
+                    print(response)
+                }
+            }
+            break
+        
+        /*开关*/
+        case (index)*500 + 300  + 3:
+            if self.isMoni
+            {
+                self.equip?.status = String(but.tag)+","+("开")+","+"G"
+                app.modelEquipArr.replaceObject(at: (indexqj?.row)!, with: self.equip!)
+                
+                self.parentController()?.navigationController!.popViewController(animated: true)
+                return
+            }
+            //temperature = (index?.row)!*100 + 1
+            
+            if isBool == 1
+            {//控制
+                print("----"+String(but.tag));
+                let parameters = ["deviceAddress":equip!.equipID,
+                                  "isStudy":String(isBool),
+                                  "infraredButtonsValuess":String(but.tag)+","+"G"]
+                print(parameters)
+                BaseHttpService .sendRequestAccess(studyandcommand, parameters:parameters as NSDictionary) { (response) -> () in
+                    print(response)
+                }
+            }
+            else
+            {//学习
+                print("----"+String(but.tag));
+                let parameters = ["deviceAddress":equip!.equipID,
+                                  "isStudy":String(isBool),
+                                  "infraredButtonsValuess":String(but.tag)]
+                print(parameters)
+                BaseHttpService .sendRequestAccess(studyandcommand, parameters:parameters as NSDictionary) { (response) -> () in
+                    print(response)
+                }
+            }
             
             
             break
-        case (index)*500 + 300 + 7:
+        case (index)*500 + 300 + 4:
             if self.isMoni
             {
                 self.equip?.status = String(but.tag)+","+("关")+","+"G"
@@ -387,7 +417,38 @@ class NormalACTableViewCell: UITableViewCell,UIActionSheetDelegate,UIAlertViewDe
             
             break
         default :
+            if self.isMoni
+            {
+                self.equip?.status = String(but.tag)+","+("开")+","+"G"
+                app.modelEquipArr.replaceObject(at: (indexqj?.row)!, with: self.equip!)
+                
+                self.parentController()?.navigationController!.popViewController(animated: true)
+                return
+            }
+            //temperature = (index?.row)!*100 + 1
             
+            if isBool == 1
+            {
+                print("----"+String(but.tag));
+                let parameters = ["deviceAddress":equip!.equipID,
+                                  "isStudy":String(isBool),
+                                  "infraredButtonsValuess":String(but.tag)+","+"G"]
+                print(parameters)
+                BaseHttpService .sendRequestAccess(studyandcommand, parameters:parameters as NSDictionary) { (response) -> () in
+                    print(response)
+                }
+            }
+            else
+            {
+                print("----"+String(but.tag));
+                let parameters = ["deviceAddress":equip!.equipID,
+                                  "isStudy":String(isBool),
+                                  "infraredButtonsValuess":String(but.tag)]
+                print(parameters)
+                BaseHttpService .sendRequestAccess(studyandcommand, parameters:parameters as NSDictionary) { (response) -> () in
+                    print(response)
+                }
+            }
             break
         }
     }
@@ -416,130 +477,46 @@ class NormalACTableViewCell: UITableViewCell,UIActionSheetDelegate,UIAlertViewDe
         }
         
     }
-    //按钮长按事件
+    //添加按钮长按事件
     @objc func longPress(_ sender:UILongPressGestureRecognizer){
         self.btag = (sender.view?.tag)!
         if sender.state == UIGestureRecognizerState.began{
-            if self.btag < ((index)*500 + 300 + 40){
-                let actionSheet:UIActionSheet? = UIActionSheet(title: nil, delegate: self, cancelButtonTitle: NSLocalizedString("取消", comment: ""), destructiveButtonTitle: NSLocalizedString("学习", comment: ""), otherButtonTitles:NSLocalizedString("学习完成", comment: ""))
-                actionSheet?.show(in: self.superview!)
-            }else{
-                let actionSheet:UIActionSheet? = UIActionSheet(title: nil, delegate: self, cancelButtonTitle: NSLocalizedString("取消", comment: ""), destructiveButtonTitle: nil, otherButtonTitles:NSLocalizedString("学习", comment: ""),NSLocalizedString("修改名称", comment: ""))
-                actionSheet?.show(in: self.superview!)
-            }
+            let actionSheet:UIActionSheet? = UIActionSheet(title: nil, delegate: self, cancelButtonTitle: NSLocalizedString("取消", comment: ""), destructiveButtonTitle: NSLocalizedString("学习", comment: ""), otherButtonTitles:NSLocalizedString("学习完成", comment: ""))
+            actionSheet?.show(in: self.superview!)
         }
     }
     //长按事件
     func actionSheet(_ actionSheet: UIActionSheet, clickedButtonAt buttonIndex: Int) {
-        if self.btag < ((index)*500 + 300 + 40){
-            switch buttonIndex{
-            case 0:
-                //取消
-                self.isBool = 0
-                zhileng = 9
-                bool = false
-                temperature = (index)*500 + 300 + zhileng
-                print(temperature)
-                self.smallProgress!.progress = CGFloat(zhileng+6+1 - 15) / 15.0
-                self.leb.setTitle("\(zhileng+6+1)°", for: UIControlState())
-                lbut!.isSelected = true
-                rbut!.isSelected = false
-                
-                print("0")
-                break
-            case 1:
-                print("1111")
-                break
-            case 2:
-                print("1")
-                self.isBool = 1
-                zhileng = 19
-                bool = false
-                temperature = (index)*500 + 300 + zhileng
-                print(temperature)
-                self.smallProgress!.progress = CGFloat(zhileng+6 - 15) / 15.0
-                self.leb.setTitle("\(zhileng+6)°", for: UIControlState())
-                lbut!.isSelected = true
-                rbut!.isSelected = false
-                break
-            default:
-                break
-            }
-        }
-        else{
-            switch buttonIndex{
-            case 0:
-                //取消
-                break
-            case 1:
-                print("----"+String(self.btag));
-                let parameters = ["deviceAddress":equip!.equipID,
-                                  "isStudy":String(0),
-                                  "infraredButtonsValuess":String(self.btag)]
-                print(parameters)
-                BaseHttpService .sendRequestAccess(studyandcommand, parameters:parameters as NSDictionary) { (response) -> () in
-                    print(response)
-                }
-                break
-            case 2:
-                let alert = UIAlertView(title:NSLocalizedString("提示", comment: ""),message:NSLocalizedString("请输入名字", comment: ""),delegate:self,cancelButtonTitle:NSLocalizedString("确定", comment: ""),otherButtonTitles:NSLocalizedString("取消", comment: ""))
-                alert.alertViewStyle = UIAlertViewStyle.plainTextInput
-                
-                alert.show()
-                //修改
-                break
-            default:
-                break
-            }
+        switch buttonIndex{
+        case 0:
+            //取消
+            self.isBool = 0
+            zhileng = 9
+            bool = false
+            temperature = (index)*500 + 300 + zhileng
+            print("气温 = \(temperature)")
+            self.smallProgress!.progress = CGFloat(zhileng+6+1 - 15) / 15.0
+            self.leb.setTitle("\(zhileng+6+1)°", for: UIControlState())
+            print("学习")
+            break
+        case 1:
+            print("取消")
+            break
+        case 2:
+            print("学习完成")
+            self.isBool = 1
+            zhileng = 19
+            bool = false
+            temperature = (index)*500 + 300 + zhileng
+            print("气温 = \(temperature)")
+            self.smallProgress!.progress = CGFloat(zhileng+6 - 15) / 15.0
+            self.leb.setTitle("\(zhileng+6)°", for: UIControlState())
+            break
+        default:
+            break
         }
     }
     
-    //修改
-    func alertView(_ alertView: UIAlertView, clickedButtonAt buttonIndex: Int) {
-        //self.but.setTitle(alertView.textFieldAtIndex(0)!.text, forState: UIControlState.Normal)
-        if buttonIndex == 0{
-            let a = alertView.textField(at: 0)!.text!
-            print(a)
-            switch self.btag{
-            case (index)*500+140:
-                OneBut.setTitle(a, for: UIControlState())
-                let parameters = ["deviceAddress":equip!.equipID,
-                                  "deviceCode":equip!.hostDeviceCode,
-                                  "infraredButtonsValuess":String(self.btag),
-                                  "infraredButtonsName":a]
-                print(parameters)
-                BaseHttpService .sendRequestAccess(updatebutten, parameters:parameters as NSDictionary) { (response) -> () in
-                    print(response)
-                }
-                break
-            case (index)*500+141:
-                TwoBut.setTitle(a, for: UIControlState())
-                let parameters = ["deviceAddress":equip!.equipID,
-                                  "deviceCode":equip!.hostDeviceCode,
-                                  "infraredButtonsValuess":String(self.btag),
-                                  "infraredButtonsName":a]
-                print(parameters)
-                BaseHttpService .sendRequestAccess(updatebutten, parameters:parameters as NSDictionary) { (response) -> () in
-                    print(response)
-                }
-                break
-            case (index)*500+142:
-                ThreeBut.setTitle(a, for: UIControlState())
-                let parameters = ["deviceAddress":equip!.equipID,
-                                  "deviceCode":equip!.hostDeviceCode,
-                                  "infraredButtonsValuess":String(self.btag),
-                                  "infraredButtonsName":a]
-                print(parameters)
-                BaseHttpService .sendRequestAccess(updatebutten, parameters:parameters as NSDictionary) { (response) -> () in
-                    print(response)
-                }
-                break
-            default :
-                break
-            }
-        }
-        
-    }
     
     
     override func awakeFromNib() {
