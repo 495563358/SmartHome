@@ -51,7 +51,7 @@ class ChoseDeviceForModel: UIViewController,UITableViewDelegate,UITableViewDataS
         
         
         navigationItem.title = NSLocalizedString("我的设备", comment: "")
-        //  navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "fanhui(b)"), style: UIBarButtonItemStyle.Plain, target: self, action: Selector("handleBack:"))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "fanhui(b)"), style: UIBarButtonItemStyle.plain, target: self, action: #selector(ChoseDeviceForModel.handleBack(_:)))
 //        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "保存", style: UIBarButtonItemStyle.Plain, target: self, action: Selector("handleRightItem:"))
         
         
@@ -77,7 +77,7 @@ class ChoseDeviceForModel: UIViewController,UITableViewDelegate,UITableViewDataS
         self.tableView.tableFooterView = footerView
     }
     
-    func handleBack(_ barButton: UIBarButtonItem) {
+    @objc func handleBack(_ barButton: UIBarButtonItem) {
         self.navigationController?.popViewController(animated: true)
     }
     func handleRightItem(_ barButton: UIBarButtonItem) {

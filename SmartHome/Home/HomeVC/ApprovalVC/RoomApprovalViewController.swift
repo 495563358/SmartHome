@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RoomApprovalViewController: UITableViewController,UIGestureRecognizerDelegate {
+class RoomApprovalViewController: UITableViewController {
     
     var dataSource: [Building] = []
     
@@ -30,16 +30,8 @@ class RoomApprovalViewController: UITableViewController,UIGestureRecognizerDeleg
         self.navigationItem.title = "房间权限"
         self.view.backgroundColor = mygrayColor
         
-        tableView.tableFooterView = UIView.init(frame: CGRect(x: 0, y: 0, width: ScreenWidth, height: 0.01))
-        let backBtn = UIButton.init(frame: CGRect(x: 0, y: 35, width: 40, height: 40))
-        backBtn.setImage(UIImage(named: "fanhui(b)"), for: UIControlState())
-        backBtn.addTarget(self, action: #selector(RoomApprovalViewController.backClick), for: UIControlEvents.touchUpInside)
-        
-        backBtn.contentEdgeInsets = UIEdgeInsetsMake(0, -16, 0, 0)
-        self.navigationItem.hidesBackButton = true
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(customView: backBtn)
-        self.navigationController?.interactivePopGestureRecognizer?.delegate = self
-        
+        tableView.tableFooterView = UIView.init(frame: CGRect(x: 0, y: 0, width: ScreenWidth, height: CGFloat.leastNormalMagnitude))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "fanhui(b)"), style: UIBarButtonItemStyle.plain, target: self, action: #selector(RoomApprovalViewController.backClick))
         tableView.register(UINib(nibName: "EquipTableRoomCell", bundle: nil), forCellReuseIdentifier: "equiptableroomcell")
         
     }

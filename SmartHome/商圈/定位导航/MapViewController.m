@@ -43,6 +43,13 @@
     UIButton *moreInfo;
 }
 
+-(void)viewWillAppear:(BOOL)animated{
+    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName:[UIColor whiteColor]};
+    
+    self.navigationController.navigationBar.translucent = NO;
+    self.navigationController.navigationBar.barTintColor = color(14, 173, 254, 1);
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.title = @"商户定位";

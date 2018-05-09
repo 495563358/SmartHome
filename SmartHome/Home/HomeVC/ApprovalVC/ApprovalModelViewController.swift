@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ApprovalModelViewController: UITableViewController,UIGestureRecognizerDelegate {
+class ApprovalModelViewController: UITableViewController {
     
     var modelData = [EditChainModel]()
     
@@ -24,14 +24,7 @@ class ApprovalModelViewController: UITableViewController,UIGestureRecognizerDele
         self.view.backgroundColor = mygrayColor
         
         tableView.tableFooterView = UIView.init(frame: CGRect(x: 0, y: 0, width: ScreenWidth, height: 0.01))
-        let backBtn = UIButton.init(frame: CGRect(x: 0, y: 35, width: 40, height: 40))
-        backBtn.setImage(UIImage(named: "fanhui(b)"), for: UIControlState())
-        backBtn.addTarget(self, action: #selector(ApprovalModelViewController.backClick), for: UIControlEvents.touchUpInside)
-        
-        backBtn.contentEdgeInsets = UIEdgeInsetsMake(0, -16, 0, 0)
-        self.navigationItem.hidesBackButton = true
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(customView: backBtn)
-        self.navigationController?.interactivePopGestureRecognizer?.delegate = self
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "fanhui(b)"), style: UIBarButtonItemStyle.plain, target: self, action: #selector(ApprovalModelViewController.backClick))
         // Do any additional setup after loading the view.
     }
 

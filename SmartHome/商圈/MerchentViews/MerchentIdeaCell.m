@@ -18,7 +18,7 @@
 
 //总高度 50 + 152 * Percentage + 10
 -(void)createView{
-    _titleLab = [[UILabel alloc]initWithFrame:CGRectMake(15, 0, 200, 50)];
+    _titleLab = [[UILabel alloc]initWithFrame:CGRectMake(20, 0, 200, 50)];
     _titleLab.font = [UIFont systemFontOfSize:15];
     _titleLab.text = @"设计方案";
     
@@ -26,7 +26,7 @@
     _totalLab.font = [UIFont systemFontOfSize:15];
     _totalLab.textColor = [UIColor grayColor];
     _totalLab.textAlignment = NSTextAlignmentRight;
-    _totalLab.text = @"全部20个";
+    _totalLab.text = @"全部0个";
     
     UIImageView *nextImgtip = [[UIImageView alloc]initWithFrame:CGRectMake(Sc_w - 20, 18, 7, 13)];
     nextImgtip.image = [UIImage imageNamed:@"gengduo"];
@@ -36,7 +36,7 @@
     [self.contentView addSubview:nextImgtip];
     
     UIImageView *imgView = [[UIImageView alloc]initWithFrame:CGRectMake(15, 50, ScreenW - 30, 152 * Percentage)];
-    imgView.image = [UIImage imageNamed:@"家头部图片"];
+    imgView.image = [UIImage imageNamed:@"gs_dp_banner"];
     [self.contentView addSubview:imgView];
 }
 

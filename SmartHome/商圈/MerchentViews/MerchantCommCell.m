@@ -18,7 +18,7 @@
 
 //总高度 50
 -(void)createView{
-    _titleLab = [[UILabel alloc]initWithFrame:CGRectMake(15, 0, 200, 50)];
+    _titleLab = [[UILabel alloc]initWithFrame:CGRectMake(20, 0, 200, 50)];
     _titleLab.font = [UIFont systemFontOfSize:15];
     _titleLab.text = @"商户评价";
     

@@ -300,7 +300,7 @@ class ManageRoomDev: UIViewController, UITableViewDataSource, UITableViewDelegat
     /* 展开设备 */
     func unfoldDevice(){
         let countIndex:Int = self.tDataSource.count
-        for var i in 0...(countIndex - 1){
+        for i in 0...(countIndex - 1){
             let index = countIndex - 1 - i
             let model = self.tDataSource[index]
             if model.type == .room{

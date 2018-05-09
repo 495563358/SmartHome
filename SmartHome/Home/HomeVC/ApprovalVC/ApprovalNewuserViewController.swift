@@ -9,7 +9,7 @@
 import UIKit
 import LJContactManager
 
-class ApprovalNewuserViewController: UIViewController,UIGestureRecognizerDelegate,postApprovalDevice{
+class ApprovalNewuserViewController: UIViewController,postApprovalDevice{
     
     var dataSource: [Building] = []
     var tDataSource: [FloorOrRoomOrEquip] = []
@@ -42,14 +42,7 @@ class ApprovalNewuserViewController: UIViewController,UIGestureRecognizerDelegat
         setupView()
         setupView2()
         
-        let backBtn = UIButton.init(frame: CGRect(x: 0, y: 35, width: 40, height: 40))
-        backBtn.setImage(UIImage(named: "fanhui(b)"), for: UIControlState())
-        backBtn.addTarget(self, action: #selector(ApprovalNewuserViewController.backClick), for: UIControlEvents.touchUpInside)
-        
-        backBtn.contentEdgeInsets = UIEdgeInsetsMake(0, -16, 0, 0)
-        self.navigationItem.hidesBackButton = true
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(customView: backBtn)
-        self.navigationController?.interactivePopGestureRecognizer?.delegate = self
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "fanhui(b)"), style: UIBarButtonItemStyle.plain, target: self, action: #selector(ApprovalNewuserViewController.backClick))
     }
     
     @objc func backClick(){

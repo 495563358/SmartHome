@@ -9,7 +9,7 @@
 import UIKit
 import Alamofire
 
-class ApprovalViewController: UIViewController,UITableViewDataSource,UITableViewDelegate,UIAlertViewDelegate,UIGestureRecognizerDelegate {
+class ApprovalViewController: UIViewController,UITableViewDataSource,UITableViewDelegate,UIAlertViewDelegate {
 
     @IBOutlet weak var iphone: UITextField!
     @IBOutlet weak var approval: UIButton!
@@ -48,20 +48,13 @@ class ApprovalViewController: UIViewController,UITableViewDataSource,UITableView
             if any.count == 0{
                 return
             }
-            for var i in 0...any.count-1{
+            for i in 0...any.count-1{
                 self.userDic.append(((any as! NSArray)[i] as! NSDictionary)["userPhone"] as! String)
             }
             self.tableview.reloadData()
         }
         
-        let backBtn = UIButton.init(frame: CGRect(x: 0, y: 35, width: 40, height: 40))
-        backBtn.setImage(UIImage(named: "fanhui(b)"), for: UIControlState())
-        backBtn.addTarget(self, action: #selector(ApprovalViewController.backClick), for: UIControlEvents.touchUpInside)
-        
-        backBtn.contentEdgeInsets = UIEdgeInsetsMake(0, -16, 0, 0)
-        self.navigationItem.hidesBackButton = true
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(customView: backBtn)
-        self.navigationController?.interactivePopGestureRecognizer?.delegate = self
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "fanhui(b)"), style: UIBarButtonItemStyle.plain, target: self, action: #selector(ApprovalViewController.backClick))
     }
     
     @objc func backClick(){

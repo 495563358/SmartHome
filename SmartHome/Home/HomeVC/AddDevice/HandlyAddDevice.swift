@@ -38,6 +38,7 @@ class HandlyAddDevice: UIViewController,UITableViewDelegate,UITableViewDataSourc
         self.view .addSubview(_tableview)
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "fanhui(b)"), style: UIBarButtonItemStyle.plain, target: self, action: #selector(HandlyAddDevice.backClick))
+        
     }
     
     @objc func backClick(){

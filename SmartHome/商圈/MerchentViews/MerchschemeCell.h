@@ -10,8 +10,11 @@
 
 @interface MerchschemeCell : UITableViewCell
 
+@property (nonatomic,strong)UIImageView *imgView;
 @property (nonatomic,strong)UILabel *titleLab;
 @property (nonatomic,strong)UILabel *subLab;
+
+-(void)configcell:(NSDictionary *)info;
 
 +(CGFloat)getCellHeight;
 

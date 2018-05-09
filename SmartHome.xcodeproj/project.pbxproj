@@ -89,6 +89,8 @@
 		950F78C7208976A500CD33AD /* NormalColorLampTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950F78C6208976A500CD33AD /* NormalColorLampTableViewCell.swift */; };
 		95116DCF2029B1E600B7220C /* ChoseDeviceForModel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95116DCD2029B1E500B7220C /* ChoseDeviceForModel.xib */; };
 		95116DD02029B1E600B7220C /* ChoseDeviceForModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95116DCE2029B1E600B7220C /* ChoseDeviceForModel.swift */; };
+		95122C6120A12D2400DBC53C /* ChangeAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95122C6020A12D2400DBC53C /* ChangeAccountVC.swift */; };
+		95122C6420A14EA400DBC53C /* MerchantLoadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 95122C6320A14EA400DBC53C /* MerchantLoadVC.m */; };
 		95193C3620196F7600CD8870 /* SideHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95193C3420196F7600CD8870 /* SideHeaderCell.swift */; };
 		95193C3720196F7600CD8870 /* SideOtherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95193C3520196F7600CD8870 /* SideOtherCell.swift */; };
 		95193C422019798300CD8870 /* FailedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95193C392019798300CD8870 /* FailedVC.swift */; };
@@ -231,6 +233,16 @@
 		952CC5D020207291007B192C /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 952CC5CF20207291007B192C /* libiconv.tbd */; };
 		952CD95120917CDD0067DF80 /* MerchIntroduceVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 952CD95020917CDD0067DF80 /* MerchIntroduceVC.m */; };
 		953395B4209BF1BC0019B805 /* NewMerchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 953395B3209BF1BC0019B805 /* NewMerchCell.m */; };
+		953395B7209C37340019B805 /* MerchFilterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 953395B6209C37340019B805 /* MerchFilterVC.m */; };
+		953395CD209C3C8E0019B805 /* DCFiltrateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 953395BB209C3C8E0019B805 /* DCFiltrateViewController.m */; };
+		953395CE209C3C8E0019B805 /* DCContentItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 953395BE209C3C8E0019B805 /* DCContentItem.m */; };
+		953395CF209C3C8E0019B805 /* DCFiltrateItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 953395C0209C3C8E0019B805 /* DCFiltrateItem.m */; };
+		953395D0209C3C8E0019B805 /* DCAttributeItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 953395C4209C3C8E0019B805 /* DCAttributeItemCell.m */; };
+		953395D1209C3C8E0019B805 /* DCFooterReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 953395C6209C3C8E0019B805 /* DCFooterReusableView.m */; };
+		953395D2209C3C8E0019B805 /* DCHeaderReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 953395C8209C3C8E0019B805 /* DCHeaderReusableView.m */; };
+		953395D3209C3C8E0019B805 /* DCHeaderReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 953395C9209C3C8E0019B805 /* DCHeaderReusableView.xib */; };
+		953395D4209C3C8E0019B805 /* DCSildeBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 953395CC209C3C8E0019B805 /* DCSildeBarView.m */; };
+		953395D6209C3E710019B805 /* FiltrateItem.plist in Resources */ = {isa = PBXBuildFile; fileRef = 953395D5209C3E700019B805 /* FiltrateItem.plist */; };
 		9533E9D6204FB35E0064E69E /* RoomApprovalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9533E9D5204FB35E0064E69E /* RoomApprovalViewController.swift */; };
 		9533E9D8204FB3A10064E69E /* RoomApprovalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9533E9D7204FB3A10064E69E /* RoomApprovalTableViewCell.swift */; };
 		9533E9DA204FBC6E0064E69E /* DeviceApprovalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9533E9D9204FBC6E0064E69E /* DeviceApprovalViewController.swift */; };
@@ -293,6 +305,8 @@
 		954040ED201EF895006DA1E9 /* SLockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954040C6201EF894006DA1E9 /* SLockViewController.swift */; };
 		95432427204E8280001466F6 /* ApprovalManageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95432426204E8280001466F6 /* ApprovalManageViewController.swift */; };
 		95432429204E8590001466F6 /* ApprovalNewuserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95432428204E8590001466F6 /* ApprovalNewuserViewController.swift */; };
+		9547BEBF209E8E4A00D7DDDB /* MerchLoadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9547BEBE209E8E4A00D7DDDB /* MerchLoadVC.m */; };
+		9547BEC2209E999000D7DDDB /* MerchRegistVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9547BEC1209E999000D7DDDB /* MerchRegistVC.m */; };
 		954C674620171E62004332D9 /* ChangeSetPasVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 954C673C20171E61004332D9 /* ChangeSetPasVC.xib */; };
 		954C674720171E62004332D9 /* ChangeRegisterVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 954C673D20171E61004332D9 /* ChangeRegisterVC.xib */; };
 		954C674820171E62004332D9 /* PassLoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 954C673E20171E61004332D9 /* PassLoginVC.xib */; };
@@ -832,6 +846,9 @@
 		950F78C6208976A500CD33AD /* NormalColorLampTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalColorLampTableViewCell.swift; sourceTree = "<group>"; };
 		95116DCD2029B1E500B7220C /* ChoseDeviceForModel.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChoseDeviceForModel.xib; sourceTree = "<group>"; };
 		95116DCE2029B1E600B7220C /* ChoseDeviceForModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoseDeviceForModel.swift; sourceTree = "<group>"; };
+		95122C6020A12D2400DBC53C /* ChangeAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeAccountVC.swift; sourceTree = "<group>"; };
+		95122C6220A14EA400DBC53C /* MerchantLoadVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MerchantLoadVC.h; sourceTree = "<group>"; };
+		95122C6320A14EA400DBC53C /* MerchantLoadVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MerchantLoadVC.m; sourceTree = "<group>"; };
 		95193C3420196F7600CD8870 /* SideHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideHeaderCell.swift; sourceTree = "<group>"; };
 		95193C3520196F7600CD8870 /* SideOtherCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideOtherCell.swift; sourceTree = "<group>"; };
 		95193C392019798300CD8870 /* FailedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FailedVC.swift; sourceTree = "<group>"; };
@@ -1147,6 +1164,24 @@
 		952CD95020917CDD0067DF80 /* MerchIntroduceVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MerchIntroduceVC.m; sourceTree = "<group>"; };
 		953395B2209BF1BC0019B805 /* NewMerchCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewMerchCell.h; sourceTree = "<group>"; };
 		953395B3209BF1BC0019B805 /* NewMerchCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewMerchCell.m; sourceTree = "<group>"; };
+		953395B5209C37340019B805 /* MerchFilterVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MerchFilterVC.h; sourceTree = "<group>"; };
+		953395B6209C37340019B805 /* MerchFilterVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MerchFilterVC.m; sourceTree = "<group>"; };
+		953395BA209C3C8E0019B805 /* DCFiltrateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCFiltrateViewController.h; sourceTree = "<group>"; };
+		953395BB209C3C8E0019B805 /* DCFiltrateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCFiltrateViewController.m; sourceTree = "<group>"; };
+		953395BD209C3C8E0019B805 /* DCContentItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCContentItem.h; sourceTree = "<group>"; };
+		953395BE209C3C8E0019B805 /* DCContentItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCContentItem.m; sourceTree = "<group>"; };
+		953395BF209C3C8E0019B805 /* DCFiltrateItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCFiltrateItem.h; sourceTree = "<group>"; };
+		953395C0209C3C8E0019B805 /* DCFiltrateItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCFiltrateItem.m; sourceTree = "<group>"; };
+		953395C3209C3C8E0019B805 /* DCAttributeItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCAttributeItemCell.h; sourceTree = "<group>"; };
+		953395C4209C3C8E0019B805 /* DCAttributeItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCAttributeItemCell.m; sourceTree = "<group>"; };
+		953395C5209C3C8E0019B805 /* DCFooterReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCFooterReusableView.h; sourceTree = "<group>"; };
+		953395C6209C3C8E0019B805 /* DCFooterReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCFooterReusableView.m; sourceTree = "<group>"; };
+		953395C7209C3C8E0019B805 /* DCHeaderReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCHeaderReusableView.h; sourceTree = "<group>"; };
+		953395C8209C3C8E0019B805 /* DCHeaderReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCHeaderReusableView.m; sourceTree = "<group>"; };
+		953395C9209C3C8E0019B805 /* DCHeaderReusableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DCHeaderReusableView.xib; sourceTree = "<group>"; };
+		953395CB209C3C8E0019B805 /* DCSildeBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCSildeBarView.h; sourceTree = "<group>"; };
+		953395CC209C3C8E0019B805 /* DCSildeBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCSildeBarView.m; sourceTree = "<group>"; };
+		953395D5209C3E700019B805 /* FiltrateItem.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = FiltrateItem.plist; sourceTree = "<group>"; };
 		9533E9D5204FB35E0064E69E /* RoomApprovalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomApprovalViewController.swift; sourceTree = "<group>"; };
 		9533E9D7204FB3A10064E69E /* RoomApprovalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomApprovalTableViewCell.swift; sourceTree = "<group>"; };
 		9533E9D9204FBC6E0064E69E /* DeviceApprovalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceApprovalViewController.swift; sourceTree = "<group>"; };
@@ -1234,6 +1269,10 @@
 		954040C6201EF894006DA1E9 /* SLockViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLockViewController.swift; sourceTree = "<group>"; };
 		95432426204E8280001466F6 /* ApprovalManageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApprovalManageViewController.swift; sourceTree = "<group>"; };
 		95432428204E8590001466F6 /* ApprovalNewuserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApprovalNewuserViewController.swift; sourceTree = "<group>"; };
+		9547BEBD209E8E4A00D7DDDB /* MerchLoadVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MerchLoadVC.h; sourceTree = "<group>"; };
+		9547BEBE209E8E4A00D7DDDB /* MerchLoadVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MerchLoadVC.m; sourceTree = "<group>"; };
+		9547BEC0209E999000D7DDDB /* MerchRegistVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MerchRegistVC.h; sourceTree = "<group>"; };
+		9547BEC1209E999000D7DDDB /* MerchRegistVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MerchRegistVC.m; sourceTree = "<group>"; };
 		954C673C20171E61004332D9 /* ChangeSetPasVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChangeSetPasVC.xib; sourceTree = "<group>"; };
 		954C673D20171E61004332D9 /* ChangeRegisterVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChangeRegisterVC.xib; sourceTree = "<group>"; };
 		954C673E20171E61004332D9 /* PassLoginVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PassLoginVC.xib; sourceTree = "<group>"; };
@@ -2581,6 +2620,69 @@
 			path = libavutil;
 			sourceTree = "<group>";
 		};
+		953395B8209C3C8E0019B805 /* MerchFiltrate(商户筛选) */ = {
+			isa = PBXGroup;
+			children = (
+				953395B9209C3C8E0019B805 /* Controller */,
+				953395BC209C3C8E0019B805 /* Model */,
+				953395C1209C3C8E0019B805 /* View */,
+			);
+			path = "MerchFiltrate(商户筛选)";
+			sourceTree = "<group>";
+		};
+		953395B9209C3C8E0019B805 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				953395BA209C3C8E0019B805 /* DCFiltrateViewController.h */,
+				953395BB209C3C8E0019B805 /* DCFiltrateViewController.m */,
+				953395D5209C3E700019B805 /* FiltrateItem.plist */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		953395BC209C3C8E0019B805 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				953395BD209C3C8E0019B805 /* DCContentItem.h */,
+				953395BE209C3C8E0019B805 /* DCContentItem.m */,
+				953395BF209C3C8E0019B805 /* DCFiltrateItem.h */,
+				953395C0209C3C8E0019B805 /* DCFiltrateItem.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		953395C1209C3C8E0019B805 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				953395C2209C3C8E0019B805 /* Cell */,
+				953395CA209C3C8E0019B805 /* CustomView */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		953395C2209C3C8E0019B805 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				953395C3209C3C8E0019B805 /* DCAttributeItemCell.h */,
+				953395C4209C3C8E0019B805 /* DCAttributeItemCell.m */,
+				953395C5209C3C8E0019B805 /* DCFooterReusableView.h */,
+				953395C6209C3C8E0019B805 /* DCFooterReusableView.m */,
+				953395C7209C3C8E0019B805 /* DCHeaderReusableView.h */,
+				953395C8209C3C8E0019B805 /* DCHeaderReusableView.m */,
+				953395C9209C3C8E0019B805 /* DCHeaderReusableView.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		953395CA209C3C8E0019B805 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				953395CB209C3C8E0019B805 /* DCSildeBarView.h */,
+				953395CC209C3C8E0019B805 /* DCSildeBarView.m */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
 		953E6BD82016C0F80091C8B0 = {
 			isa = PBXGroup;
 			children = (
@@ -2763,6 +2865,17 @@
 			path = NumericLib;
 			sourceTree = "<group>";
 		};
+		9547BEBC209E8E1B00D7DDDB /* 商户登录注册 */ = {
+			isa = PBXGroup;
+			children = (
+				9547BEBD209E8E4A00D7DDDB /* MerchLoadVC.h */,
+				9547BEBE209E8E4A00D7DDDB /* MerchLoadVC.m */,
+				9547BEC0209E999000D7DDDB /* MerchRegistVC.h */,
+				9547BEC1209E999000D7DDDB /* MerchRegistVC.m */,
+			);
+			path = "商户登录注册";
+			sourceTree = "<group>";
+		};
 		954C6750201721CF004332D9 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
@@ -2869,6 +2982,7 @@
 				954EE5E5201B0FAF00A3C343 /* ApprovalViewController.swift */,
 				954EE5E6201B0FAF00A3C343 /* ApprovalViewController.xib */,
 				95432426204E8280001466F6 /* ApprovalManageViewController.swift */,
+				95122C6020A12D2400DBC53C /* ChangeAccountVC.swift */,
 				95432428204E8590001466F6 /* ApprovalNewuserViewController.swift */,
 				9533E9D5204FB35E0064E69E /* RoomApprovalViewController.swift */,
 				9533E9D9204FBC6E0064E69E /* DeviceApprovalViewController.swift */,
@@ -3761,28 +3875,21 @@
 		957AFA332022BEF200FEED28 /* 商圈 */ = {
 			isa = PBXGroup;
 			children = (
-				957AFA342022BEF200FEED28 /* BusinessAreaVC.h */,
-				957AFA352022BEF200FEED28 /* BusinessAreaVC.m */,
-				957AFA362022BEF200FEED28 /* BusinessCell.h */,
-				957AFA372022BEF200FEED28 /* BusinessCell.m */,
-				957AFA382022BEF200FEED28 /* BusinesslicenceVC.h */,
-				957AFA392022BEF200FEED28 /* BusinesslicenceVC.m */,
-				957AFA3A2022BEF200FEED28 /* BusinessSearchVC.h */,
-				957AFA3B2022BEF200FEED28 /* BusinessSearchVC.m */,
-				957AFA3C2022BEF200FEED28 /* MerchantViewController.h */,
-				957AFA3D2022BEF200FEED28 /* MerchantViewController.m */,
+				959601D520A041D500C5148D /* OldVersion */,
 				957AFA3E2022BEF200FEED28 /* 加盟入驻 */,
 				957AFA432022BEF200FEED28 /* 坐标转换 */,
 				957AFA462022BEF200FEED28 /* 定位导航 */,
-				957AFA562022BEF200FEED28 /* 技术培训 */,
-				957AFA5B2022BEF200FEED28 /* 智能体验 */,
-				957AFA5E2022BEF200FEED28 /* 智能装修 */,
 				954CC379208DE9C5003C0ED9 /* MerchantVC.h */,
 				954CC37A208DE9C5003C0ED9 /* MerchantVC.m */,
+				953395B5209C37340019B805 /* MerchFilterVC.h */,
+				953395B6209C37340019B805 /* MerchFilterVC.m */,
 				952CD94F20917CDD0067DF80 /* MerchIntroduceVC.h */,
 				952CD95020917CDD0067DF80 /* MerchIntroduceVC.m */,
 				9506EE58209AA1CB00AF12E2 /* MerchRecommend.h */,
 				9506EE59209AA1CB00AF12E2 /* MerchRecommend.m */,
+				95122C6220A14EA400DBC53C /* MerchantLoadVC.h */,
+				95122C6320A14EA400DBC53C /* MerchantLoadVC.m */,
+				9547BEBC209E8E1B00D7DDDB /* 商户登录注册 */,
 				959D20032094525E00235166 /* MerchentViews */,
 			);
 			path = "商圈";
@@ -3880,6 +3987,26 @@
 			path = "本地化";
 			sourceTree = "<group>";
 		};
+		959601D520A041D500C5148D /* OldVersion */ = {
+			isa = PBXGroup;
+			children = (
+				957AFA562022BEF200FEED28 /* 技术培训 */,
+				957AFA5B2022BEF200FEED28 /* 智能体验 */,
+				957AFA5E2022BEF200FEED28 /* 智能装修 */,
+				957AFA342022BEF200FEED28 /* BusinessAreaVC.h */,
+				957AFA352022BEF200FEED28 /* BusinessAreaVC.m */,
+				957AFA362022BEF200FEED28 /* BusinessCell.h */,
+				957AFA372022BEF200FEED28 /* BusinessCell.m */,
+				957AFA382022BEF200FEED28 /* BusinesslicenceVC.h */,
+				957AFA392022BEF200FEED28 /* BusinesslicenceVC.m */,
+				957AFA3A2022BEF200FEED28 /* BusinessSearchVC.h */,
+				957AFA3B2022BEF200FEED28 /* BusinessSearchVC.m */,
+				957AFA3C2022BEF200FEED28 /* MerchantViewController.h */,
+				957AFA3D2022BEF200FEED28 /* MerchantViewController.m */,
+			);
+			path = OldVersion;
+			sourceTree = "<group>";
+		};
 		959883A32016D383002C473B /* AppDelegate */ = {
 			isa = PBXGroup;
 			children = (
@@ -3956,6 +4083,7 @@
 		959D20032094525E00235166 /* MerchentViews */ = {
 			isa = PBXGroup;
 			children = (
+				953395B8209C3C8E0019B805 /* MerchFiltrate(商户筛选) */,
 				953395B2209BF1BC0019B805 /* NewMerchCell.h */,
 				953395B3209BF1BC0019B805 /* NewMerchCell.m */,
 				959D1FFA209443DC00235166 /* MerchentDescCell.h */,
@@ -4326,6 +4454,7 @@
 				95261EA3202158A500AA1932 /* left.png in Resources */,
 				95261EA0202158A500AA1932 /* ico5.png in Resources */,
 				95261E93202158A500AA1932 /* JK_LineTableViewCell.xib in Resources */,
+				953395D6209C3E710019B805 /* FiltrateItem.plist in Resources */,
 				9501EE752021BEA100C4F356 /* common_stretch_arrow_downward_down.png in Resources */,
 				95BC6F6120186AC7004801A1 /* DuYaInModelCell.xib in Resources */,
 				9501EEA62021BEA100C4F356 /* oDropListCell.xib in Resources */,
@@ -4420,6 +4549,7 @@
 				95BC6F99201875FA004801A1 /* SetModelVC.xib in Resources */,
 				9501EE742021BEA100C4F356 /* common_stretch_arrow_downward.png in Resources */,
 				95261E9D202158A500AA1932 /* ico3on.png in Resources */,
+				953395D3209C3C8E0019B805 /* DCHeaderReusableView.xib in Resources */,
 				95193C452019798300CD8870 /* ItemCell.xib in Resources */,
 				955F81EB20577A0D00252F47 /* btn_mic_P11.png in Resources */,
 				9528A9AB201D581100A0239C /* SensorViewController.xib in Resources */,
@@ -4610,6 +4740,7 @@
 				954040C8201EF894006DA1E9 /* NSDictionary+aes.m in Sources */,
 				957AFA812022C42A00FEED28 /* catergory.swift in Sources */,
 				957AFA2B2022BEA500FEED28 /* GeziView.m in Sources */,
+				953395D0209C3C8E0019B805 /* DCAttributeItemCell.m in Sources */,
 				9501EE962021BEA100C4F356 /* WeekButton.mm in Sources */,
 				95193C612019CE7D00CD8870 /* AlterViewController.swift in Sources */,
 				957AF9E52022BEA500FEED28 /* CommentViewController.m in Sources */,
@@ -4695,6 +4826,7 @@
 				9540406E201ECAED006DA1E9 /* CameraTypeTVC.swift in Sources */,
 				959DE579201823D3000E3C84 /* UIImageView+WebCache.m in Sources */,
 				95404077201ECF1F006DA1E9 /* ThirdTableViewCell.swift in Sources */,
+				953395D4209C3C8E0019B805 /* DCSildeBarView.m in Sources */,
 				954C675A201721CF004332D9 /* NSDictionary+Ping.m in Sources */,
 				95193C5C2019CE0300CD8870 /* HeadImgTableViewCell.swift in Sources */,
 				952C5C6E204924AA009212EB /* MessageTableViewCell.m in Sources */,
@@ -4713,6 +4845,7 @@
 				954040DA201EF894006DA1E9 /* LockTimeTableViewCell.swift in Sources */,
 				957AFA092022BEA500FEED28 /* TZPhotoPickerController.m in Sources */,
 				957AFA702022BEF300FEED28 /* QYAnnotation.m in Sources */,
+				953395CF209C3C8E0019B805 /* DCFiltrateItem.m in Sources */,
 				9578063B2072194400AF647A /* NSURL+DCHook.m in Sources */,
 				95404084201EEDD4006DA1E9 /* First1TableViewCell.swift in Sources */,
 				959883D22016DDED002C473B /* Infrared.swift in Sources */,
@@ -4736,6 +4869,7 @@
 				95193C422019798300CD8870 /* FailedVC.swift in Sources */,
 				95404082201EEDB0006DA1E9 /* RedccViewController.swift in Sources */,
 				959D1FFC209443DC00235166 /* MerchentDescCell.m in Sources */,
+				95122C6420A14EA400DBC53C /* MerchantLoadVC.m in Sources */,
 				95BC6F7D20186AC7004801A1 /* SmartLockCell.swift in Sources */,
 				957806772072194400AF647A /* SDWaitingView.m in Sources */,
 				95193C672019DE1E00CD8870 /* ManageRoomDev.swift in Sources */,
@@ -4762,6 +4896,7 @@
 				95BC6F7F20186AC7004801A1 /* UnkownCell.swift in Sources */,
 				95BC6F98201875FA004801A1 /* SetModelVC.swift in Sources */,
 				954C674A20171E62004332D9 /* ChangeLoginVC.swift in Sources */,
+				953395B7209C37340019B805 /* MerchFilterVC.m in Sources */,
 				959883BD2016D70E002C473B /* GlobalVariables.swift in Sources */,
 				954C6759201721CF004332D9 /* FileManager.m in Sources */,
 				959883D12016DDED002C473B /* Getui.swift in Sources */,
@@ -4787,6 +4922,7 @@
 				954EE5D8201AF9D700A3C343 /* SceneSectionVC.swift in Sources */,
 				954EE5F0201B132D00A3C343 /* SetPassViewController.swift in Sources */,
 				957AFA2C2022BEA500FEED28 /* Loadmore.m in Sources */,
+				9547BEC2209E999000D7DDDB /* MerchRegistVC.m in Sources */,
 				959883D52016DDED002C473B /* SensorModel.swift in Sources */,
 				954EE5E3201AFC8B00A3C343 /* WeekViewController.swift in Sources */,
 				957806782072194400AF647A /* XWCircleSpreadAnimator.m in Sources */,
@@ -4795,6 +4931,7 @@
 				95261EAE202158A500AA1932 /* MyGLViewController.mm in Sources */,
 				9501EE9B2021BEA100C4F356 /* WifiSettingViewController.mm in Sources */,
 				957806472072194400AF647A /* DCZuoWenRightButton.m in Sources */,
+				953395D2209C3C8E0019B805 /* DCHeaderReusableView.m in Sources */,
 				9578065C2072194400AF647A /* UIView+DCRolling.m in Sources */,
 				957AFA642022BEF300FEED28 /* BusinessSearchVC.m in Sources */,
 				95261EB420215C0F00AA1932 /* HTCameraStatus.mm in Sources */,
@@ -4827,6 +4964,7 @@
 				957AFA192022BEA500FEED28 /* MessageViewController.m in Sources */,
 				957806762072194400AF647A /* SDPhotoBrowser.m in Sources */,
 				9528A9A5201D571A00A0239C /* SetSenCelScene.swift in Sources */,
+				9547BEBF209E8E4A00D7DDDB /* MerchLoadVC.m in Sources */,
 				95E9AE09206B79CB0079BB6F /* HBYYTool.m in Sources */,
 				959883BC2016D70E002C473B /* DataDeal.swift in Sources */,
 				9578067F2072194400AF647A /* XWCoolAnimator+XWScanning.m in Sources */,
@@ -4865,6 +5003,7 @@
 				9501EE8B2021BEA100C4F356 /* SelectWeekCustomView.mm in Sources */,
 				954EE5E1201AFC7500A3C343 /* CreateTimerViewController.swift in Sources */,
 				9578056B2072175B00AF647A /* ProductImageCell.m in Sources */,
+				953395D1209C3C8E0019B805 /* DCFooterReusableView.m in Sources */,
 				955F81DF20577A0D00252F47 /* RecognizerFactory.m in Sources */,
 				95261E92202158A500AA1932 /* JK_LineTableViewCell.mm in Sources */,
 				9528A9B5201D59DF00A0239C /* SenChoiceTableViewCell.swift in Sources */,
@@ -4951,6 +5090,7 @@
 				959DE573201823D3000E3C84 /* SDWebImagePrefetcher.m in Sources */,
 				9578067B2072194400AF647A /* XWCoolAnimator+XWLines.m in Sources */,
 				959DE57A201823D3000E3C84 /* UIView+WebCacheOperation.m in Sources */,
+				95122C6120A12D2400DBC53C /* ChangeAccountVC.swift in Sources */,
 				9501EE7D2021BEA100C4F356 /* OpenRecScheduleCell.m in Sources */,
 				959883BE2016D70E002C473B /* Helper.swift in Sources */,
 				957806842072194400AF647A /* XWFilterAnimator+XWCopyMachine.m in Sources */,
@@ -5028,6 +5168,7 @@
 				954C675C201721CF004332D9 /* UIViewController+EZBackPop.m in Sources */,
 				954C675B201721CF004332D9 /* NSString+Contains.m in Sources */,
 				957805632072169700AF647A /* DCCometItemCell.m in Sources */,
+				953395CE209C3C8E0019B805 /* DCContentItem.m in Sources */,
 				954040EA201EF895006DA1E9 /* KMDatePickerDateModel.m in Sources */,
 				957AF9FD2022BEA500FEED28 /* TypeView.m in Sources */,
 				957AFA172022BEA500FEED28 /* UIView+SDExtension.m in Sources */,
@@ -5040,6 +5181,7 @@
 				959DE56D201823D3000E3C84 /* SDImageCache.m in Sources */,
 				9578065B2072194400AF647A /* DCTitleRolling.m in Sources */,
 				957AF9E62022BEA500FEED28 /* DiscountViewController.m in Sources */,
+				953395CD209C3C8E0019B805 /* DCFiltrateViewController.m in Sources */,
 				957AFA142022BEA500FEED28 /* TAAnimatedDotView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -5279,7 +5421,7 @@
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = com.shenzhen.maibao.test;
+				PRODUCT_BUNDLE_IDENTIFIER = com.shenzhen.maibao;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -5347,7 +5489,7 @@
 					"$(PROJECT_DIR)/SmartHome/Tools/UMessage_Sdk_1.5.0a",
 				);
 				OTHER_LDFLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = com.shenzhen.maibao.test;
+				PRODUCT_BUNDLE_IDENTIFIER = com.shenzhen.maibao;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";

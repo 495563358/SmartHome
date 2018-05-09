@@ -93,7 +93,7 @@ class TabbarC: UITabBarController {
         
         self.tabBar.bringSubview(toFront: self.btn)
         self.tabBar.tintColor=mainColor
-        self.selectedIndex = 1
+//        self.selectedIndex = 1
         // Do any additional setup after loading the view.
     }
     

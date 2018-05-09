@@ -49,14 +49,8 @@ class SceneSectionVC: UICollectionViewController,DeleModels2,UIGestureRecognizer
         let nib = UINib(nibName: "ModelCell2", bundle: Bundle.main)
         self.collectionView!.register(nib , forCellWithReuseIdentifier: "model_cell")
         // Do any additional setup after loading the view.
-        let backBtn = UIButton.init(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
-        backBtn.setImage(UIImage(named: "fanhui(b)"), for: UIControlState())
-        backBtn.addTarget(self, action: Selector("backClick"), for: UIControlEvents.touchUpInside)
         
-//        backBtn.contentEdgeInsets = UIEdgeInsetsMake(0, -16, 0, 0)
-        self.navigationItem.hidesBackButton = true
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(customView: backBtn)
-        self.navigationController?.interactivePopGestureRecognizer?.delegate = self
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "fanhui(b)"), style: UIBarButtonItemStyle.plain, target: self, action: #selector(SceneSectionVC.backClick))
     }
     
     @objc func backClick(){

@@ -583,7 +583,6 @@ class HomeVC: UIViewController,UITableViewDataSource,UITableViewDelegate,UIAlert
             
         }
         //刷新数据
-        self.sideView?.tableView.reloadData()
         roomArray=[]
         print("刷新数据\(tableSideViewDataSource.count)\n\(floors.count)\n")
         let allrooms = dataDeal.getModels(type: DataDeal.TableType.Room) as! Array<Room>
@@ -807,7 +806,8 @@ class HomeVC: UIViewController,UITableViewDataSource,UITableViewDelegate,UIAlert
             BaseHttpService.setUserCity(arrayStr[0] as NSString)
             
             print(app.user?.userName)
-            self.sideView!.tableView.reloadData()
+            
+            self.sideView!.tableView.reloadRows(at: [IndexPath(item: 0, section: 0)], with: .none)
         }
         
     }
@@ -1397,7 +1397,7 @@ class HomeVC: UIViewController,UITableViewDataSource,UITableViewDelegate,UIAlert
             return false
         }
         var i = 0
-        for var j in 0...allrooms.count-1 {
+        for j in 0...allrooms.count-1 {
             i = j
             if allrooms[i].roomCode == roomCode{
                 break
@@ -1418,28 +1418,32 @@ class HomeVC: UIViewController,UITableViewDataSource,UITableViewDelegate,UIAlert
          app.App_room = allrooms[i+(isNext ? 1 : -1)].roomCode
          app.App_roomName = allrooms[i+(isNext ? 1 : -1)].name
         print(app.App_roomName)
-    return true
+        return true
     }
     
     func preOne(){
-
+//        let transition = CATransition()
+//        transition.type = kCATransitionPush//可更改为其他方式
+//        transition.subtype = kCATransitionFromLeft//可更改为其他方式
+//        let homevc:HomeVC=HomeVC(nibName: "HomeVC", bundle: nil)
+//      
+//        self.navigationController!.view.layer.add(transition, forKey: kCATransition)
+//        self.navigationController?.pushViewController(homevc, animated: false)
         
-    let transition = CATransition()
-    transition.type = kCATransitionPush//可更改为其他方式
-    transition.subtype = kCATransitionFromLeft//可更改为其他方式
-        let homevc:HomeVC=HomeVC(nibName: "HomeVC", bundle: nil)
-      
-        self.navigationController!.view.layer.add(transition, forKey: kCATransition)
-        self.navigationController?.pushViewController(homevc, animated: false)
+        self.refreshStatus()
     }
      func nextOne()
     {
-        let transition = CATransition()
-        transition.type = kCATransitionPush//可更改为其他方式
-        transition.subtype = kCATransitionFromRight//可更改为其他方式
-        let homevc:HomeVC=HomeVC(nibName: "HomeVC", bundle: nil)
-        self.navigationController!.view.layer.add(transition, forKey: kCATransition)
-        self.navigationController?.pushViewController(homevc, animated: false)
+//        let transition = CATransition()
+//        transition.type = kCATransitionPush//可更改为其他方式
+//        transition.subtype = kCATransitionFromRight//可更改为其他方式
+//        let homevc:HomeVC=HomeVC(nibName: "HomeVC", bundle: nil)
+//        self.navigationController!.view.layer.add(transition, forKey: kCATransition)
+//        self.navigationController?.pushViewController(homevc, animated: false)
+        
+        
+        self.refreshStatus()
+        
     }
     
     //    //MARK-转屏适配-optional

@@ -102,23 +102,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate,WXApiDelegate,UNUserNotifi
     }
     
     func secondLogin(){
-        
         if BaseHttpService.userCode()=="" || BaseHttpService.refreshAccessToken()=="" || BaseHttpService.accessToken()==""
         {
-            
             let nav:UINavigationController = UINavigationController(rootViewController: ChangeLoginVC(nibName: "ChangeLoginVC", bundle: nil))
             self.window!.rootViewController=nav
         }else{
-//            EZOpenSDK.setAccessToken(GlobalKit.share().accessToken)
             self.window!.rootViewController = TabbarC()
         }
         
     }
     
+    //程序将进入后台
     func applicationWillResignActive(_ application: UIApplication) {
-        
         let currVC:UIViewController = UIWindow.visibleViewController()
-        
         if (currVC.navigationController == nil){
             print("不是导航控制器")
             return
@@ -128,8 +124,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,WXApiDelegate,UNUserNotifi
             print("当前在管理摄像头页面")
             return
         }
-        
-        for var temp in (currVC.navigationController?.viewControllers)!{
+        for temp in (currVC.navigationController?.viewControllers)!{
             let str = NSStringFromClass(temp.classForCoder)
             print(str)
             if str == "CameraManagerVC"{
@@ -153,7 +148,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate,WXApiDelegate,UNUserNotifi
     func applicationWillEnterForeground(_ application: UIApplication) {
         // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
     }
-
+    
+    //程序进入前台 app启动时会进入此方法
     func applicationDidBecomeActive(_ application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
         
@@ -194,7 +190,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,WXApiDelegate,UNUserNotifi
     func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
         if url.host == "safepay"{
             AlipaySDK.defaultService().processOrder(withPaymentResult: url, standbyCallback: { (resultDic) -> Void in
-                if let Alipayjson = resultDic as? NSDictionary{
+                if let Alipayjson = resultDic as NSDictionary?{
                     let resultStatus = Alipayjson.value(forKey: "resultStatus") as! String
                     if resultStatus == "9000"{
                         print("OK")
@@ -212,6 +208,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate,WXApiDelegate,UNUserNotifi
             return true
         }
         return WXApi.handleOpen(url, delegate: self)
+    }
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+        return false
     }
     
     func application(_ application: UIApplication, handleOpen url: URL) -> Bool {
@@ -235,12 +235,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate,WXApiDelegate,UNUserNotifi
                 let response:PayResp = resp as! PayResp
                 switch(response.errCode){
                 case 0:
-                    
                     mdict?.setObject(self.getNowTimeTimestamp(), forKey:"timestamp" as NSCopying)
                     
-                    print(mdict)
-                    
-                    
+                    print(mdict as Any)
                     let ipaddr = mdict?.object(forKey: "ip")
                     let nonce = mdict?.object(forKey: "nonce")
                     let ordersn = mdict?.object(forKey: "ordersn")
@@ -248,7 +245,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate,WXApiDelegate,UNUserNotifi
                     let sign = mdict?.object(forKey: "sign")
                     let timestamp = mdict?.object(forKey: "timestamp")
                     let token = mdict?.object(forKey: "token")
-                    
                     
                     Alamofire.request("http://mall.znhomes.com/app/index.php?i=195&c=entry&m=ewei_shopv2&do=mobile&r=order.apppay.complete2",method:.post , parameters: ["ip":ipaddr!,"nonce":nonce!,"ordersn":ordersn!,"price":price!,"sign":sign!,"timestamp":timestamp!,"token":token!] ).responseJSON { (response) -> Void in
                         //                    print("结果",response)
@@ -303,7 +299,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,WXApiDelegate,UNUserNotifi
                     
                     break
                 default:
-                    print(mdict);
+                    print(mdict as Any);
                     let alertCtr = UIAlertController.init(title: nil, message: "支付失败,您取消了支付", preferredStyle: .alert)
                     alertCtr.addAction(UIAlertAction.init(title: "确定", style: .default, handler: nil))
                     

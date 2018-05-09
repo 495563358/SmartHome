@@ -273,3 +273,5 @@ let authorize1 = "\(baseUrl)newAuthorization.action"
 let updateAuthorize = "\(baseUrl)updateAuthorization.action"
 //改动后 获取用户已授权设备
 let authorizeDevice = "\(baseUrl)gainDevicesList.action"
+//移交主账户
+let changeAccount = "\(baseUrl)changeAccount.action"

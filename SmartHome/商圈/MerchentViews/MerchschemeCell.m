@@ -7,6 +7,7 @@
 //
 
 #import "MerchschemeCell.h"
+#import "UIImageView+WebCache.h"
 
 @implementation MerchschemeCell
 -(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
@@ -18,11 +19,11 @@
 //总高度 50 + 152 * Percentage + 10
 -(void)createView{
     
-    UIImageView *imgView = [[UIImageView alloc]initWithFrame:CGRectMake(15, 10, ScreenW - 30, 152 * Percentage)];
-    imgView.image = [UIImage imageNamed:@"家头部图片"];
-    [self.contentView addSubview:imgView];
+    _imgView = [[UIImageView alloc]initWithFrame:CGRectMake(15, 10, ScreenW - 30, 152 * Percentage)];
+    _imgView.image = [UIImage imageNamed:@"gs_dp_banner"];
+    [self.contentView addSubview:_imgView];
     
-    _titleLab = [[UILabel alloc]initWithFrame:CGRectMake(15, 20 + imgView.mj_h, ScreenW - 30, 30)];
+    _titleLab = [[UILabel alloc]initWithFrame:CGRectMake(15, 20 + _imgView.mj_h, ScreenW - 30, 30)];
     _titleLab.font = [UIFont systemFontOfSize:15];
     _titleLab.text = @"智能屋体验版套装";
     
@@ -33,6 +34,26 @@
     
     [self.contentView addSubview:_titleLab];
     [self.contentView addSubview:_subLab];
+    
+    UILabel *catLab = [[UILabel alloc]initWithFrame:CGRectMake(ScreenW - 225, _titleLab.mj_y , 200, 30)];
+    catLab.font = [UIFont systemFontOfSize:14];
+    catLab.textColor = [UIColor grayColor];
+    catLab.textAlignment = NSTextAlignmentRight;
+    catLab.text = @"查看全文";
+    
+    UIImageView *nextImgtip = [[UIImageView alloc]initWithFrame:CGRectMake(Sc_w - 20, 8 + _titleLab.mj_y , 7, 13)];
+    nextImgtip.image = [UIImage imageNamed:@"gengduo"];
+    [self.contentView addSubview:catLab];
+    [self.contentView addSubview:nextImgtip];
+}
+
+-(void)configcell:(NSDictionary *)info{
+    if ([info isKindOfClass:NSDictionary.class]) {
+        
+        [_imgView sd_setImageWithURL:[NSURL URLWithString:[AddressPath stringByAppendingString:info[@"resp_img"]]] placeholderImage:[UIImage imageNamed:@"gs_dp_banner"]];
+        _titleLab.text = info[@"article_title"];
+        _subLab.text = info[@"resp_desc"];
+    }
 }
 
 +(CGFloat)getCellHeight{

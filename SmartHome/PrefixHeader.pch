@@ -30,7 +30,9 @@
 //vender
 #import "UIView+Toast.h"
 
+//商城请求地址
 #define ResourceFront @"http://mall.znhomes.com/app/index.php?i=195&c=entry&m=ewei_shopv2&do=mobile&"
+//图片拼接地址
 #define AddressPath   @"http://mall.znhomes.com/attachment/"
 #define DetilPath     @"http://mall.znhomes.com/app/index.php?i=195&c=entry&m=ewei_shopv2&do=mobile&r=goods.product&cate="
 

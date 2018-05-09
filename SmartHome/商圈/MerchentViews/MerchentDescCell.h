@@ -10,8 +10,12 @@
 
 @interface MerchentDescCell : UITableViewCell
 
+@property (nonatomic,assign)CGFloat descHeight;
 @property (nonatomic,strong)UILabel *contentLabel;
+@property (nonatomic,strong)UIButton *showAll;
 
--(instancetype)initWithDesc:(NSString *)desc;
+@property (nonatomic,copy)void(^changeCellHeight)(BOOL showAll);
+
+-(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier andDesc:(NSString *)desc andShow:(BOOL)showAll;
 
 @end

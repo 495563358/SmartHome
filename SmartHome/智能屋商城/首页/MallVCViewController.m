@@ -7,62 +7,41 @@
 //
 
 #import "MallVCViewController.h"//商城首页
+//8个分类页面
+#import "GeziView.h"
+//通知
+#import "NoticeView.h"
+//每个商品的数据
+#import "ModelData.h"
+//8个分类点进去的页面
+#import "TestViewController.h"
+//单个商品的页面
+#import "ProductViewControll.h"
+//刷新
+#import <MJRefresh/MJRefresh.h>
+//用户中心
+#import "UserCenterViewController.h"
+//消息
+#import "MessageViewController.h"
+//登录
+#import "LoadViewController.h"
+//购物车列表
+#import "ShopListViewController.h"
+#import "SearchViewController.h"
+#import "CommssionViewController.h"
+#import "MerchIntroduceVC.h"
 
+//vender
+#import "JZLocationConverter.h"
+#import "MBProgressHUD.h"
+#import "UIView+Toast.h"
+#import "ObjectTools.h"
+#import "Reachability.h"
 #import "BaseocHttpService.h"
 #import <CoreLocation/CoreLocation.h>
 
-//8个分类页面
-#import "GeziView.h"
-
-//通知
-#import "NoticeView.h"
-
-//每个商品的数据
-#import "ModelData.h"
-
-//网络
-#import "ObjectTools.h"
-#import "Reachability.h"
-
-//8个分类点进去的页面
-#import "TestViewController.h"
-
-//单个商品的页面
-#import "ProductViewControll.h"
-
-//刷新
-#import <MJRefresh/MJRefresh.h>
-
-//用户中心
-#import "UserCenterViewController.h"
-
-//消息
-#import "MessageViewController.h"
-
-//登录
-#import "LoadViewController.h"
-
-//购物车列表
-#import "ShopListViewController.h"
-
-#import "UIView+Toast.h"
-
 #define StaticCell  @"CollectionCell"
-
 #define requestPath @"r=appindex.indexno"
-
-//快速购买
-#import "QuickbuyController.h"
-
-#import "SearchViewController.h"
-
-#import "CommssionViewController.h"
-
-#import "MBProgressHUD.h"
-
-#import "MerchantViewController.h"
-
-#import "JZLocationConverter.h"
 
 @interface MallVCViewController ()<SDCycleScrollViewDelegate,CLLocationManagerDelegate,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout,UICollectionViewDataSource,UIWebViewDelegate,UIScrollViewDelegate>{
     UIImageView *shopImg;
@@ -378,6 +357,14 @@
     //设置商品列表
     hh += Sc_w/10 * 3;
     
+    UILabel *betterlabel = [[UILabel alloc]initWithFrame:CGRectMake(0, hh, Sc_w, 39)];
+    betterlabel.backgroundColor = [UIColor whiteColor];
+    betterlabel.textAlignment = NSTextAlignmentCenter;
+    betterlabel.textColor = Color_system;
+    betterlabel.font = [UIFont systemFontOfSize:14];
+    betterlabel.text = @"—— 优选商品 ——";
+    
+    hh += 39;
     
     //设置headerView
     self.headView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, Sc_w, hh)];
@@ -385,6 +372,7 @@
     [_headView addSubview:_scrollview];
     [_headView addSubview:_gezi];
     [_headView addSubview:shopView];
+    [_headView addSubview:betterlabel];
     
     
     UICollectionViewFlowLayout *flowLayout =[[UICollectionViewFlowLayout alloc]init];
@@ -447,18 +435,12 @@
     if (!_shopInfo) {
         return;
     }
-    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    [[ObjectTools sharedManager] POST:[ResourceFront stringByAppendingString:@"r=business.appindex"] parameters:@{@"merchid":_shopInfo[@"id"]} progress:^(NSProgress * _Nonnull uploadProgress) {
-                
-            } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        [MBProgressHUD hideHUDForView:self.view animated:YES];
-        MerchantViewController *vc = [MerchantViewController new];
+    [BaseocHttpService postRequest:[ResourceFront stringByAppendingString:@"r=business.appindex"] andParagram:@{@"merchid":_shopInfo[@"id"]} success:^(id responseObject) {
+        MerchIntroduceVC *vc = [MerchIntroduceVC new];
         vc.infoDict = [[(NSDictionary *)responseObject objectForKey:@"result"] objectForKey:@"list"];
         self.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:vc animated:YES];
         self.hidesBottomBarWhenPushed = NO;
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        [MBProgressHUD hideHUDForView:self.view animated:YES];
     }];
 }
 

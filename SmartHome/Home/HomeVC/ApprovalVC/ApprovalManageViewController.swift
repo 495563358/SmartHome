@@ -170,15 +170,7 @@ class ApprovalManageViewController: UITableViewController, UIGestureRecognizerDe
         footerView.backgroundColor = UIColor.groupTableViewBackground
         self.tableView.tableFooterView = footerView
         
-        let backBtn = UIButton.init(frame: CGRect(x: 0, y: 35, width: 40, height: 40))
-        backBtn.setImage(UIImage(named: "fanhui(b)"), for: UIControlState())
-        backBtn.addTarget(self, action: #selector(ApprovalManageViewController.backClick), for: UIControlEvents.touchUpInside)
-        
-        backBtn.contentEdgeInsets = UIEdgeInsetsMake(0, -16, 0, 0)
-        self.navigationItem.hidesBackButton = true
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(customView: backBtn)
-        self.navigationController?.interactivePopGestureRecognizer?.delegate = self
-        
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "fanhui(b)"), style: UIBarButtonItemStyle.plain, target: self, action: #selector(ApprovalManageViewController.backClick))
         
     }
     
@@ -210,12 +202,12 @@ class ApprovalManageViewController: UITableViewController, UIGestureRecognizerDe
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 2
+        return 3
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        if section == 0{
+        if section != 2{
             return 1
         }
         return approvalUserData.count + 1
@@ -225,20 +217,25 @@ class ApprovalManageViewController: UITableViewController, UIGestureRecognizerDe
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
         
+        cell.textLabel?.font = UIFont.systemFont(ofSize: 15)
         if indexPath.section == 0{
             cell.textLabel?.textColor = systemColor
             cell.textLabel?.text = "添加授权"
-        }else{
+        }
+        else if indexPath.section == 1{
+            cell.textLabel?.textColor = systemColor
+            cell.textLabel?.text = "移交主账户"
+        }
+        else{
             if indexPath.row == 0{
-                cell.textLabel?.textColor = systemColor
+                cell.textLabel?.textColor = UIColor.gray
                 cell.textLabel?.text = "已授权用户"
             }else{
                 cell.textLabel?.text = self.approvalUserData[indexPath.row - 1]
-//                cell.textLabel?.textColor = UIColor(red: 198/255, green: 198/255, blue: 198/255, alpha: 1.0)
             }
         }
         
-        if (indexPath.section != 1 || indexPath.row != 0){
+        if (indexPath.section != 2 || indexPath.row != 0){
             cell.accessoryType = .disclosureIndicator
         }
         
@@ -258,9 +255,13 @@ class ApprovalManageViewController: UITableViewController, UIGestureRecognizerDe
             vc.modelData = modelData
             self.navigationController?.pushViewController(vc, animated: true)
         }
-            
+        else if indexPath.section == 1{
+            //移交主账户
+            let vc = ChangeAccountVC()
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
         //编辑已授权的用户
-        else if(indexPath.row > 0 && indexPath.section > 0){
+        else if(indexPath.row > 0 && indexPath.section > 1){
             
             let dic = ["userPhone":self.approvalUserData[indexPath.row - 1]]
             
@@ -365,7 +366,7 @@ class ApprovalManageViewController: UITableViewController, UIGestureRecognizerDe
         }
     }
     override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        if section == 0{
+        if section != 2{
             return 5
         }
         return 0.01
